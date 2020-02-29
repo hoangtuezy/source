@@ -333,7 +333,10 @@ function save_man(){
 		$data['diachi'] = $_POST['diachi'];
 		$data['size'] = $_POST['size'];
 
-		$data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
+		if($_POST['tenkhongdau']!="" && $_POST['chk']==false)
+    $data['tenkhongdau'] = $_POST['tenkhongdau'];
+else
+    $data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
 		$data['baohanh_vi'] = $_POST['baohanh_vi'];	
 		$data['baohanh_en'] = $_POST['baohanh_en'];	
 		$data['thongtin_vi'] = $_POST['thongtin_vi'];	
@@ -426,7 +429,10 @@ function save_man(){
 			$data['mota_'.$key] = $_POST['mota_'.$key];
 			$data['noidung_'.$key] = magic_quote($_POST['noidung_'.$key]);
 		}
-		$data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
+		if($_POST['tenkhongdau']!="" && $_POST['chk']==false)
+    $data['tenkhongdau'] = $_POST['tenkhongdau'];
+else
+    $data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
 		$data['baohanh_vi'] = $_POST['baohanh_vi'];	
 		$data['baohanh_en'] = $_POST['baohanh_en'];	
 		$data['thongtin_vi'] = $_POST['thongtin_vi'];	
@@ -682,7 +688,10 @@ function save_list(){
 
 		
 		$data['links'] = $_POST['links'];
-		$data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
+		if($_POST['tenkhongdau']!="" && $_POST['chk']==false)
+    $data['tenkhongdau'] = $_POST['tenkhongdau'];
+else
+    $data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
 		$data['title'] = $_POST['title'];
 		$data['keywords'] = $_POST['keywords'];
 		$data['description'] = $_POST['description'];
@@ -715,7 +724,10 @@ function save_list(){
 	
 
 		$data['links'] = $_POST['links'];
-		$data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
+		if($_POST['tenkhongdau']!="" && $_POST['chk']==false)
+    $data['tenkhongdau'] = $_POST['tenkhongdau'];
+else
+    $data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
 		$data['title'] = $_POST['title'];
 		$data['keywords'] = $_POST['keywords'];
 		$data['description'] = $_POST['description'];
@@ -887,7 +899,10 @@ function save_cat(){
 			$data['ten_'.$key] = $_POST['ten_'.$key];
 		}
 		
-		$data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
+		if($_POST['tenkhongdau']!="" && $_POST['chk']==false)
+    $data['tenkhongdau'] = $_POST['tenkhongdau'];
+else
+    $data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
 		$data['title'] = $_POST['title'];
 		$data['keywords'] = $_POST['keywords'];
 		$data['description'] = $_POST['description'];
@@ -911,7 +926,10 @@ function save_cat(){
 		$data['ten_vi'] = $_POST['ten_vi'];
 		$data['ten_en'] = $_POST['ten_en'];
 		$data['ten_cn'] = $_POST['ten_cn'];
-		$data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
+		if($_POST['tenkhongdau']!="" && $_POST['chk']==false)
+    $data['tenkhongdau'] = $_POST['tenkhongdau'];
+else
+    $data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
 		$data['title'] = $_POST['title'];
 		$data['keywords'] = $_POST['keywords'];
 		$data['description'] = $_POST['description'];
@@ -1064,7 +1082,10 @@ function save_item(){
 		$data['id_cat'] = $_POST['id_cat'];
 		$data['ten_vi'] = $_POST['ten_vi'];
 		$data['ten_en'] = $_POST['ten_en'];
-		$data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
+		if($_POST['tenkhongdau']!="" && $_POST['chk']==false)
+    $data['tenkhongdau'] = $_POST['tenkhongdau'];
+else
+    $data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
 		$data['title'] = $_POST['title'];
 		$data['keywords'] = $_POST['keywords'];
 		$data['description'] = $_POST['description'];
@@ -1088,7 +1109,10 @@ function save_item(){
 		$data['id_cat'] = $_POST['id_cat'];
 		$data['ten_vi'] = $_POST['ten_vi'];
 		$data['ten_en'] = $_POST['ten_en'];
-		$data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
+		if($_POST['tenkhongdau']!="" && $_POST['chk']==false)
+    $data['tenkhongdau'] = $_POST['tenkhongdau'];
+else
+    $data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
 		$data['title'] = $_POST['title'];
 		$data['keywords'] = $_POST['keywords'];
 		$data['description'] = $_POST['description'];
@@ -1250,7 +1274,10 @@ function save_sub(){
 		}
 		
 	
-		$data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
+		if($_POST['tenkhongdau']!="" && $_POST['chk']==false)
+    $data['tenkhongdau'] = $_POST['tenkhongdau'];
+else
+    $data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
 		$data['title'] = $_POST['title'];
 		$data['keywords'] = $_POST['keywords'];
 		$data['description'] = $_POST['description'];
@@ -1276,7 +1303,10 @@ function save_sub(){
 		foreach($config_lang as $key => $value){
 			$data['ten_'.$key] = $_POST['ten_'.$key];
 		}
-		$data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
+		if($_POST['tenkhongdau']!="" && $_POST['chk']==false)
+    $data['tenkhongdau'] = $_POST['tenkhongdau'];
+else
+    $data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
 		$data['title'] = $_POST['title'];
 		$data['keywords'] = $_POST['keywords'];
 		$data['description'] = $_POST['description'];

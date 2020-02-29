@@ -42,7 +42,6 @@ $white_coms = array(
 if(!in_array($com, $white_coms)){
 	include _lib."short_link.php";
 }
-
 switch($com){
 	case 'ajax':
 	include _source."ajax.php";

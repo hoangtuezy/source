@@ -534,7 +534,7 @@ $.configureBoxes();
 
 	//===== Form elements styling =====//
 	
-	$("input:checkbox, input:radio, input:file").uniform();
+	$("input:file").uniform();
 
 	
 });

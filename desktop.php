@@ -22,7 +22,7 @@
 </head>
 <body class="<?=$source?>">
 	<span class="action-button d-none"></span>
-	<?php if($com=='index'){ ?><h1><?php if($title_bar!='') echo $title_bar; else echo $row_setting['title']; ?></h1><?php } ?>
+	<?php if(empty($id)){ ?><h1><?php if($title_bar!='') echo $title_bar; else echo $row_setting['title']; ?></h1><?php } ?>
 	<div id="nav">
 		<?php include _template."layout/header.php";?>
 	</div>

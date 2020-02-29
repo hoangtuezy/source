@@ -93,7 +93,10 @@ $file_name=images_name($_FILES['file']['name']);
 		$data['ten_vi'] = $_POST['ten_vi'];
 		$data['ten_en'] = $_POST['ten_en'];
 		
-		$data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
+		if($_POST['tenkhongdau']!="" && $_POST['chk']==false)
+    $data['tenkhongdau'] = $_POST['tenkhongdau'];
+else
+    $data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
 	
 		$data['title'] = $_POST['title'];
 		
@@ -127,7 +130,10 @@ $file_name=images_name($_FILES['file']['name']);
 		$data['ten_vi'] = $_POST['ten_vi'];
 			$data['ten_en'] = $_POST['ten_en'];
 			
-		$data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
+		if($_POST['tenkhongdau']!="" && $_POST['chk']==false)
+    $data['tenkhongdau'] = $_POST['tenkhongdau'];
+else
+    $data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
 	
 		$data['title'] = $_POST['title'];
 		$data['keywords'] = $_POST['keywords'];

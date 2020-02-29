@@ -71,7 +71,10 @@ function save_item(){
 	$file_name=images_name($_FILES['file']['name']);
 	if(empty($_POST)) transfer("Không nhận được dữ liệu", "index.php?com=toado&act=man");
 	$id = isset($_POST['id']) ? themdau($_POST['id']) : "";
-	$data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
+	if($_POST['tenkhongdau']!="" && $_POST['chk']==false)
+    $data['tenkhongdau'] = $_POST['tenkhongdau'];
+else
+    $data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
 	if($id){
 		if($photo = upload_image("file", 'jpg|png|gif|JPG|jpeg|JPEG', _upload_hinhanh,$file_name)){
 			$data['photo'] = $photo;		

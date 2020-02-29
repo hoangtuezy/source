@@ -66,10 +66,6 @@
 		$txt_key = "toado";
 		include _template."helper/textarea.php";
 		?>
-		
-		
-
-		
 
 
 		<div class="formRow">

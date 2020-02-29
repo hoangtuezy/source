@@ -111,7 +111,7 @@ body:not(.responsive){
 	min-width: 1349px;
 	width: 100%;
 }
-.formRow .note{ float: left; color: #999; padding:4px 0px 0px 10px; font-size: 11px;}
+.formRow .note{display: flex;align-items: center;justify-content: space-evenly;padding: 5px 5px;/* padding:4px 0px 0px 10px; *//* font-size: 11px; */}
 body {
 	/* background: url(../images/backgrounds/bodyBg.png) repeat-y 0 0; */
 }
@@ -2940,8 +2940,10 @@ table thead td.headerSortDown span {
 	color: #595959;
 }
 .formRow .checker, .formRow .radio {
-	margin-right: 45px;
+	/* margin-right: 45px; */
 	/* margin-top: 10px; */
+	/* float: right; */
+	margin: 0 15px;
 }
 .formRow .formRight {
 	display: flex;
@@ -3277,8 +3279,8 @@ div.selector span {
 /* ===== Checkboxes ===== */
 
 div.checker {
-	width: 15px;
-	height: 15px;
+	display: flex;
+	/* height: 15px; */
 	/* position: relative; */
 	/* text-align: center; */
 }

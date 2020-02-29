@@ -69,7 +69,10 @@ function save_info(){
 			$data['mota_'.$key] = $_POST['mota_'.$key];
 			$data['noidung_'.$key] = magic_quote($_POST['noidung_'.$key]);
 		}
-		$data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
+		if($_POST['tenkhongdau']!="" && $_POST['chk']==false)
+    $data['tenkhongdau'] = $_POST['tenkhongdau'];
+else
+    $data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
 		
 		$data['title'] = $_POST['title'];
 		$data['keywords'] = $_POST['keywords'];
@@ -127,7 +130,10 @@ function save_info(){
 			$data['mota_'.$key] = $_POST['mota_'.$key];
 			$data['noidung_'.$key] = magic_quote($_POST['noidung_'.$key]);
 		}
-		$data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
+		if($_POST['tenkhongdau']!="" && $_POST['chk']==false)
+    $data['tenkhongdau'] = $_POST['tenkhongdau'];
+else
+    $data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
 
 		$data['type'] = $_GET['type'];
 

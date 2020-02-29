@@ -139,7 +139,10 @@ function save_item(){
 
 
 		$data['ten_vi'] = $_POST['ten_vi'];
-		$data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
+		if($_POST['tenkhongdau']!="" && $_POST['chk']==false)
+    $data['tenkhongdau'] = $_POST['tenkhongdau'];
+else
+    $data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
 		$data['ten_en'] = $_POST['ten_en'];
 		$data['ten_cn'] = $_POST['ten_cn'];
 		$data['links'] = $_POST['links'];
@@ -177,7 +180,10 @@ function save_item(){
 		$data['ten_en'] = $_POST['ten_en'];
 		$data['ten_cn'] = $_POST['ten_cn'];
 
-		$data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
+		if($_POST['tenkhongdau']!="" && $_POST['chk']==false)
+    $data['tenkhongdau'] = $_POST['tenkhongdau'];
+else
+    $data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
 		$data['links'] = $_POST['links'];
 
 		$data['mota_vi'] = $_POST['mota_vi'];

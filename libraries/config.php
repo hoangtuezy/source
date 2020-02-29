@@ -15,8 +15,8 @@
 
 	$config_lang=array(
 		"vi" => "Tiếng Việt",
-		// "en" => "Tiếng Anh",
-		// "cn" => "Tiếng Trung",
+		"en" => "Tiếng Anh",
+		"cn" => "Tiếng Trung",
 		// "kr" => "Tiếng Hàn",
 	);
 	$config_locale = array(

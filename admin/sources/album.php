@@ -47,7 +47,7 @@ switch($act){
 function get_mans(){
 	global $d, $items, $paging,$page;
 	
-	
+	$link_add = '';
 	$per_page = 10; // Set how many records do you want to display per page.
 	$startpoint = ($page * $per_page) - $per_page;
 	$limit = ' limit '.$startpoint.','.$per_page;
