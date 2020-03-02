@@ -25,6 +25,7 @@
 					$config_noibat= "true";
 					$config_noibat1= "false";
 					$config_noibat2= "false";
+					$config_tenkhongdau = true;
 					@define ( _width_thumb , 1366 );
 					@define ( _height_thumb , 320 );
 					@define ( _style_thumb , 2 );
@@ -39,6 +40,7 @@
 					$config_noibat1= "false";
 					$config_noibat2= "false";
 					$config_noibat = 'true';
+					$config_tenkhongdau = true;
 					@define ( _width_thumb , 386 );
 					@define ( _height_thumb , 235 );
 					@define ( _style_thumb , 2 );
@@ -68,6 +70,7 @@
 					$config_noibat3 = "false";
 					$config_tags = "false";
 					$config_link = 'false';
+					$config_tenkhongdau = true;
 					@define ( _width_thumb , 380 );
 					@define ( _height_thumb , 280 );
 					@define ( _style_thumb , 2 );

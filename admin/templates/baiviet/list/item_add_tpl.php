@@ -70,6 +70,8 @@
 			</div>
 			<div class="clear"></div>
 		</div>
+
+<?php include _template."helper/config_tenkhongdau.php";?>		
 		<?php if($config_mota=='true'){ ?>
 				<div class="formRow lang_hidden lang_vi active">
 					<label>Mô tả</label>

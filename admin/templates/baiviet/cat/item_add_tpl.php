@@ -101,6 +101,8 @@
 			</div>
 			<div class="clear"></div>
 		</div>
+		
+<?php include _template."helper/config_tenkhongdau.php";?>
 
         <div class="formRow">
           <label>Hiển thị : <img src="./images/question-button.png" alt="Chọn loại" class="icon_que tipS" original-title="Bỏ chọn để không hiển thị danh mục này ! "> </label>

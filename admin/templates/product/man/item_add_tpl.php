@@ -295,6 +295,7 @@ if($item['tags']!=''){
 			
 			
 <?php include _template."helper/ten_lang.php";?>
+<?php include _template."helper/config_tenkhongdau.php";?>
 
 <?php if($config_quangcao == 'true'){ ?>
 <div class="formRow">

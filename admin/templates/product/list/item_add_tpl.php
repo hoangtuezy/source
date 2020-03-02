@@ -28,7 +28,7 @@
 	<div class="widget">
 		<?php include _template."helper/lang.php";?>
        	<?php include _template."helper/ten_lang.php";?>
-
+		<?php include _template."helper/config_tenkhongdau.php";?>
 		<?php if($config_images=='true'){?>
 		<div class="formRow">
 			<label>Hình ảnh :</label>
