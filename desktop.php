@@ -3,13 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<base href="<?=$Protocol.$config_url?>/">
+	<meta name="viewport" content="width='device-width, initial-scale=1':?>">
 	<link id="favicon" rel="shortcut icon" href="<?=_upload_hinhanh_l.$favicon['thumb_'.$lang]?>" type="image/x-icon" />
 	<link rel="canonical" href="<?=getCurrentPageURL();?>" />
 	<?php include _template."layout/seo.php";?>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="assets/css/bootstrap4.css">
-	<link rel="stylesheet" href="assets/css/style.css">
-	<link rel="stylesheet" href="assets/<?=NN_MSHD?>.css">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/base.css">
 
 	<link rel="stylesheet" href="assets/css/news.css">
 	<link rel="stylesheet" href="assets/js/swiper/swiper.min.css">
@@ -22,14 +22,12 @@
 </head>
 <body class="<?=$source?>">
 	<span class="action-button d-none"></span>
-	<?php if(empty($id)){ ?><h1><?php if($title_bar!='') echo $title_bar; else echo $row_setting['title']; ?></h1><?php } ?>
+	<?php if(empty($id)){ ?><h1 class="nina"><?php if($title_bar!='') echo $title_bar; else echo $row_setting['title']; ?></h1><?php } ?>
 	<div id="nav">
 		<?php include _template."layout/header.php";?>
 	</div>
 	<div id="wrapper">
-		<?php if($com=='index'){ ?>
 		<?php include _template."components/slider.php";?>
-		<?php } ?>
 			<?php if($com!='index'){ ?>
 				<?php include _template."layout/breadcrum.php";?>
 			<?php } ?>
@@ -55,9 +53,7 @@
 	<script src="assets/js/custom/giohang.js"></script>
 <?php } ?>
 <?php include _template."layout/support-online.php";?>
-<div class="baogia_fix">
-	<img src="assets/images/baogia.png" alt="báo giá">
-</div>
+
 <script src="assets/js/owl/owl.carousel.min.js"></script>
 <script>
 	  $(window).scroll(function() {
@@ -95,5 +91,110 @@
     },
 })
 </script>
+ <script>
+  var mySwiper = new Swiper ('#quytrinh .swiper-container', {
+    // Optional parameters
+    loop: true,
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+   
+    breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
+      }
+  });
+var baogia = new Swiper ('#baogia .swiper-container', {
+    // Optional parameters
+    loop: true,
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+   
+    breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
+      }
+  });
+  var swiper_product = new Swiper('#ykien .swiper-container', {
+       
+        spaceBetween: 30,
+        centeredSlides: true,
+        loop:true,
+        autoplay: {
+        delay: 4000,
+        },
+         breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
+        // pagination: '.swiper-product .swiper-pagination',
+        paginationClickable: true,
+        slideToClickedSlide: true,
+        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        },
+        on: {
+            slideChangeTransitionStart:function(){
+                $(".ykien_content").removeClass("active");
+            },
+            slideChangeTransitionEnd: function(){
+                var a = $("#ykien .swiper-slide-active .khachhang_item").data("id");
+                $("."+a).addClass("active");
+            }
+        }
+
+        });
+       
+  </script>
 </body>
 </html>

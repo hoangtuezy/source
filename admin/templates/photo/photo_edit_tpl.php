@@ -97,7 +97,7 @@
         <div class="formRow">
           <label>Tùy chọn: <img src="./images/question-button.png" alt="Chọn loại" class="icon_que tipS" original-title="Check vào những tùy chọn "> </label>
           <div class="formRight">           
-            <input type="checkbox" name="active" id="check1"  class="form-control" value="1" <?=(!isset($item['hienthi']) || $item['hienthi']==1)?'checked="checked"':''?> />
+            <input type="checkbox" name="active" id="check1"  class="custom-checkbox" value="1" <?=(!isset($item['hienthi']) || $item['hienthi']==1)?'checked="checked"':''?> />
             <label for="check1">Hiển thị</label>           
           </div>
           <div class="clear"></div>

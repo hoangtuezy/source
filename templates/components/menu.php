@@ -4,9 +4,8 @@ $product_list = result_array("select * from #_product_list where hienthi=1 and n
 
 <div class="container">
 	<ul class="nav-menu">
-		<li class="menu <?=$com=='index'?'active':''?>"><a href=""><span>Trang Chủ</span></a></li>
 		<li class="menu <?=$com=='gioi-thieu'?'active':''?>"><a href="gioi-thieu"><span>Giới thiệu</span></a></li>
-
+		<li class="menu <?=$com=='dich-vu'?'active':''?>"><a href="dich-vu"><span>Dịch vụ</span></a></li>
 		<li class="menu <?=$com=='san-pham'?'active':''?>"><a href="san-pham"><span>Sản phẩm</span></a>
 			<?php if(!empty($product_list)){ ?>
 				<ul class="nav-menu-list">
@@ -36,17 +35,18 @@ $product_list = result_array("select * from #_product_list where hienthi=1 and n
 					</ul>
 				<?php }?>
 			</li>
-			<li class="menu <?=$com=='dich-vu'?'active':''?>"><a href="dich-vu"><span>Dịch Vụ  </span></a></li>
-			<li class="menu <?=$com=='tin-tuc'?'active':''?>"><a href="tin-tuc"><span>Tin Tức</span></a></li>
+		</ul>
+		<div id="logo">
+			<a href="">
+				<img src="upload/hinhanh/<?=$row_logo["photo_vi"]?>" alt="logo" />
+			</a>
+		</div>
+		<ul class="nav-menu">
+			<li class="menu <?=$com=='cong-trinh'?'active':''?>"><a href="cong-trinh"><span>Công Trình</span></a></li>
 			<li class="menu <?=$com=='tuyen-dung'?'active':''?>"><a href="tuyen-dung"><span>Tuyển Dụng</span></a></li>
 			<li class="menu <?=$com=='lien-he'?'active':''?>"><a href="lien-he"><span>Liên Hệ</span></a></li>
-			
 		</ul>
-		 <form action="tim-kiem" method="get" name="frm_timkiem">
-             <input type="text" name="keyword" id="keyword" value="<?= _tukhoa ?>" onblur="textboxChange(this,false,'<?= _tukhoa ?>')" onfocus="textboxChange(this,true,'<?= _tukhoa ?>')" onkeypress="doEnter(event,'keyword');" class=""/>
-            
-    <input type="submit" onclick="return onSearch(event,'keyword');" class="bttimkiem" value="TÌM KIẾM"/>   
-    </form>
+		<?php include _template."layout/timkiem_icon.php";?>
 	</div>
 
 

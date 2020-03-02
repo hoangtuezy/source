@@ -1,12 +1,12 @@
 <?php
 	if(!defined('_lib')) die("Error");
  	error_reporting(0);
- 	define ( 'NN_MSHD' , '1385219w'); //Mã số HĐ
+ 	define ( 'NN_MSHD' , '087220W'); //Mã số HĐ
 	define ( 'NN_AUTHOR' , 'vohoangtu.nina@gmail.com'); //Email của lập trình
 
 	$Protocol='http://';	
 	$login_name = '33455b15cd5108e1d0b1772a8c128bb2';
-	$theme_color = '#047442';
+	$theme_color = '#000';
 	$config['salt']='N0zGTN2ll';
 	$config_path = '';
 	$config_url=$_SERVER["SERVER_NAME"].$config_path;

@@ -32,20 +32,8 @@ $product_thongtin = fetch_array("select noidung_$lang from #_company where type=
                         <div class="product_info">
                             <div class="giaban"><span class="label"><?=_gia?>:</span><span class="text-red" style="font-size: 18px;"><?= price($row_detail["giaban"]) ?></span> <?php if(!empty($row_detail["giacu"])){ ?> <del class="text-grey" style="font-size: 16px;text-decoration: line-through;"><?= price($row_detail["giacu"]) ?><?php } ?></div>
                         </div>
-                          <div class="product_info">
-                <span class="float-left mr-2"><span class="label">Số lượng:</span> </span>
-                <div class="soluong_11 <?=return_uid($row_detail["id"])?>" data-product="<?=return_uid($row_detail["id"])?>">
-                    <a href="javascript:void()" class="minus a_1">-</a>
-                    <input type="text" value="1" min="1" max="999" name="soluong" class="soluong" id="input_soluong">
-                    <a href="javascript:void()" class="add a_1">+</i></a>
-                </div>
                 
-                <div class="clearfix"></div>
-            </div>
-            <div class="product_info d-flex flex-wrap">
-                <div class="btn-giohang add_cart" data-product="<?=return_uid($row_detail["id"])?>">THÊM VÀO GIỎ HÀNG</div>
-                <div class="btn-giohang muangay px-2" onclick="addtocart(<?=$row_detail['id']?>)" data-product="<?=return_uid($row_detail["id"])?>">MUA NGAY</div>
-            </div>
+            
                         <?php if(!empty($row_detail['mota_'.$lang])){ ?>
                             <div class="product_info">
                                <?=$row_detail['mota_'.$lang]; ?>

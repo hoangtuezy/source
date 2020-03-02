@@ -1,4 +1,7 @@
 <?php if(!defined('_lib')) die("Error");
+function e($str){
+	return htmlspecialchars($str);
+}
 function generate_crsf(){
 	if (function_exists('mcrypt_create_iv')) {
 		return bin2hex(mcrypt_create_iv(32, MCRYPT_DEV_URANDOM));

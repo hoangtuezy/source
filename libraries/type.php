@@ -21,12 +21,12 @@
 					$title_main = "Danh true cấp 1";
 					$config_images = "true";
 					$config_qc = "false";
-					$config_mota= "false";
+					$config_mota= "true";
 					$config_noibat= "true";
 					$config_noibat1= "false";
 					$config_noibat2= "false";
-					@define ( _width_thumb , 70 );
-					@define ( _height_thumb , 70 );
+					@define ( _width_thumb , 1366 );
+					@define ( _height_thumb , 320 );
 					@define ( _style_thumb , 2 );
 					$ratio_ = 1;
 					break;
@@ -55,7 +55,7 @@
 					$config_sub = "false";
 					$config_masp = true;
 					$config_giaban = true;
-					$config_giacu = true
+					$config_giacu = false
 					;
 					$config_diachi = false;
 					$config_dientich = false;
@@ -63,7 +63,7 @@
 					$config_quangcao = 'false';
 					$config_trongluong = "false";
 					$config_noibat = "true";
-					$config_noibat1 = "true";
+					$config_noibat1 = "false";
 					$config_noibat2 = "false";
 					$config_noibat3 = "false";
 					$config_tags = "false";
@@ -483,7 +483,7 @@
 			$title_main = "Dịch Vụ";
 			$config_images = "true";
 			$config_mota= "true";
-			$config_list = "false";
+			$config_list = "true";
 			$config_cat = "false";
 			$config_item = "false";
 			$config_sub = "false";
@@ -491,12 +491,37 @@
 			$config_noidung = "true";
 			switch ($act) {
 				case 'list':
-					@define ( _width_thumb , 690 );
-					@define ( _height_thumb , 500 );
+					@define ( _width_thumb , 450 );
+					@define ( _height_thumb , 270 );
 					break;
 				default:
-					@define ( _width_thumb , 100 );
-					@define ( _height_thumb , 100 );
+					@define ( _width_thumb , 450 );
+					@define ( _height_thumb , 270 );
+					break;
+			}
+			
+			@define ( _style_thumb , 1 );
+			@define ( _img_type , 'jpg|gif|png|jpeg|PNG|JPG|JPEG|GIF' );
+			$ratio_ = 1;
+			break;
+			case 'cong-trinh':
+			$title_main = "Công Trình";
+			$config_images = "true";
+			$config_mota= "true";
+			$config_list = "true";
+			$config_cat = "false";
+			$config_item = "false";
+			$config_sub = "false";
+			$config_noibat = "true";
+			$config_noidung = "true";
+			switch ($act) {
+				case 'list':
+					@define ( _width_thumb , 450 );
+					@define ( _height_thumb , 270 );
+					break;
+				default:
+					@define ( _width_thumb , 450 );
+					@define ( _height_thumb , 270 );
 					break;
 			}
 			
@@ -579,10 +604,12 @@
 			@define ( _img_type , 'jpg|gif|png|jpeg|PNG|JPG|JPEG|GIF' );
 			$ratio_ = 1;
 			break;
-			case 'su-kien':
-			$title_main = "Sự Kiện";
-			$config_images = "true";
+
+			case 'bao-gia':
+			$title_main = "Báo Giá";
+			$config_images = "false";
 			$config_mota= "true";
+			$config_giaban= "true";
 			$config_list = "false";
 			$config_cat = "false";
 			$config_item = "false";
@@ -597,6 +624,32 @@
 				default:
 					@define ( _width_thumb , 590 );
 					@define ( _height_thumb , 360 );
+					break;
+			}
+			
+			@define ( _style_thumb , 1 );
+			@define ( _img_type , 'jpg|gif|png|jpeg|PNG|JPG|JPEG|GIF' );
+			$ratio_ = 1;
+			break;
+
+			case 'quy-trinh':
+			$title_main = "Quy Trình";
+			$config_images = "true";
+			$config_mota= "true";
+			$config_list = "false";
+			$config_cat = "false";
+			$config_item = "false";
+			$config_sub = "false";
+			$config_noibat = "true";
+			$config_noidung = "true";
+			switch ($act) {
+				case 'list':
+					@define ( _width_thumb , 690 );
+					@define ( _height_thumb , 500 );
+					break;
+				default:
+					@define ( _width_thumb , 144 );
+					@define ( _height_thumb , 144 );
 					break;
 			}
 			
@@ -1366,14 +1419,14 @@ case 'thanh-toan-giao-nhan':
 			$title_main = "Khách Hàng";
 			$config_images = "true";
 			$config_mota= "true";
-			$config_noidung= "true";
+			$config_noidung= "false";
 			$config_list = "false";
 			$config_cat = "false";
 			$config_item = "false";
 			$config_sub = "false";
 			$config_noibat = "true";
-			@define ( _width_thumb , 280 );
-			@define ( _height_thumb , 300 );
+			@define ( _width_thumb , 144 );
+			@define ( _height_thumb , 144 );
 			@define ( _style_thumb , 1 );
 			@define ( _img_type , 'jpg|gif|png|jpeg|PNG|JPG|JPEG|GIF' );
 			$ratio_ = 1;
@@ -1577,7 +1630,7 @@ case 'thanh-toan-giao-nhan':
 			$config_list = "false";
 			$config_mota = "false";
 			@define ( _width_thumb , 1366 );
-			@define ( _height_thumb , 475);
+			@define ( _height_thumb , 680);
 			@define ( _style_thumb , 1 );
 			@define ( _img_type , 'jpg|gif|png|jpeg|PNG|JPG|JPEG|GIF' );
 			$ratio_ = 1;

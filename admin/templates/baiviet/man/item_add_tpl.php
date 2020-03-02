@@ -267,6 +267,15 @@ foreach($config_lang as $key => $value) { ?>
     </div>
     <div class="clear"></div>
 </div>
+<?php if($config_giaban){ ?>          
+      <div class="formRow">
+        <label class="price">Giá</label>
+        <div class="formRight">
+          <input type="text" name="giaban" title="Nhập giá bán" id="giaban" class="conso tipS form-control  " value="<?=@$item['giaban']?>" />
+        </div>
+        <div class="clear"></div>
+      </div>
+<?php } ?>
 <?php if($config_link=='true'){ ?>
   <div class="formRow">
    <label>Link</label>

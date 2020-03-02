@@ -2,7 +2,7 @@
 $row_logo = fetch_array("select photo_vi,link from #_photo where type='logo' ");
 $row_banner = fetch_array("select photo_vi,link from #_photo where type='banner' ");
 ?>
-<div id="header">
+<div id="header" class="d-none">
 	<div class="container d-flex">
 		<div id="logo">
 			<a href="">
@@ -14,22 +14,11 @@ $row_banner = fetch_array("select photo_vi,link from #_photo where type='banner'
 				<img src="upload/hinhanh/<?=$row_banner["photo_vi"]?>" alt="banner"  class="img-fluid"/>
 			</a>
 		</div>
-		<div id="addons">
-			<div>
-				<?=layout_mxh(28,28,'mxh_top')?>
-				<div class="header-hotline <?=empty($row_setting["hotline"])?'d-none':''?>">
-					<div class="hotline"><span><?=$row_setting["hotline"]?></span></div>
-				</div>
-			</div>
-		</div>
 	</div>
 </div>
 <div id="menu-top">
-	<a href="#menu_responsive" class="btn-menu"><span class="icon hamburger"></span></a>
+	<a href="#menu_responsive" class="btn-menu"><span class="icon menu_responsive"></span></a>
 	<?php include _template."components/menu.php";?>
-</div>
-<div class="giohang_fix">
-	<a href="gio-hang"><img src="assets/images/giohang.png" alt="giohang"></a>
 </div>
 <div id="menu_responsive">
 	<ul class="nav-menu">

@@ -31,6 +31,9 @@ $white_coms = array(
 	'thuc-don',
 	'tin-tuc',
 	'dich-vu',
+	'cong-trinh',
+	'bao-gia',
+	'wuy-trinh',
 	'gioi-thieu',
 	'video',
 	'ajax',
@@ -135,12 +138,29 @@ switch($com){
 	$type_bar = 'tin-tuc';
 	$title_detail = _tintuc;
 	break;
-	case 'su-kien':
+	case 'quy-trinh':
 	$source = "news";
 	$template = isset($id) ? "news_detail" : "news";
-	$type_bar = 'su-kien';
-	$title_detail = "Sự Kiện";
+	$type_bar = 'quy-trinh';
+	$title_detail = "Quy Trình";
 	break;
+
+	case 'bao-gia':
+	$source = "news";
+	$template = isset($id) ? "news_detail" : "news";
+	$type_bar = 'bao-gia';
+	$title_detail = "Báo Giá";
+	break;
+
+	case 'cong-trinh':
+	$source = "news";
+	$template = isset($id) ? "news_detail" : "news";
+	$type_bar = 'cong-trinh';
+	$title_detail = "Công Trình";
+	break;
+
+	
+	
 	case 'doi-tac':
 	$source = "news";
 	$template = isset($id) ? "news_detail" : "news";
