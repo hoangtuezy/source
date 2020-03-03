@@ -12,7 +12,6 @@
  </li>
   <li class="menu categories_li"><a href="" title="" class="exp"><span>Dịch Vụ</span><strong></strong></a>
     <ul class="sub"> 
-      <li><a href="index.php?com=baiviet&act=man_list&type=dich-vu">DM Cấp 1</a></li>
      <li><a href="index.php?com=baiviet&act=man&type=dich-vu">Dịch Vụ</a></li>
    </ul>
  </li>

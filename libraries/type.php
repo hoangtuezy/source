@@ -486,7 +486,7 @@
 			$title_main = "Dịch Vụ";
 			$config_images = "true";
 			$config_mota= "true";
-			$config_list = "true";
+			$config_list = "false";
 			$config_cat = "false";
 			$config_item = "false";
 			$config_sub = "false";
@@ -1511,8 +1511,8 @@ case 'thanh-toan-giao-nhan':
 			break;
 		case 'banner':
 			$title_main = 'Banner';
-			@define ( _width_thumb , 745 );
-			@define ( _height_thumb , 120 );
+			@define ( _width_thumb , 603 );
+			@define ( _height_thumb , 142 );
 			@define ( _style_thumb , 1 );
 			@define ( _img_type , 'jpg|gif|png|jpeg|PNG|JPG|JPEG|GIF|swf' );
 			$ratio_ = 1;
@@ -1536,8 +1536,8 @@ case 'thanh-toan-giao-nhan':
 			break;
 		case 'logo':
 		$title_main = 'Logo';
-		@define ( _width_thumb , 170 );
-		@define ( _height_thumb , 129 );
+		@define ( _width_thumb , 285 );
+		@define ( _height_thumb , 142 );
 		@define ( _style_thumb , 2 );
 		@define ( _img_type , 'jpg|gif|png|jpeg|PNG|JPG|JPEG|GIF' );
 		$ratio_ = 1;
@@ -1632,8 +1632,8 @@ case 'thanh-toan-giao-nhan':
 			$title_main = "Hình ảnh slider";
 			$config_list = "false";
 			$config_mota = "false";
-			@define ( _width_thumb , 1366 );
-			@define ( _height_thumb , 680);
+			@define ( _width_thumb , 910 );
+			@define ( _height_thumb , 380);
 			@define ( _style_thumb , 1 );
 			@define ( _img_type , 'jpg|gif|png|jpeg|PNG|JPG|JPEG|GIF' );
 			$ratio_ = 1;
@@ -1700,8 +1700,8 @@ case 'thanh-toan-giao-nhan':
 		
 		case 'quangcao':
 		    $title_main = "Quảng cáo";
-			@define ( _width_thumb , 1366 );
-			@define ( _height_thumb , 450 );
+			@define ( _width_thumb , 1200 );
+			@define ( _height_thumb , 180 );
 			@define ( _style_thumb , 1 );
 			@define ( _img_type , 'jpg|gif|png|jpeg|PNG|JPG|JPEG|GIF' );
 			$ratio_ = 1;

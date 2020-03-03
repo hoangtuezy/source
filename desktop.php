@@ -3,10 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<base href="<?=$Protocol.$config_url?>/">
-	<meta name="viewport" content="width='device-width, initial-scale=1':?>">
 	<link id="favicon" rel="shortcut icon" href="<?=_upload_hinhanh_l.$favicon['thumb_'.$lang]?>" type="image/x-icon" />
 	<link rel="canonical" href="<?=getCurrentPageURL();?>" />
 	<?php include _template."layout/seo.php";?>
+  
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/base.css">
@@ -27,10 +27,10 @@
 		<?php include _template."layout/header.php";?>
 	</div>
 	<div id="wrapper">
-		<?php include _template."components/slider.php";?>
 			<?php if($com!='index'){ ?>
 				<?php include _template."layout/breadcrum.php";?>
 			<?php } ?>
+      <?php include _template."layout/product_list.php";?>
 			<?php include _template.$template."_tpl.php";?>	
 			<?php include _template."layout/footer.php";?>
 	</div>
@@ -48,10 +48,7 @@
 </div>
 <div class="clearfix"></div>
 <?=$row_setting['bodycode']?>
-<?php if(!empty($config_cart)){ ?>
-	<link rel="stylesheet" href="assets/css/giohang.css">
-	<script src="assets/js/custom/giohang.js"></script>
-<?php } ?>
+
 <?php include _template."layout/support-online.php";?>
 
 <script src="assets/js/owl/owl.carousel.min.js"></script>

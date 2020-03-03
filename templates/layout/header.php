@@ -1,8 +1,17 @@
 <?php
-$row_logo = fetch_array("select photo_vi,link from #_photo where type='logo' ");
-$row_banner = fetch_array("select photo_vi,link from #_photo where type='banner' ");
+	$d->reset();
+	$d->query("select photo_vi,link from #_photo where type='logo' ");
+	$row_logo = $d->fetch_array();
+
+	$d->reset();
+	$d->query("select photo_vi,link from #_photo where type='banner'");
+	$row_banner = $d->fetch_array();
+
+	$d->reset();
+	$d->query("select photo_vi,link from #_photo where type='quangcao'");
+	$row_qc = $d->fetch_array();
 ?>
-<div id="header" class="d-none">
+<div id="header">
 	<div class="container d-flex">
 		<div id="logo">
 			<a href="">
@@ -17,8 +26,22 @@ $row_banner = fetch_array("select photo_vi,link from #_photo where type='banner'
 	</div>
 </div>
 <div id="menu-top">
+	<div class="container">
 	<a href="#menu_responsive" class="btn-menu"><span class="icon menu_responsive"></span></a>
+	<div class="nav-left">
+		DANH MỤC SẢN PHẨM
+	</div>
 	<?php include _template."components/menu.php";?>
+</div>
+</div>
+<div class="container">
+		<?php include _template."components/slider.php";?>
+		<div class="clearfix"></div>
+</div>
+<div class="container">
+	<a href="<?=$row_qc['link']?>">
+				<img src="upload/hinhanh/<?=$row_qc["photo_vi"]?>" alt="logo" />
+			</a>
 </div>
 <div id="menu_responsive">
 	<ul class="nav-menu">

@@ -41,13 +41,15 @@ if(!empty($_POST)){
 	<div class="row sanpham">
 		<?php foreach($result_sanpham as $stt => $item){ ?>
 			<div class="col-md-3 col-sm-4 col-xs-6">
-				<?php include _template."addons/product_item.php";?>
+				<?php include _template."components/product_item.php";?>
 			</div>
 		<?php } ?>
 
 	</div>
+	<?php if(!empty($paging_sanpham)){ ?>
 	<div class="clearfix"></div>
 	<div class="pagination">
 		<div class="paging paging_ajax" data-_crsf="<?=$_crsf?>" <?php if(!empty($noibat)) { ?>data-noibat="<?=$noibat?>"<?php } ?> <?php if($idlist > 0) { ?> data-idlist="<?=$idlist?>"<?php } ?> <?php if($idcat > 0) { ?> data-idcat="<?=$idcat?>"<?php } ?> <?php if(!empty($type)) { ?>data-type="<?=$type?>"<?php } ?> <?php if(!empty($target)) { ?> data-target="<?=$target?>"<?php } ?> <?php if(!empty($perpage)) { ?> data-perpage="<?=$perpage?>"<?php } ?>><?=$paging_sanpham?></div>
 	</div>
 	<div class="clearfix"></div>
+<?php } ?>

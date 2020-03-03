@@ -1,6 +1,6 @@
 <?php
 	if(!defined('_lib')) die("Error");
- 	error_reporting(0);
+ 	error_reporting(3);
  	define ( 'NN_MSHD' , '087220W'); //Mã số HĐ
 	define ( 'NN_AUTHOR' , 'vohoangtu.nina@gmail.com'); //Email của lập trình
 
@@ -15,8 +15,8 @@
 
 	$config_lang=array(
 		"vi" => "Tiếng Việt",
-		"en" => "Tiếng Anh",
-		"cn" => "Tiếng Trung",
+		// "en" => "Tiếng Anh",
+		// "cn" => "Tiếng Trung",
 		// "kr" => "Tiếng Hàn",
 	);
 	$config_locale = array(

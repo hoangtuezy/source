@@ -1,12 +1,12 @@
 <?php
 $slider =result_array("select ten_vi,photo_vi,link from #_photo where type='slider'  and hienthi=1 order by stt,id desc");
-$width=1366;
-$height = 680;
+$width=910;
+$height = 380;
 $sliderzc = 1;
 $slider_indicators = true;
 $slider_pagination = true;
 ?>
-<div id="slider" class="w-100">
+<div id="slider">
  <div class="swiper-container">
   <div class="swiper-wrapper">
    <?php foreach($slider as $stt => $item){ ?>

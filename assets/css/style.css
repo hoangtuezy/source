@@ -12,8 +12,7 @@ body.index h1{
 @font-face { font-family: "utm-helvetin"; src: url("../fonts/UTM HelvetIns.ttf"); font-weight: normal; }
 @font-face { font-family: "beauty"; src: url("../fonts/UTM Beautiful Caps.ttf"); font-weight: normal; }
 
-@font-face { font-family: "roboto-black"; src: url("../fonts/Roboto-Bold.ttf"); font-weight: normal; }
-
+utm-avobold.ttf
 .gioithieu-title h2{
 	font-family: sfu-helvetin;
 	font-size: 45px;
