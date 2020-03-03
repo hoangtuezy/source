@@ -8,7 +8,7 @@
 	$login_name = '33455b15cd5108e1d0b1772a8c128bb2';
 	$theme_color = '#000';
 	$config['salt']='N0zGTN2ll';
-	$config_path = '';
+	$config_path = '/source';
 	$config_url=$_SERVER["SERVER_NAME"].$config_path;
 	
 	$config['debug']=1;

@@ -57,8 +57,10 @@
         var cach_top = $(window).scrollTop();
         if (cach_top >= 128) {
             $("#menu-top").addClass("sticky_topbar");
+             $(".vertical_menu").removeClass("d-block");
         } else {
             $("#menu-top").removeClass("sticky_topbar");
+            $(".vertical_menu").addClass("d-block");
         }
     });
 </script>
@@ -120,7 +122,7 @@
         },
       }
   });
-var baogia = new Swiper ('#baogia .swiper-container', {
+var baogia = new Swiper ('.sub-videos .swiper-container', {
     // Optional parameters
     loop: true,
     // If we need pagination
@@ -143,15 +145,15 @@ var baogia = new Swiper ('#baogia .swiper-container', {
         },
         768: {
           slidesPerView: 3,
-          spaceBetween: 30,
+          spaceBetween: 10,
         },
         1024: {
           slidesPerView: 4,
-          spaceBetween: 30,
+          spaceBetween: 10,
         },
       }
   });
-  var swiper_product = new Swiper('#ykien .swiper-container', {
+  var subvidecscso = new Swiper('.ykien .swiper-container', {
        
         spaceBetween: 30,
         centeredSlides: true,

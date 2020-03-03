@@ -12,7 +12,7 @@ $slider_pagination = true;
    <?php foreach($slider as $stt => $item){ ?>
      <div class="swiper-slide">
        <a href="<?=$item["link"]?>">
-        <img src="thumb/1-<?=$width?>-<?=$height?>/<?=_upload_hinhanh_l.$item["photo_vi"]?>" class="img-fluid w-100" alt="<?=$item["photo_vi"]?>">
+        <img src="thumb/1-<?=$width?>-<?=$height?>/<?=_upload_hinhanh_l.$item["photo_vi"]?>" class="img-fluid w-100" alt="<?=$item["photo_vi"]?>" onerror='this.src="img/<?=$width?>x<?=$height?>/"'>
       </a>
     </div>
   <?php } ?>
