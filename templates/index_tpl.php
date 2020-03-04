@@ -1,3 +1,5 @@
+
+
 <?php $congtrinh = result_array("select * from #_baiviet where type='dich-vu' and hienthi=1 and noibat=1 order by stt asc "); ?>
 <div id="congtrinh">
 	<div class="container">
@@ -25,7 +27,7 @@
 </div>
 <?php $video = result_array("select * from #_video where type='video' and hienthi=1  order by stt asc "); ?>
 <div id="video">
-	<a href="<?=$video[0]["links"]?>">
+	<a href="<?=$video[0]["links"]?>"  data-fancybox="video">
 		<img src="upload/video/<?=$video[0]["photo"]?>" alt="<?=$video[0]["photo"]?>" class="w-100 img-fluid" onerror='this.src="img/1366x450/"'>
 	</a>
 	<div class="sub-videos">
@@ -35,16 +37,13 @@
 				<?php foreach($video as $item): ?>
 					<div class="swiper-slide">
 						<div>
-							<a href="<?=$item["links"]?>"><img src="thumb/1-108-108/upload/video/<?=$item["photo"]?>" alt="<?=$item["ten_$lang"]?>" onerror='this.src="img/108x108/"'></a>
+							<a href="<?=$item["links"]?>" data-fancybox="video"><img src="thumb/1-108-108/upload/video/<?=$item["photo"]?>" alt="<?=$item["ten_$lang"]?>" onerror='this.src="img/108x108/"'></a>
 						</div>
 					</div>
 				<?php endforeach; ?>
 			</div>
 			<!-- If we need pagination -->
 			<!-- If we need navigation buttons -->
-			<div class="swiper-button-prev"></div>
-			<div class="swiper-button-next"></div>
-
 			<!-- If we need scrollbar -->
 		</div>
 	</div>
@@ -54,16 +53,19 @@
 $gioithieu_index = fetch_array("select * from #_info where type='gioi-thieu' ");
 $minibox_tintuc = result_array("select * from #_baiviet where type='tin-tuc' and hienthi=1 and noibat=1 order by stt asc limit 3");
 $result_video= result_array("select id,ten_$lang,links from #_video where hienthi=1 and type='video' order by stt,id desc");
+$result_album = result_array("select * from #_album where type='album' and hienthi=1 ");
 if(!empty($minibox_tintuc)){ 
 	?>
 	<div id="toolbox">
 		<div class="container" id="minibox_vertical_baiviet">
-			<div class="vertical_tintuc">
+			<div class="row">
+			<div class="vertical_tintuc col-lg-6 col-md-12">
+				<h2>TIN TỨC</h2>
 					<!-- Additional required wrapper -->
 					<div class="w-100 d-flex justify-content-between flex-wrap">
 						<?php foreach($minibox_tintuc as $stt => $item){
 							?>
-							<div class="vertical_tintuc_item w-100">
+							<div class="vertical_tintuc_item w-100 hover">
 								<div class=" d-flex justify-content-between flex-wrap">
 									<div class="image hieuung">
 										<a href="<?=$item["tenkhongdau"]?>" class="d-block">
@@ -90,8 +92,27 @@ if(!empty($minibox_tintuc)){
 						<?php } ?>
 					</div>
 			</div>
-			<div class="album">
+			<div class="album col-lg-6 col-md-12">
+				<h2>ALBUM ẢNH</h2>
+				<div class="w-100 d-flex justify-content-between flex-wrap">
+					<div class="main_album hover overlay">
+						<div class="image">
+						<a href="upload/album/<?=$result_album[0]['photo']?>" data-fancybox="album">
+							<img src="thumb/1-760-880/upload/album/<?=$result_album[0]['photo']?>" alt="<?=$result_album[0]['photo']?>" class="img-fluid w-100">
+						</a>
+						</div>
+						<h3 class="overlay-item"><?=$result_album[0]['ten_'.$lang]?></h3>
+					</div>
+					<div class="sub_album">
+						<?php foreach($result_album as $item): ?>
+							<a href="upload/album/<?=$item['photo']?>" data-fancybox="album">
+							<img src="thumb/1-185-210/upload/album/<?=$item['photo']?>" alt="<?=$item['photo']?>" class="img-fluid w-100">
+						</a>
 				
+						<?php endforeach;?>
+					</div>
+				</div>
+			</div>
 			</div>
 		</div>
 	</div>

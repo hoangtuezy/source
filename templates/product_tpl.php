@@ -7,7 +7,7 @@ if(count($result_product) > 0){
 		<div class="scrollbar">
 			<div class="row sanpham row-32">
 				<?php foreach($result_product as $item) { ?>
-					<div class="col-md-3 col-sm-4 col-xs-6 col-12">
+					<div class="col-md-3 col-sm-4 col-6">
 						<?php include _template."components/product_item.php";?>
 					</div>
 				<?php } ?>

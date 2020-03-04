@@ -32,7 +32,7 @@
 </script>
 
 
-<div class="control_frm" style="margin-top:25px;">
+<div class="control_frm breadcrumb" style="margin-top:25px;">
     <div class="bc">
         <ul id="breadcrumbs" class="breadcrumbs">
         	<li><a href="index.php?com=video&act=man<?php if($_REQUEST['type']!='') echo'&type='. $_REQUEST['type'];?>"><span>Quản lý <?=$title_main?></span></a></li>
@@ -50,8 +50,8 @@
 <form name="f" id="f" method="post">
 <div class="control_frm" style="margin-top:0;">
   	<div style="float:left;">
-    	<input type="button" class="blueB" value="Thêm" onclick="location.href='index.php?com=video&act=add<?php if($_REQUEST['type']!='') echo'&type='. $_REQUEST['type'];?>'" />
-        <input type="button" class="blueB" value="Xoá Chọn" id="xoahet" />
+    	<input type="button" class="btn btn-primary" value="Thêm" onclick="location.href='index.php?com=video&act=add<?php if($_REQUEST['type']!='') echo'&type='. $_REQUEST['type'];?>'" />
+        <input type="button" class="btn btn-primary" value="Xoá Chọn" id="xoahet" />
 
     </div>  
 </div>
@@ -62,8 +62,8 @@
     </span>
     <h6>Chọn tất cả</h6>
     <div class="timkiem">
-	    <input type="text" value="" placeholder="Nhập từ khóa tìm kiếm ">
-	    <button type="button" class="blueB"  value="">Tìm kiếm</button>
+	    <input type="text" value="" placeholder="Nhập từ khóa tìm kiếm " class="form-control">
+	    <button type="button" class="btn btn-primary"  value="">Tìm kiếm</button>
     </div>
   </div>
   <table cellpadding="0" cellspacing="0" width="100%" class="sTable withCheck mTable" id="checkAll">

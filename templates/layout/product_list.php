@@ -27,7 +27,7 @@ if(count($result_product) > 0){
             <div class="tab-pane fade show active" id="<?=$list['tenkhongdau']?>-all" role="tabpanel" aria-labelledby="<?=$list['tenkhongdau']?>-all-tab">
                 <div class="row sanpham">
                     <?php foreach($result_product as $item){ ?>
-                    <div class="col-3">
+                    <div class="col-md-3 col-sm-4 col-6">
                         <?php include _template."components/product_item.php";?>
                     </div>
                     
@@ -53,7 +53,7 @@ if(count($result_product) > 0){
             <div class="tab-pane fade show <?php //$stt == 0?'active':''?>" id="<?=return_uid($cat["id"])?>" role="tabpanel" aria-labelledby="<?=return_uid($cat["id"])?>-tab">
                 <div class="row sanpham">
                     <?php foreach($_result_sanpham as $item){ ?>
-                    <div class="col-3">
+                    <div class="col-md-3 col-sm-4 col-6">
                         <?php include _template."components/product_item.php";?>
                     </div>
                     <?php } ?>

@@ -70,7 +70,7 @@
 ?>
 <div class="wrapper">
 
-<div class="control_frm" style="margin-top:25px;">
+<div class="control_frm breadcrumb" style="margin-top:25px;">
     <div class="bc">
         <ul id="breadcrumbs" class="breadcrumbs">
         	<li><a href="index.php?com=album&act=add<?php if($_REQUEST['type']!='') echo'&type='. $_REQUEST['type'];?>"><span>Thêm <?=$title_main?></span></a></li>
@@ -122,30 +122,7 @@
 		<?php } ?>
 		<?php } ?>
 			
-        <div class="formRow lang_hidden lang_vi active">
-			<label>Tiêu đề</label>
-			<div class="formRight">
-                <input type="text" name="ten_vi" title="Nhập tên danh mục" id="ten_vi" class="tipS validate[required]" value="<?=@$item['ten_vi']?>" />
-			</div>
-			<div class="clear"></div>
-		</div>
-		
-
-		<div class="formRow lang_hidden lang_en">
-			<label>Tiêu đề (Tiếng anh)</label>
-			<div class="formRight">
-                <input type="text" name="ten_en" title="Nhập tên danh mục" id="ten_en" class="tipS validate[required]" value="<?=@$item['ten_en']?>" />
-			</div>
-			<div class="clear"></div>
-		</div>
-
-		<div class="formRow lang_hidden lang_cn">
-			<label>Tiêu đề (Tiếng trung)</label>
-			<div class="formRight">
-                <input type="text" name="ten_cn" title="Nhập tên danh mục" id="ten_cn" class="tipS validate[required]" value="<?=@$item['ten_cn']?>" />
-			</div>
-			<div class="clear"></div>
-		</div>
+        <?php include _template."helper/ten_lang.php";?>
        <!--
 		<div class="formRow">
 	      	<label>Hình ảnh kèm theo: </label>
@@ -183,7 +160,7 @@
 		<div class="formRow lang_hidden lang_vi active">
 			<label>Mô tả</label>
 			<div class="formRight">
-                <textarea rows="4" cols="" title="Nhập mô tả . " class="tipS" name="mota_vi"><?=@$item['mota_vi']?></textarea>
+                <textarea rows="4" cols="" title="Nhập mô tả . " class="tipS form-control" name="mota_vi"><?=@$item['mota_vi']?></textarea>
 			</div>
 			<div class="clear"></div>
 		</div>
@@ -191,7 +168,7 @@
 		<div class="formRow lang_hidden lang_en">
 			<label>Mô tả (Tiếng anh)</label>
 			<div class="formRight">
-                <textarea rows="4" cols="" title="Nhập mô tả . " class="tipS" name="mota_en"><?=@$item['mota_en']?></textarea>
+                <textarea rows="4" cols="" title="Nhập mô tả . " class="tipS form-control" name="mota_en"><?=@$item['mota_en']?></textarea>
 			</div>
 			<div class="clear"></div>
 		</div>
@@ -234,7 +211,7 @@
 		<div class="formRow">
 			<label>Title</label>
 			<div class="formRight">
-				<input type="text" value="<?=@$item['title']?>" name="title" title="Nội dung thẻ meta Title dùng để SEO" class="tipS" />
+				<input type="text" value="<?=@$item['title']?>" name="title" title="Nội dung thẻ meta Title dùng để SEO" class="tipS form-control" />
 			</div>
 			<div class="clear"></div>
 		</div>
@@ -242,7 +219,7 @@
 		<div class="formRow">
 			<label>Từ khóa</label>
 			<div class="formRight">
-				<input type="text" value="<?=@$item['keywords']?>" name="keywords" title="Từ khóa chính cho danh mục" class="tipS" />
+				<input type="text" value="<?=@$item['keywords']?>" name="keywords" title="Từ khóa chính cho danh mục" class="tipS form-control" />
 			</div>
 			<div class="clear"></div>
 		</div>
@@ -250,7 +227,7 @@
 		<div class="formRow">
 			<label>Description:</label>
 			<div class="formRight">
-				<textarea rows="4" cols="" title="Nội dung thẻ meta Description dùng để SEO" class="tipS" name="description"><?=@$item['description']?></textarea>
+				<textarea rows="4" cols="" title="Nội dung thẻ meta Description dùng để SEO" class="tipS form-control" name="description"><?=@$item['description']?></textarea>
                 <input readonly="readonly" type="text" style="width:25px; margin-top:10px; text-align:center;" name="des_char" value="<?=@$item['des_char']?>" /> ký tự <b>(Tốt nhất là 68 - 170 ký tự)</b>
 			</div>
 			<div class="clear"></div>
@@ -260,8 +237,8 @@
 			<div class="formRight">
                 <input type="hidden" name="type" id="id_this_type" value="<?=$_REQUEST['type']?>" />
                 <input type="hidden" name="id" id="id_this_post" value="<?=@$item['id']?>" />
-            	<input type="submit" class="blueB" onclick="TreeFilterChanged2(); return false;" value="Hoàn tất" />
-            	<a href="index.php?com=album&act=man<?php if($_REQUEST['type']!='') echo'&type='. $_REQUEST['type'];?>" onClick="if(!confirm('Bạn có muốn thoát không ? ')) return false;" title="" class="button tipS" original-title="Thoát">Thoát</a>
+            	<input type="submit" class="btn btn-primary" onclick="TreeFilterChanged2(); return false;" value="Hoàn tất" />
+            	<a href="index.php?com=album&act=man<?php if($_REQUEST['type']!='') echo'&type='. $_REQUEST['type'];?>" onClick="if(!confirm('Bạn có muốn thoát không ? ')) return false;" title="" class="btn btn-secondary tipS" original-title="Thoát">Thoát</a>
 			</div>
 			<div class="clear"></div>
 		</div>

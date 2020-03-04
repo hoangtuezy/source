@@ -12,29 +12,23 @@
  </li>
   <li class="menu categories_li"><a href="" title="" class="exp"><span>Dịch Vụ</span><strong></strong></a>
     <ul class="sub"> 
+      <li><a href="index.php?com=baiviet&act=man_list&type=dich-vu">DM Cấp 1</a></li>
      <li><a href="index.php?com=baiviet&act=man&type=dich-vu">Dịch Vụ</a></li>
    </ul>
  </li>
-   <li class="menu categories_li"><a href="" title="" class="exp"><span>Công Trình</span><strong></strong></a>
-    <ul class="sub"> 
-      <li><a href="index.php?com=baiviet&act=man_list&type=cong-trinh">DM Cấp 1</a></li>
-     <li><a href="index.php?com=baiviet&act=man&type=cong-trinh">Công Trình</a></li>
-   </ul>
- </li>
+
  <li class="menu categories_li"><a href="" title="" class="exp"><span>Bài viết</span><strong></strong></a>
   <ul class="sub">
    <li><a href="index.php?com=info&act=capnhat&type=gioi-thieu">Giới Thiệu</a></li>
-   <li><a href="index.php?com=baiviet&act=man&type=khach-hang">Ý Kiến khách hàng</a></li>
    <li><a href="index.php?com=baiviet&act=man&type=tuyen-dung">Tuyển Dụng</a></li>
     <li><a href="index.php?com=baiviet&act=man&type=tin-tuc">Tin TỨc</a></li>
-    <li><a href="index.php?com=baiviet&act=man&type=quy-trinh">Quy Trình</a></li>
-    <li><a href="index.php?com=baiviet&act=man&type=bao-gia">Bảng Báo Giá</a></li>
  </ul>
 </li>
 <li class="menu categories_li"><a href="#" title="" class="exp"><span>Thông tin công ty</span><strong></strong></a>
   <ul class="sub">
     <!--<li<?php if($_GET['type']=='bgweb') echo ' class="this"' ?>><a href="index.php?com=background&act=capnhat&type=bgweb" title="">Background body</a></li>-->
     <li><a href="index.php?com=bannerqc&act=capnhat&type=logo" title="">Logo</a></li>
+    <li><a href="index.php?com=bannerqc&act=capnhat&type=banner" title="">Banner</a></li>
     <li><a href="index.php?com=bannerqc&act=capnhat&type=favicon" title="">Favicon</a></li>
     <!-- <li><a href="index.php?com=lkweb&act=man&type=lkweb" title="">Link liên kết</a></li> -->
     <!-- <li><a href="index.php?com=bannerqc&act=capnhat&type=popup" title="">Popup</a></li> -->
@@ -52,6 +46,7 @@
 <li class="menu categories_li"><a href="#" title="" class="exp"><span>Slider - Video - Hình ảnh</span><strong></strong></a>
   <ul class="sub">
     <li><a href="index.php?com=photo&act=man_photo&type=slider" title="">Hình ảnh slider</a></li>
+    <li><a href="index.php?com=bannerqc&act=capnhat&type=quangcao" title="">Quảng cáo</a></li>
   </ul>
 </li>
 
@@ -59,11 +54,8 @@
   <ul class="sub"> 
    <li><a href="index.php?com=component&act=man&type=san-pham" title="">Sản phẩm</a></li>
    <li><a href="index.php?com=component&act=man&type=tin-tuc" title="">Tin Tức</a></li>
-   <li><a href="index.php?com=component&act=man&type=quy-trinh" title="">Quy Trình</a></li>
-   <li><a href="index.php?com=component&act=man&type=bao-gia" title="">Báo Giá</a></li>
    <li><a href="index.php?com=component&act=man&type=tuyen-dung" title="">Tuyển Dụng</a></li>
    <li><a href="index.php?com=component&act=man&type=dich-vu" title="">Dịch Vụ</a></li>
-   <li><a href="index.php?com=component&act=man&type=cong-trinh" title="">Công Trình</a></li>
 </ul>
 </li>
 

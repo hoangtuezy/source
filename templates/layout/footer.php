@@ -2,7 +2,7 @@
 	<div class="container">
 		
 		<div class="row">
-			<div class="col-md-5 col-sm-12 col-12 p-5">
+			<div class="col-md-5 col-sm-12 col-12 p-md-5">
 				<h2><?=$row_setting["ten_$lang"]?></h2>
 				<div class="icon marker">Địa chỉ: <?=$row_setting["diachi_$lang"]?></div>
 				<div class="icon hotline">Số điện thoại: <?=$row_setting["hotline"]?></div>

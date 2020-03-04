@@ -3,8 +3,8 @@ $slider =result_array("select ten_vi,photo_vi,link from #_photo where type='slid
 $width=910;
 $height = 380;
 $sliderzc = 1;
-$slider_indicators = true;
-$slider_pagination = true;
+$slider_indicators = false;
+$slider_pagination = false;
 ?>
 <div id="slider">
  <div class="swiper-container">

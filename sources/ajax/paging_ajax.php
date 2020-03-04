@@ -40,7 +40,7 @@ if(!empty($_POST)){
 	?>
 	<div class="row sanpham">
 		<?php foreach($result_sanpham as $stt => $item){ ?>
-			<div class="col-md-3 col-sm-4 col-xs-6">
+			<div class="col-md-3 col-sm-4 col-6">
 				<?php include _template."components/product_item.php";?>
 			</div>
 		<?php } ?>

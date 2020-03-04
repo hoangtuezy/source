@@ -37,6 +37,9 @@
 		<?php if(!empty($product_list)){ ?>
 			<div class="vertical_menu d-block">
 						<ul class="nav-menu-list">
+							<li>
+								<?php include _template."components/timkiem.php";?>
+							</li>
 							<?php foreach($product_list as $list){ ?>
 								<li class="menu-list"><a href="<?=$list["tenkhongdau"]?>" class="menu-list-text"><?=$list["ten_$lang"]?></a>
 									<?php  
@@ -71,17 +74,21 @@
 		<?php include _template."components/slider.php";?>
 		<div class="clearfix"></div>
 </div>
+
+<?php if($com=='index'){ ?>
 <div class="container">
 	<a href="<?=$row_qc['link']?>">
-				<img src="upload/hinhanh/<?=$row_qc["photo_vi"]?>" alt="logo" onerror='this.src="img/1200x250/"'/>
+				<img src="upload/hinhanh/<?=$row_qc["photo_vi"]?>" alt="logo" onerror='this.src="img/1200x250/"' class="img-fluid"/>
 			</a>
 </div>
-<div id="menu_responsive">
-	<ul class="nav-menu">
-		<li class="menu <?=$com=='index'?'active':''?>"><a href=""><span>Trang Chủ</span></a></li>
-		<li class="menu <?=$com=='gioi-thieu'?'active':''?>"><a href="gioi-thieu"><span>Giới thiệu</span></a></li>
+<?php } ?>
 
-		<li class="menu <?=$com=='san-pham'?'active':''?>"><a href="san-pham"><span>Sản phẩm</span></a>
+<div id="menu_responsive">
+	<ul >
+		<li class="<?=$com=='index'?'active':''?>"><a href=""><span>Trang Chủ</span></a></li>
+		<li class="<?=$com=='gioi-thieu'?'active':''?>"><a href="gioi-thieu"><span>Giới thiệu</span></a></li>
+
+		<li class="<?=$com=='san-pham'?'active':''?>"><a href="san-pham"><span>Sản phẩm</span></a>
 			<?php if(!empty($product_list)){ ?>
 				<ul class="nav-menu-list">
 					<?php foreach($product_list as $list){ ?>
@@ -110,10 +117,10 @@
 				</ul>
 			<?php }?>
 		</li>
-		<li class="menu <?=$com=='dich-vu'?'active':''?>"><a href="dich-vu"><span>Dịch Vụ  </span></a></li>
-		<li class="menu <?=$com=='tin-tuc'?'active':''?>"><a href="tin-tuc"><span>Tin Tức</span></a></li>
-		<li class="menu <?=$com=='tuyen-dung'?'active':''?>"><a href="tuyen-dung"><span>Tuyển Dụng</span></a></li>
-		<li class="menu <?=$com=='lien-he'?'active':''?>"><a href="lien-he"><span>Liên Hệ</span></a></li>
+		<li class="<?=$com=='dich-vu'?'active':''?>"><a href="dich-vu"><span>Dịch Vụ  </span></a></li>
+		<li class="<?=$com=='tin-tuc'?'active':''?>"><a href="tin-tuc"><span>Tin Tức</span></a></li>
+		<li class="<?=$com=='tuyen-dung'?'active':''?>"><a href="tuyen-dung"><span>Tuyển Dụng</span></a></li>
+		<li class="<?=$com=='lien-he'?'active':''?>"><a href="lien-he"><span>Liên Hệ</span></a></li>
 
 	</ul>
 </div>
