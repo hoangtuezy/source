@@ -20,6 +20,7 @@ $('.update_stt').keyup(function(event) {
 		}
 	});
 });
+
 $('.delete_images').click(function(){
 if (confirm('Bạn có muốn xóa hình này ko ? ')) {
 var id = $(this).attr('title');

@@ -1,0 +1,1 @@
+<?php return array("id","madonhang","tinhthanh","id_quanhuyen","phivanchuyen","view","giagiam","hoten","gioitinh","dienthoai","diachi","email","httt","tonggia","noidung","ghichu","ngaytao","trangthai","goitruoc","xuathd","tencty","diachicty","mast","diachigiao","phitinh","id_thanhpho","pt_thanhtoan","pt_nhanhang","receiver","sender","payment","send_time");?>

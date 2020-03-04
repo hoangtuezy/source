@@ -1,0 +1,1 @@
+<?php return array("id","id_vitri","id_list","photo_vi","photo_en","photo_cn","photo_kr","thumb_vi","thumb_en","thumb_cn","thumb_kr","thumb","ten_vi","ten_en","ten_cn","link","mota_vi","mota_en","mota_cn","stt","hienthi","type","id_thanhvien","noidung_vi","noidung_en","noidung_cn","ten_kr","mota_kr","noidung_kr");?>

@@ -1,0 +1,1 @@
+<?php return array("id","type","ten_vi","ten_en","name_vi","name_en","tenkhongdau","quangcao","quangcao_thumb","links","title","keywords","description","photo","thumb","stt","hienthi","ngaytao","ngaysua","mota_vi","noidung_vi","mota_en","noidung_en","ten_cn","mota_cn","noidung_cn","ten_kr","mota_kr","noidung_kr");?>

@@ -1,0 +1,1 @@
+<?php return array("id","ten","ten_com","act_com","danhmuc","type","act","hienthi","stt");?>

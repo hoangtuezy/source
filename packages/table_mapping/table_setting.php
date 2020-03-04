@@ -1,0 +1,1 @@
+<?php return array("id","title","keywords","description","youtube","whatapp","facebook","zalo","viber","dienthoai","hotline","email","website","toado","scriptcode","bodycode","sanpham","diachi_en","diachi_vi","ten_vi","slogan_en","slogan_vi","ten_en");?>

@@ -1,0 +1,1 @@
+<?php return array("id","type","com","ten","title","keywords","description","h1","h2","h3","h4","h5","h6","stt","hienthi","ngaytao","ngaysua","photo","thumb");?>

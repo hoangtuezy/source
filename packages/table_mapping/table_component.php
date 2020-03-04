@@ -1,0 +1,1 @@
+<?php return array("id","name","source","template","type","description","keywords","title","photo");?>

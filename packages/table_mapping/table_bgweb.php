@@ -1,0 +1,1 @@
+<?php return array("id","re_peat","tren","trai","fix_bg","mauneen","type","photo","stt","hienthi","ngaytao","ngaysua");?>

@@ -1,0 +1,1 @@
+<?php return array("id","ten","zalo","skype","viber","dienthoai","email","stt","hienthi","ngaytao","ngaysua","link");?>
