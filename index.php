@@ -42,5 +42,4 @@ if($_POST['command']=='add' && $_POST['productid']>0){
 	include_once _source."template.php";
 	$_SESSION['links']=getCurrentPageURL();
 		include 'desktop.php';
-
 	?>

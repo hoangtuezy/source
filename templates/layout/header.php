@@ -15,73 +15,28 @@
 	$d->query("select * from #_product_list where type='san-pham' and hienthi=1 and noibat=1 order by stt asc ");
 	$product_list = $d->result_array();
 ?>
-<div id="header">
-	<div class="container d-flex">
-		<div id="logo">
-			<a href="">
-				<img src="upload/hinhanh/<?=$row_logo["photo_vi"]?>" alt="logo" onerror='this.src="img/285x142/"'/>
-			</a>
+<div id="topbar">
+	<div class="container d-flex justify-content-between flex-wrap">
+		<div class="col-md-9 d-flex justify-content-between flex-wrap">
+		<span>Địa chỉ: <?=$row_setting["diachi_$lang"]?></span>
+		<span>Email: <?=$row_setting["email"]?></span>
+		<span>tel: <?=$row_setting["hotline"]?> - <?=$row_setting["dienthoai"]?></span>
 		</div>
-		<div id="banner">
-			<a href="">
-				<img src="upload/hinhanh/<?=$row_banner["photo_vi"]?>" alt="banner"  class="img-fluid" onerror='this.src="img/603x142/"'/>
-			</a>
-		</div>
+		<?=layout_mxh(38,38,'mxh_top')?>
 	</div>
 </div>
 <div id="menu-top">
 	<div class="container">
 	<a href="#menu_responsive" class="btn-menu"><span class="icon menu_responsive"></span></a>
-	<div class="nav-left">
-		DANH MỤC SẢN PHẨM
-		<?php if(!empty($product_list)){ ?>
-			<div class="vertical_menu d-block">
-						<ul class="nav-menu-list">
-							<li>
-								<?php include _template."components/timkiem.php";?>
-							</li>
-							<?php foreach($product_list as $list){ ?>
-								<li class="menu-list"><a href="<?=$list["tenkhongdau"]?>" class="menu-list-text"><?=$list["ten_$lang"]?></a>
-									<?php  
-										$product_cat = result_array("select id,tenkhongdau,ten_$lang from #_".'product'."_cat where hienthi=1 and id_list='".$list['id']."'");
-										if(!empty($product_cat)){ ?>
-											<ul class="nav-menu-cat">
-												<?php foreach($product_cat as $cat){ ?>
-													<li class="menu-cat"><a href="<?=$cat["tenkhongdau"]?>"><?=$cat["ten_$lang"]?></a>
-														<?php 
-															$product_items = result_array("select id,tenkhongdau,ten_$lang from #_".'product'."_item where hienthi=1 and id_list='".$list['id']."'");
-															if(!empty($product_items)){ ?>
-																<ul class="nav-menu-item">
-																	<?php foreach($product_items as $items){ ?>
-																		<li class="menu-item"><a href="<?=$items["tenkhongdau"]?>"><?=$items["ten_$lang"]?></a></li>
-																	<?php } ?>
-																</ul>
-															<?php } ?>
-														</li>
-													<?php } ?>
-												</ul>
-										<?php } ?>	
-									</li>	
-								<?php }?>
-							</ul>
-							</div>
-						<?php }?>
-	</div>
+	<div id="logo">
+			<a href="">
+				<img src="upload/hinhanh/<?=$row_logo["photo_vi"]?>" alt="logo" onerror='this.src="img/285x142/"'/>
+			</a>
+		</div>
 	<?php include _template."components/menu.php";?>
 </div>
 </div>
-<div class="container">
 		<?php include _template."components/slider.php";?>
-		<div class="clearfix"></div>
-</div>
-
-<?php if($com=='index'){ ?>
-<div class="container">
-	<a href="<?=$row_qc['link']?>">
-				<img src="upload/hinhanh/<?=$row_qc["photo_vi"]?>" alt="logo" onerror='this.src="img/1200x250/"' class="img-fluid"/>
-			</a>
-</div>
-<?php } ?>
 
 <div id="menu_responsive">
 	<ul >

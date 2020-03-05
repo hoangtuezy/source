@@ -498,7 +498,7 @@
 					@define ( _height_thumb , 270 );
 					break;
 				default:
-					@define ( _width_thumb , 450 );
+					@define ( _width_thumb , 375 );
 					@define ( _height_thumb , 270 );
 					break;
 			}
@@ -651,8 +651,8 @@
 					@define ( _height_thumb , 500 );
 					break;
 				default:
-					@define ( _width_thumb , 144 );
-					@define ( _height_thumb , 144 );
+					@define ( _width_thumb , 160 );
+					@define ( _height_thumb , 160 );
 					break;
 			}
 			
@@ -1632,8 +1632,8 @@ case 'thanh-toan-giao-nhan':
 			$title_main = "Hình ảnh slider";
 			$config_list = "false";
 			$config_mota = "false";
-			@define ( _width_thumb , 910 );
-			@define ( _height_thumb , 380);
+			@define ( _width_thumb , 1366 );
+			@define ( _height_thumb , 510);
 			@define ( _style_thumb , 1 );
 			@define ( _img_type , 'jpg|gif|png|jpeg|PNG|JPG|JPEG|GIF' );
 			$ratio_ = 1;

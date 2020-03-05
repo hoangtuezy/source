@@ -57,11 +57,73 @@
    
     breakpoints: {
         640: {
-          slidesPerView: 2,
+          slidesPerView: 3,
           spaceBetween: 20,
         },
         768: {
+          slidesPerView: 5,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 6,
+          spaceBetween: 30,
+        },
+      }
+  });
+   var mySwiper_dichvu = new Swiper ('#dichvu .swiper-container', {
+    // Optional parameters
+    loop: true,
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+   
+    breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        1024: {
           slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      }
+  }); 
+   var mySwiper_visaochon = new Swiper ('#visaochon .swiper-container', {
+    // Optional parameters
+    loop: true,
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+   
+    breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
           spaceBetween: 30,
         },
         1024: {
@@ -69,7 +131,7 @@
           spaceBetween: 30,
         },
       }
-  });
+  }); 
 var baogia = new Swiper ('.sub-videos .swiper-container', {
     // Optional parameters
     loop: true,

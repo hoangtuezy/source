@@ -10,7 +10,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/base.css">
-
 	<link rel="stylesheet" href="assets/css/news.css">
 	<link rel="stylesheet" href="assets/js/swiper/swiper.min.css">
 	<link rel="stylesheet" href="assets/js/owl/owl.carousel.min.css">
@@ -33,9 +32,9 @@
 				<?php include _template."layout/breadcrum.php";?>
 			<?php } ?>
       <?php if($com=='index'){ ?>
+		<?php include _template.$template."_tpl.php";?>
       <?php include _template."components/circle.php";?>
       <?php include _template."layout/product_list.php";?>
-			<?php include _template.$template."_tpl.php";?>
       <?php }else{ ?>	
   <?php include _template.$template."_tpl.php";?>
         <?php } ?>

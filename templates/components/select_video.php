@@ -17,6 +17,7 @@ $result_video = $d->result_array();
 		$(window).on("load",function() {
 		$("#listVideo").change(function(){
 			var id=$(this).val();
+			var height = $(this).attr('data-height');
 			$("#ajax_video_123").load("load_video.php", "id="+ id);
 			return false;
 		});
@@ -24,18 +25,21 @@ $result_video = $d->result_array();
 	})
 	
 </script>
+<?php
+$vheight = 400;
 
-<div id="ajax_video_123">
-	<iframe  width="100%" height="300" src="//www.youtube.com/embed/<?=youtobi($result_video[0]['links'])?>" frameborder="0" allowfullscreen></iframe>
+?>
+<div id="ajax_video_123" class="w-100">
+	<iframe  width="100%" height="<?=$vheight?>" src="//www.youtube.com/embed/<?=youtobi($result_video[0]['links'])?>" frameborder="0" allowfullscreen></iframe>
 </div>
-<div class=" d-none">
+<div class="w-100">
 	<select style="width: 100%;margin-top: 5px;" name="listVideo" id="listVideo" class="form-control">
 		<?php for($i=0; $i<count($result_video); $i++){?>
-			<option value="<?=$result_video[$i]['id']?>"><?=$result_video[$i]['ten_vi']?></option>
+			<option value="<?=$result_video[$i]['id']?>-<?=$vheight?>"><?=$result_video[$i]['ten_vi']?></option>
 		<?php } ?>
 	</select>
 </div>
-<div id="slider_video_select" class="mt-2">
+<div id="slider_video_select" class="mt-2  d-none">
 <div class="swiper-container">
 	<div class="swiper-wrapper">
 		<?php foreach($result_video as $stt => $item){
