@@ -1,24 +1,43 @@
 <div id="footer">
 	<div class="container">
-		
+				<h2 class="text-center"><?=$row_setting["ten_$lang"]?></h2>
 		<div class="row">
-			<div class="col-md-5 col-sm-12 col-12 p-md-5">
-				<h2><?=$row_setting["ten_$lang"]?></h2>
-				<div class="icon marker">Địa chỉ: <?=$row_setting["diachi_$lang"]?></div>
-				<div class="icon hotline">Số điện thoại: <?=$row_setting["hotline"]?></div>
-				<div class="icon email">Email: <?=$row_setting["email"]?></div>
-				<div class="icon global">Website: <?=$row_setting["website"]?></div>
+			<div class="col-md-3 col-sm-12 col-12">
+				<div class="icon marker">Địa chỉ<br /> <?=$row_setting["diachi_$lang"]?></div>
+				<div class="icon hotline">Hotline <br /><?=$row_setting["hotline"]?></div>
+				<div class="icon email">Email <br /><?=$row_setting["email"]?></div>
 			</div>
-			<div class="col-md-7 col-sm-12 col-12 bando_footer">
-				<?=$row_setting["toado"]?>
+			<div class="col-md-9 col-sm-12 col-12 ">
+				<div class="newsletter">
+					<h3>FORM LIÊN HỆ</h3>
+					<form action="nhan-mail" method="POST">
+						<input type="hidden" name="nhanmail">
+						<div class="form-group">
+							<label for="ten" class="col-md-3 text-right">Họ và tên</label>
+							<input type="text" name="ten" placeholder="">
+						</div>
+						<div class="form-group">
+							<label for="email" class="col-md-3 text-right">Địa chỉ mail</label>
+							<input type="text" name="email" placeholder="">
+						</div>
+						<div class="form-group">
+							<label for="dienthoai" class="col-md-3 text-right">Số điện thoại</label>
+							<input type="text" name="dienthoai" placeholder="">
+						</div>
+						<div class="form-group d-flex">
+							<label for="noidung" class="col-md-3 text-right">Nội dung</label>
+							<textarea name="noidung" id="" cols="30" rows="4" class="col-md-9"></textarea>
+						</div>
+					</form>
+				</div>
 			</div>
 		</div>
-		<div class="copyright">
-			© Copyright <?=date('Y',time())?> <?=$row_setting["ten_$lang"]?>. ALL RIGHT REVERSED. DESIGN  BY NINA
-		</div>
+		
 	</div>
 </div>
-
+<div class="copyright">
+			© Copyright <?=date('Y',time())?> <?=$row_setting["ten_$lang"]?>. ALL RIGHT REVERSED. DESIGN  BY NINA
+		</div>
 
 
 

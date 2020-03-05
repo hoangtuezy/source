@@ -10,6 +10,17 @@ iframe{
 #quytrinh{
 	padding-top: 30px;
 }
+.copyright{
+	height:50px;
+	display:flex;
+	align-items:center;
+	background-color: #878787;
+	text-align:center;
+	font-size: 13px;
+	color: #FFF;
+	text-align:center;
+	justify-content:center;
+}
 #wrapper{
 	position:relative;
 	z-index:99;
@@ -332,45 +343,48 @@ color: #333;
 }
 
 #footer{
-	background: url(../images/bg_footer.jpg);
+	/* background: url(../images/bg_footer.jpg); */
 	background-size: cover;
 	padding: 45px 0;
-	color: #c0bebf;
-	font-size: 15px;
+	color: #333;
+	font-size: 13px;
 	margin-top: 15px;
+	font-family: futura-book;
 }
 #footer .container{
-	background-color: #18191e;
-	border: 10px solid #202127;
+	/* background-color: #18191e; */
+	/* border: 10px solid #202127; */
 }
 #footer .icon{
   padding-left: 40px;
   margin-bottom: 15px;
-  border-bottom: 1px dashed #ccc;
+  border-bottom: 1px solid #ccc;
   padding-bottom: 10px;
   height: unset;
 }
 #footer .icon:before{
-  color: #FFF;
+  color: #878787;
   /* border: 1px solid #ffffff5e; */
   width: 32px!important;
   height: 32px!important;
   border-radius: 5px;
   margin-right: 40px;
-  font-size: 14px;
+  font-size: 32px;
 }
 #footer h2{
-	font-family: flamenco;
-	font-size: 53px;
+	font-family: futura-book;
+	font-size: 36px;
 	margin-bottom: 15px;
-	color: #009c14;
+	color: #333;
+	text-transform: uppercase;
 }
 #footer input,#footer textarea{
 	border-radius: 0;
-	border: 0;
+	border: 1px solid #dfdfdf;
 }
 #footer input{
-	height: 45px;
+	height: 40px;
+	width: 383px;
 }
 .btn-contact-submit{
 	width: 100%;
@@ -404,11 +418,16 @@ color: #333;
 #toolbox .vertical_baiviet_item { margin-bottom: 15px; }
 #toolbox .vertical_baiviet_item .detail { width: calc(100% - 195px); }
 #toolbox .vertical_baiviet_item h3 a { font-family: "quicksand-bold"; color: #1d1d1d; }
-#toolbox .vertical_tintuc_item {/* min-height: 220px; */margin-bottom: 15px;/* background: #f6f6f6; */}
-#toolbox .vertical_tintuc_item .detail {/* padding: 15px 20px; */display: flex;padding-top: 15px;width: calc(100% - 185px);}
+#toolbox .vertical_tintuc_item {/* min-height: 220px; */margin-bottom: 20px;/* background: #f6f6f6; */}
+#toolbox .vertical_tintuc_item .detail {/* padding: 15px 20px; */display: flex;/* padding-top: 15px; */width: calc(100% - 185px);overflow: hidden;}
 #toolbox .vertical_tintuc_item .detail .ngaytao {/* font-family: "quicksand-regular"; */font-size: 12px;color: #8c8b8b;/* margin-bottom: 15px; */}
 #toolbox .vertical_tintuc_item .detail h3{
 	/* font-size: 14px; */
+	/* text-overflow: ellipsis; */
+	white-space: nowrap;
+	overflow: hidden;
+	max-width: 100%;
+	position: relative;
 }
 #toolbox .vertical_tintuc_item .image{
 	position:relative;
@@ -443,8 +462,8 @@ color: #333;
 	
 
 }
-#toolbox .vertical_tintuc_item .detail h3 a {font-size: 16px;color: #353434;font-family: roboto-bold;vertical-align: middle;line-height: 1;}
-#toolbox .vertical_tintuc_item .detail .mota { color: #5d5d5d; font-size: 13px; line-height: 1.4; }
+#toolbox .vertical_tintuc_item .detail h3 a {font-size: 20px;color: #282828;font-family: futura-book;vertical-align: top;line-height: 1;/* text-overflow: ellipsis; *//* white-space: nowrap; *//* overflow: hidden; */}
+#toolbox .vertical_tintuc_item .detail .mota {color: #5d5d5d;font-size: 13px;line-height: 1.4;font-family: futura-book;}
 #toolbox .vertical_tintuc_item .detail .xemthem { margin-top: 10px; }
 #toolbox .vertical_tintuc_item .detail .xemthem a {color: #fff;/* font-family: "quicksand-regular"; */position: relative;}
 #toolbox .vertical_tintuc_item .detail .xemthem a:after {/* content: ""; */width: 48px;height: 1px;background: #f7d691;display: block;position: absolute;right: -70px;top: 10px;}
@@ -938,9 +957,9 @@ color: #333;
 	width: calc(100% - 300px);
 }
 #footer .copyright{
-	position:absolute;
-	bottom: 30px;
-	left: 40px;
+	/* position:absolute; */
+	/* bottom: 30px; */
+	/* left: 40px; */
 }
 
 
@@ -1260,4 +1279,11 @@ color: #333;
 #visaochon{
 	background-color: #e6e6e6;
 	
+}
+.newsletter{
+	padding: 30px;
+	border: 1px solid #dfdfdf;
+}
+.newsletter form{
+	/* margin-left: 100px; */
 }

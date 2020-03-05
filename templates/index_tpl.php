@@ -184,7 +184,7 @@ if(!empty($minibox_tintuc)){
 								<div class=" d-flex justify-content-between flex-wrap">
 									<div class="image hieuung">
 										<a href="<?=$item["tenkhongdau"]?>" class="d-block">
-											<img src="thumb/1-170-130/upload/baiviet/<?=$item["photo"]?>" alt="<?=$item["photo"]?>" onerror='this.src="img/170x130/"' class="w-100 img-fluid">
+											<img src="thumb/1-170-140/upload/baiviet/<?=$item["photo"]?>" alt="<?=$item["photo"]?>" onerror='this.src="img/170x140/"' class="w-100 img-fluid">
 										</a>
 									</div>
 									<div class="detail">
