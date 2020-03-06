@@ -16,7 +16,12 @@
      <li><a href="index.php?com=baiviet&act=man&type=dich-vu">Dịch Vụ</a></li>
    </ul>
  </li>
-
+  <li class="menu categories_li"><a href="" title="" class="exp"><span>Dự Án</span><strong></strong></a>
+    <ul class="sub"> 
+      <li><a href="index.php?com=baiviet&act=man_list&type=du-an">DM Cấp 1</a></li>
+     <li><a href="index.php?com=baiviet&act=man&type=du-an">Dự Án</a></li>
+   </ul>
+ </li>
  <li class="menu categories_li"><a href="" title="" class="exp"><span>Bài viết</span><strong></strong></a>
   <ul class="sub">
    <li><a href="index.php?com=info&act=capnhat&type=gioi-thieu">Giới Thiệu</a></li>
@@ -47,6 +52,7 @@
   <ul class="sub">
     <li><a href="index.php?com=photo&act=man_photo&type=slider" title="">Hình ảnh slider</a></li>
     <li><a href="index.php?com=bannerqc&act=capnhat&type=quangcao" title="">Quảng cáo</a></li>
+    <li><a href="index.php?com=mxh&act=man&type=mxh_top" title="">Quảng cáo</a></li>
   </ul>
 </li>
 

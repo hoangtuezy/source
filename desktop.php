@@ -33,7 +33,6 @@
 			<?php } ?>
       <?php if($com=='index'){ ?>
 		<?php include _template.$template."_tpl.php";?>
-      <?php include _template."components/circle.php";?>
       <?php include _template."layout/product_list.php";?>
       <?php }else{ ?>	
   <?php include _template.$template."_tpl.php";?>
@@ -54,7 +53,9 @@
 </div>
 <div class="clearfix"></div>
 <?=$row_setting['bodycode']?>
-
+<div class="bando_iframe">
+	<?=$row_setting['toado']?>
+</div>
 <?php include _template."layout/support-online.php";?>
 <?php include _template."layout/javascript.php";?>
 </body>

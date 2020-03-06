@@ -6,11 +6,11 @@ $menu_array = array(
 	'gioi-thieu' => array(
 		'title' => "Giới Thiệu"
 	),
-	'san-pham' => array(
-		'title' => "Sản Phẩm",
-		'table' => 'product',
-		'type'	=> 'san-pham',
-		'lv'	=> 2
+	'quy-trinh' => array(
+		'title' => "Quy Trình",
+		'table' => 'baiviet',
+		'type'	=> 'quy-trinh',
+		// 'lv'	=> 2
 	),
 	'dich-vu' => array(
 		'title' => "Dịch Vụ",
@@ -18,10 +18,16 @@ $menu_array = array(
 		'type'	=> 'dich-vu',
 		'lv'	=> 1
 	),
-	'tuyen-dung' => array(
-		'title' => "Tuyển Dụng",
+	'du-an' => array(
+		'title' => "Dự Án Công Trình",
 		'table' => 'baiviet',
-		'type'	=> 'tuyen-dung',
+		'type'	=> 'du-an',
+		// 'lv'	=> 1
+	),
+	'tin-tuc' => array(
+		'title' => "Tin Tức",
+		'table' => 'baiviet',
+		'type'	=> 'tin-tuc',
 		// 'lv'	=> 1
 	),
 	

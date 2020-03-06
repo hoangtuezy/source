@@ -100,11 +100,11 @@ switch($com){
 	$type_bar = 'tags';
 	$title_detail = "Tags";
 	break;
-	case 'doi-ngu':
+	case 'du-an':
 	$source = "news";
-	$template = isset($id) ? "news_detail" : "news";
-	$type_bar = 'doi-ngu';
-	$title_detail = "Đội Ngũ";
+	$template = isset($id) ? "duan_detail" : "duan";
+	$type_bar = 'du-an';
+	$title_detail = "Dự Án";
 	break;
 	case 'khoa-hoc':
 	$source = "news";

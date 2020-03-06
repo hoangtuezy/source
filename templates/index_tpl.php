@@ -93,8 +93,75 @@ $index_gioithieu = fetch_array("select * from #_info where type='gioi-thieu' ");
 	</div>
 </div>
 
+<?php
+$duan_list = result_array("select * from #_baiviet_list where type='du-an' and hienthi=1 and noibat=1 order by stt asc ");
+$duan_all = result_array("select * from #_baiviet where type='du-an' and hienthi=1 and noibat=1 and id_list <> 0 order by stt asc limit 8");
+if(!empty($duan_all)){
+
+$duan_all_id = array_filter($duan_all,function($arr){
+	return $arr['id'];
+});
+?>
+<div class="duan_detail_page">
+	
+</div>
 
 
+
+<div id="duan">
+	<div class="container">
+		<div class="header-title">
+			<h2 class="h2-title">
+				DỰ ÁN TIÊU BIỂU
+			</h2>
+			<div class="desc">
+				
+			</div>
+		</div>
+		<div class="content_label">
+			<span class="duan_list_label">Tất cả</span>
+			<?php foreach($duan_list as $list): ?>
+				<span class="duan_list_label" data-list="<?=$list["id"]?>">
+					<?=$list["ten_$lang"]?>
+				</span>
+			<?php endforeach; ?>
+		</div>
+	</div>
+	<div class="duan_content">
+		<div class="row">
+		<?php foreach($duan_all as $item): ?>
+			<div class="col-md-3 col-sm-4 col-6">
+				<div class="duan_item"  data-src="<?=$item['tenkhongdau']?>" data-id="<?=$item['id']?>">
+					<a href="<?=$item['tenkhongdau']?>">
+					<img src="upload/baiviet/<?=$item["photo"]?>" alt="<?=$item["photo"]?>" class="img-fluid w-100" >
+					</a>
+					<h3>
+						<span><?=$item["ten_$lang"]?></span></h3>
+				</div>
+				</div>
+			<?php endforeach; ?>
+		</div>
+	</div>
+	<div class="xemtatca">
+		<a href="du-an">Xem tất cả dự án</a>
+	</div>
+</div>
+
+<?php } ?>
+<script>
+	$(document).on('click','.duan_list_label',function(){
+		var tg = $(this).data('list');
+		$.ajax({
+			method: "POST",
+			url: 'ajax/load_duan',
+			data: {list:tg},
+			success: function(data){
+				$(".duan_content").html(data);
+			}
+		});
+
+	});
+</script>
 <?php $visaochon = result_array("select * from #_baiviet where type='vi-sao-chon' and hienthi=1 and noibat=1 order by stt asc ");
 if(!empty($visaochon)){ 
 ?>
@@ -138,31 +205,6 @@ if(!empty($visaochon)){
 
 
 
-<?php 
-$video = result_array("select * from #_video where type='video' and hienthi=1  order by stt asc "); 
-?>
-<div id="video">
-	<a href="<?=$video[0]["links"]?>"  data-fancybox="video">
-		<img src="upload/video/<?=$video[0]["photo"]?>" alt="<?=$video[0]["photo"]?>" class="w-100 img-fluid" onerror='this.src="img/1366x450/"'>
-	</a>
-	<div class="sub-videos">
-		<div class="swiper-container">
-			<!-- Additional required wrapper -->
-			<div class="swiper-wrapper">
-				<?php foreach($video as $item): ?>
-					<div class="swiper-slide">
-						<div>
-							<a href="<?=$item["links"]?>" data-fancybox="video"><img src="thumb/1-108-108/upload/video/<?=$item["photo"]?>" alt="<?=$item["ten_$lang"]?>" onerror='this.src="img/108x108/"'></a>
-						</div>
-					</div>
-				<?php endforeach; ?>
-			</div>
-			<!-- If we need pagination -->
-			<!-- If we need navigation buttons -->
-			<!-- If we need scrollbar -->
-		</div>
-	</div>
-</div>
 
 <?php
 $gioithieu_index = fetch_array("select * from #_info where type='gioi-thieu' ");
@@ -221,23 +263,19 @@ if(!empty($minibox_tintuc)){
 </script>
 <?php } ?>
 
-
-<!-- doitac -->
-<?php
-$index_doitac = result_array("select link,photo_vi from #_photo where hienthi=1 and type='doitac' order by stt,id desc");
-if(count($index_doitac) > 0){
-	?>
-	<div id="doitac">
-		<div class="container">
-			<marquee behavior="scroll" direction="" onmouseover="this.stop()" onmouseout="this.start()" LOOP=-1>
-				<?php foreach($index_doitac as $item) { ?>
-					<div class="doitac_item">
-						<a href="<?=$item["link"]?>">
-							<img src="thumb/1-180-90/upload/hinhanh/<?=$item["photo_vi"]?>" alt="<?=$item["photo_vi"]?>" onerror='this.src="img/180x90/"'>
-						</a>
-					</div>
-				<?php } ?>
-			</marquee>
+<div id="newsletter">
+	<div class="container">
+		<div class="newsl-left col-md-6 col-sm-12 col-12">
+			<p style="font-size: 26px;">Nhận báo giá hoặc tư vấn thiết kế</p>
+			<p style="font-stretch: 16px;">Đăng ký nhận tin mới nhất từ công ty chúng tôi hàng tuần</p>
+		</div>
+		<div class="news-right col-md-6 col-sm-12 col-12">
+			<form action="nhan-mail" method="POST" id="frm_nhanmail">
+				<input type="hidden" name="nhanmail">
+				<input type="hidden" name="type" value="nhanmail">
+				<input type="text" name="email" placeholder="Email">
+				<input type="submit" >
+			</form>
 		</div>
 	</div>
-	<?php } ?>
+</div>

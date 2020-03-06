@@ -22,7 +22,7 @@
 		<span>Email: <?=$row_setting["email"]?></span>
 		<span>tel: <?=$row_setting["hotline"]?> - <?=$row_setting["dienthoai"]?></span>
 		</div>
-		<?=layout_mxh(38,38,'mxh_top')?>
+		<?=layout_mxh(45,45,'mxh_top')?>
 	</div>
 </div>
 <div id="menu-top">

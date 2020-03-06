@@ -28,6 +28,9 @@
 							<label for="noidung" class="col-md-3 text-right">Nội dung</label>
 							<textarea name="noidung" id="" cols="30" rows="4" class="col-md-9"></textarea>
 						</div>
+						<div class="text-right">
+							<input type="submit" value="send">
+						</div>
 					</form>
 				</div>
 			</div>

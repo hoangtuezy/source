@@ -1277,15 +1277,16 @@ case 'thanh-toan-giao-nhan':
 			break;
 		case 'du-an':
 			$title_main = "Dự Án";
+			$config_img= "true";
 			$config_images = "true";
 			$config_mota= "true";
-			$config_list = "false";
+			$config_list = "true";
 			$config_cat = "false";
 			$config_item = "false";
 			$config_sub = "false";
 			$config_noibat = "true";
-			@define ( _width_thumb , 640 );
-			@define ( _height_thumb , 480 );
+			@define ( _width_thumb , 340 );
+			@define ( _height_thumb , 270 );
 			@define ( _style_thumb , 1 );
 			@define ( _img_type , 'jpg|gif|png|jpeg|PNG|JPG|JPEG|GIF' );
 			$ratio_ = 1;
@@ -1536,8 +1537,8 @@ case 'thanh-toan-giao-nhan':
 			break;
 		case 'logo':
 		$title_main = 'Logo';
-		@define ( _width_thumb , 285 );
-		@define ( _height_thumb , 142 );
+		@define ( _width_thumb , 185 );
+		@define ( _height_thumb , 100 );
 		@define ( _style_thumb , 2 );
 		@define ( _img_type , 'jpg|gif|png|jpeg|PNG|JPG|JPEG|GIF' );
 		$ratio_ = 1;
@@ -1767,8 +1768,8 @@ case 'thanh-toan-giao-nhan':
 			break;
 		case 'mxh_top':
 		    $title_main = "Mạng xã hội";
-			@define ( _width_thumb , 28 );
-			@define ( _height_thumb , 28 );
+			@define ( _width_thumb , 45 );
+			@define ( _height_thumb , 45 );
 			@define ( _style_thumb , 2 );
 			@define ( _img_type , 'jpg|gif|png|jpeg|PNG|JPG|JPEG|GIF' );
 			$ratio_ = 1;
