@@ -54,7 +54,7 @@
 ?>
 <div class="wrapper">
 
-<div class="control_frm" style="margin-top:25px;">
+<div class="control_frm breadcrumb" style="margin-top:25px;">
     <div class="bc">
         <ul id="breadcrumbs" class="breadcrumbs">
         	<li><a href="index.php?com=thuoctinh&act=add<?php if($_REQUEST['type']!='') echo'&type='. $_REQUEST['type'];?>"><span>Thêm <?=$title_main?></span></a></li>
@@ -67,12 +67,8 @@
 <form name="supplier" id="validate" autocomplete="off" class="form" action="index.php?com=thuoctinh&act=save<?php if($_REQUEST['type']!='') echo'&type='. $_REQUEST['type'];?>" method="post" enctype="multipart/form-data">
 	<div class="widget">
 
-		<div class="title chonngonngu">
-		<ul>
-			<li><a href="vi" class="active tipS validate[required]" title="Chọn tiếng việt "><img src="./images/vi.png" alt="" class="tiengviet" />Tiếng Việt</a></li>
-			<?php if($_GET['type']!="makm" && $_GET['type']!="doidiem" && $_GET['type']!="chucai") { ?><li><a href="en" class="tipS validate[required]" title="Chọn tiếng anh "><img src="./images/en.png" alt="" class="tienganh" />Tiếng Anh</a></li><?php } ?>
-		</ul>
-		</div>	
+		 <?php include _template."helper/lang.php";?>
+
 		<?php if($config_list=='true'){ ?>
 		<div class="formRow">
 			<label>Chọn danh mục</label>
@@ -137,7 +133,7 @@
 		<div class="formRow lang_hidden lang_vi active">
 			<label>Tiêu đề</label>
 			<div class="formRight">
-                <input type="text" name="ten_vi" title="Nhập tên danh mục" id="ten_vi" class="tipS validate[required]" value="<?=@$item['ten_vi']?>" />
+                <input type="text" name="ten_vi" title="Nhập tên danh mục" id="ten_vi" class="form-control tipS validate[required]" value="<?=@$item['ten_vi']?>" />
 			</div>
 			<div class="clear"></div>
 		</div>
@@ -145,7 +141,7 @@
 		<div class="formRow lang_hidden lang_en">
 			<label>Tiêu đề (Tiếng anh)</label>
 			<div class="formRight">
-                <input type="text" name="ten_en" title="Nhập tên danh mục" id="ten_en" class="tipS validate[required]" value="<?=@$item['ten_en']?>" />
+                <input type="text" name="ten_en" title="Nhập tên danh mục" id="ten_en" class="form-control  tipS validate[required]" value="<?=@$item['ten_en']?>" />
 			</div>
 			<div class="clear"></div>
 		</div>
@@ -230,8 +226,8 @@
 			<div class="formRight">
                 <input type="hidden" name="type" id="id_this_type" value="<?=$_REQUEST['type']?>" />
                 <input type="hidden" name="id" id="id_this_post" value="<?=@$item['id']?>" />
-            	<input type="submit" class="blueB" onclick="TreeFilterChanged2(); return false;" value="Hoàn tất" />
-            	<a href="index.php?com=thuoctinh&act=man<?php if($_REQUEST['type']!='') echo'&type='. $_REQUEST['type'];?>" onClick="if(!confirm('Bạn có muốn thoát không ? ')) return false;" title="" class="button tipS" original-title="Thoát">Thoát</a>
+            	<input type="submit" class="btn btn-primary" onclick="TreeFilterChanged2(); return false;" value="Hoàn tất" />
+            	<a href="index.php?com=thuoctinh&act=man<?php if($_REQUEST['type']!='') echo'&type='. $_REQUEST['type'];?>" onClick="if(!confirm('Bạn có muốn thoát không ? ')) return false;" title="" class="btn btn-secondary tipS" original-title="Thoát">Thoát</a>
 			</div>
 			<div class="clear"></div>
 		</div>
