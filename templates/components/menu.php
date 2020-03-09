@@ -1,39 +1,45 @@
 <?php 
 $menu_array = array(
-	'' => array(
+	'index' => array(
 		'title' => _trangchu
 	),
 	'gioi-thieu' => array(
 		'title' => "Giới Thiệu"
 	),
-	'quy-trinh' => array(
-		'title' => "Quy Trình",
-		'table' => 'baiviet',
-		'type'	=> 'quy-trinh',
-		// 'lv'	=> 2
+	'san-pham' => array(
+		'title' => "Sản phẩm",
+		'table' => 'product',
+		'type'	=> 'san-pham',
+		'lv'	=> 2
 	),
 	'dich-vu' => array(
 		'title' => "Dịch Vụ",
 		'table' => 'baiviet',
 		'type'	=> 'dich-vu',
-		'lv'	=> 1
-	),
-	'du-an' => array(
-		'title' => "Dự Án Công Trình",
-		'table' => 'baiviet',
-		'type'	=> 'du-an',
 		// 'lv'	=> 1
 	),
+	// 'du-an' => array(
+	// 	'title' => "Dự Án Công Trình",
+	// 	'table' => 'baiviet',
+	// 	'type'	=> 'du-an',
+	// 	// 'lv'	=> 1
+	// ),
 	'tin-tuc' => array(
 		'title' => "Tin Tức",
 		'table' => 'baiviet',
 		'type'	=> 'tin-tuc',
 		// 'lv'	=> 1
 	),
-	
 	'lien-he' => array(
 		'title' => "Liên Hệ"
 	),
+	'tuyen-dung' => array(
+		'title' => "Tuyển Dụng",
+		'table' => 'baiviet',
+		'type'	=> 'tuyen-dung',
+		// 'lv'	=> 1
+	),
+	
 );
 $system_level = array('list','cat','item','sub');
 ?>
@@ -42,7 +48,7 @@ $system_level = array('list','cat','item','sub');
 			foreach($menu_array as $key => $item){
 				$_tmp = result_array("select id,tenkhongdau,ten_$lang from #_product_list where hienthi=1 and type='".$item['type']."' order by stt asc ");
 				$sub_menu[$key]=$_tmp;?>
-				<li class="menu"><a href="<?=$key?>"><?=$item["title"]?></a>
+				<li class="menu <?=$com==$key?'active':''?>"><a href="<?=$key==='index'?'':$key?>"><?=$item["title"]?></a>
 					<?php if(!empty($sub_menu[$key])){ ?>
 						<ul class="nav-menu-list">
 							<?php foreach($sub_menu[$key] as $list){ ?>

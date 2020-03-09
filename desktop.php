@@ -6,8 +6,11 @@
 	<link id="favicon" rel="shortcut icon" href="<?=_upload_hinhanh_l.$favicon['thumb_'.$lang]?>" type="image/x-icon" />
 	<link rel="canonical" href="<?=getCurrentPageURL();?>" />
 	<?php include _template."layout/seo.php";?>
-  
+ <?php if($config_responsive){ ?> 
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<?php }else{ ?>
+	<meta name="viewport" content="width=1366">
+<?php } ?>	
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/base.css">
 	<link rel="stylesheet" href="assets/css/news.css">
@@ -33,7 +36,6 @@
 			<?php } ?>
       <?php if($com=='index'){ ?>
 		<?php include _template.$template."_tpl.php";?>
-      <?php include _template."layout/product_list.php";?>
       <?php }else{ ?>	
   <?php include _template.$template."_tpl.php";?>
         <?php } ?>
@@ -53,9 +55,6 @@
 </div>
 <div class="clearfix"></div>
 <?=$row_setting['bodycode']?>
-<div class="bando_iframe">
-	<?=$row_setting['toado']?>
-</div>
 <?php include _template."layout/support-online.php";?>
 <?php include _template."layout/javascript.php";?>
 </body>

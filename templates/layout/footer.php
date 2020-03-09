@@ -1,37 +1,44 @@
 <div id="footer">
 	<div class="container">
-				<h2 class="text-center"><?=$row_setting["ten_$lang"]?></h2>
 		<div class="row">
-			<div class="col-md-3 col-sm-12 col-12">
-				<div class="icon marker">Địa chỉ<br /> <?=$row_setting["diachi_$lang"]?></div>
-				<div class="icon hotline">Hotline <br /><?=$row_setting["hotline"]?></div>
-				<div class="icon email">Email <br /><?=$row_setting["email"]?></div>
+			<div class="col-4">
+				<h3>THÔNG TIN LIÊN HỆ</h3>
+				<div class="icon marker">Địa chỉ: <?=$row_setting["diachi_$lang"]?></div>
+				<div class="icon hotline">Hotline :<?=$row_setting["hotline"]?></div>
+				<div class="icon email">Email :<?=$row_setting["email"]?></div>
+				<div class="icon global">Website :<?=$row_setting["website"]?></div>
+				<div>
+					<div>Liên hệ:</div>
+					<?=layout_mxh(40,40,'mxh_top')?>
+				</div>
 			</div>
-			<div class="col-md-9 col-sm-12 col-12 ">
+			<div class="col-4 px-5">
 				<div class="newsletter">
 					<h3>FORM LIÊN HỆ</h3>
 					<form action="nhan-mail" method="POST">
 						<input type="hidden" name="nhanmail">
 						<div class="form-group">
-							<label for="ten" class="col-md-3 text-right">Họ và tên</label>
-							<input type="text" name="ten" placeholder="">
+							<input type="text" name="ten" class="form-control mw-100" placeholder="Họ và tên">
 						</div>
 						<div class="form-group">
-							<label for="email" class="col-md-3 text-right">Địa chỉ mail</label>
-							<input type="text" name="email" placeholder="">
+							<input type="text" name="email" class="form-control mw-100" placeholder="Địa chỉ mail">
 						</div>
 						<div class="form-group">
-							<label for="dienthoai" class="col-md-3 text-right">Số điện thoại</label>
-							<input type="text" name="dienthoai" placeholder="">
+							<input type="text" name="dienthoai" class="form-control mw-100" placeholder="Số điện thoại">
 						</div>
 						<div class="form-group d-flex">
-							<label for="noidung" class="col-md-3 text-right">Nội dung</label>
-							<textarea name="noidung" id="" cols="30" rows="4" class="col-md-9"></textarea>
+							<input type="text" name="noidung" class="form-control mw-100" placeholder="Nội dung">
 						</div>
 						<div class="text-right">
-							<input type="submit" value="send">
+							<input type="submit" value="send" class="w-100">
 						</div>
 					</form>
+				</div>
+			</div>
+			<div class="col-4 ">
+				<h3>BẢN ĐỒ</h3>
+				<div class="bando_iframe">
+					<?=$row_setting['toado']?>
 				</div>
 			</div>
 		</div>

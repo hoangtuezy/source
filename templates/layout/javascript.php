@@ -12,34 +12,8 @@
         }
     });
 </script>
-<script type="text/javascript">
- $('.visao_slider').owlCarousel({
-    // loop:true,
-    margin:40,
-    responsiveClass:true,
-    items: 3,
-    autoplay:true,
-    speed:1000,
-    nav:false,
-		responsive:{
-        0:{
-            items:1,
-            nav:false
-        },
-        768:{
-            items:2,
-            nav:false
-        },
-				900:{
-            items:3,
-            nav:false
-        },
-       
-    },
-})
-</script>
  <script>
-  var mySwiper = new Swiper ('#quytrinh .swiper-container', {
+  var mySwiper_video = new Swiper ('#slider_video_select .swiper-container', {
     // Optional parameters
     loop: true,
     // If we need pagination

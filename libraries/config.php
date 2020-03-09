@@ -1,7 +1,7 @@
 <?php
 	if(!defined('_lib')) die("Error");
  	error_reporting(3);
- 	define ( 'NN_MSHD' , '087220W'); //Mã số HĐ
+ 	define ( 'NN_MSHD' , '1858919'); //Mã số HĐ
 	define ( 'NN_AUTHOR' , 'vohoangtu.nina@gmail.com'); //Email của lập trình
 
 	$Protocol='http://';	
@@ -36,7 +36,7 @@
 	$config['database']['database'] = 'source';
 	$config['database']['refix'] = 'table_';
 
-	$config_responsive =true;
+	$config_responsive =false;
 	$config_short_link =true;
 
 	$config_cart = array(

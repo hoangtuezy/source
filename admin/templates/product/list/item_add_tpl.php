@@ -27,8 +27,7 @@
 <form name="supplier" id="validate" class="form" action="index.php?com=product&act=save_list<?php if($_REQUEST['type']!='') echo'&type='. $_REQUEST['type'];?>" method="post" enctype="multipart/form-data">
 	<div class="widget">
 		<?php include _template."helper/lang.php";?>
-       	<?php include _template."helper/ten_lang.php";?>
-		<?php include _template."helper/config_tenkhongdau.php";?>
+       	
 		<?php if($config_images=='true'){?>
 		<div class="formRow">
 			<label>Hình ảnh :</label>
@@ -74,6 +73,12 @@
 		<?php } ?>
 		
 
+		
+		<?php }?>
+
+		<?php include _template."helper/ten_lang.php";?>
+		<?php include _template."helper/config_tenkhongdau.php";?>
+		<?php if($config_link=='true'){?>
 		 <div class="formRow">
 			<label>Link</label>
 			<div class="formRight">

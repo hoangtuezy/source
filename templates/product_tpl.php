@@ -5,9 +5,9 @@ if(count($result_product) > 0){
 	<div class="container mb-3">
 		
 		<div class="scrollbar">
-			<div class="row sanpham row-32">
+			<div class="row sanpham">
 				<?php foreach($result_product as $item) { ?>
-					<div class="col-md-3 col-sm-4 col-6">
+					<div class="col-3">
 						<?php include _template."components/product_item.php";?>
 					</div>
 				<?php } ?>

@@ -8,7 +8,7 @@ $product_thongtin = fetch_array("select noidung_$lang from #_company where type=
     <div class="container">
         <div id="product-detail">
             <div class="row">
-                <div id="left" class="col-md-5 col-12">
+                <div id="left" class="col-5">
                     <div class="showhinh text-center">
                         <a class="MagicZoomPlus" id="shoes" href="<?=_upload_product_l.$row_detail['photo']?>"><img src="thumb/1-560-640/<?=_upload_product_l.$row_detail['photo']?>" alt="<?=$row_detail['ten_'.$lang]?>" onerror='this.src="img/560x640/"'/></a>
                     </div>
@@ -22,7 +22,7 @@ $product_thongtin = fetch_array("select noidung_$lang from #_company where type=
                         </div>
                         <div class="clearfix"></div>
                     </div>
-                    <div id="right" class="col-md-7 col-12">
+                    <div id="right" class="col-7">
                         <h1 class="vcard fn"><?php echo $row_detail['ten_'.$lang]; ?></h1>
                         <?php if(!empty($row_detail["masp"])){ ?>
                             <div class="product_info">
@@ -70,7 +70,7 @@ $product_thongtin = fetch_array("select noidung_$lang from #_company where type=
 </div>
 <div class="product-all row row-20">
     <?php foreach($product_khac as $item) { ?>
-        <div class="col-md-3 col-sm-4 col-6 mb-3">
+        <div class="col-3 mb-3">
             <?php include _template."components/product_item.php";?>
         </div>
     <?php } ?>
