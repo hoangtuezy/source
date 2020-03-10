@@ -67,8 +67,12 @@
 <form name="supplier" id="validate" autocomplete="off" class="form" action="index.php?com=thuoctinh&act=save<?php if($_REQUEST['type']!='') echo'&type='. $_REQUEST['type'];?>" method="post" enctype="multipart/form-data">
 	<div class="widget">
 
-		 <?php include _template."helper/lang.php";?>
-
+		<div class="title chonngonngu">
+		<ul>
+			<li><a href="vi" class="active tipS validate[required]" title="Chọn tiếng việt "><img src="./images/vi.png" alt="" class="tiengviet" />Tiếng Việt</a></li>
+			<?php if($_GET['type']!="makm" && $_GET['type']!="doidiem" && $_GET['type']!="chucai") { ?><li><a href="en" class="tipS validate[required]" title="Chọn tiếng anh "><img src="./images/en.png" alt="" class="tienganh" />Tiếng Anh</a></li><?php } ?>
+		</ul>
+		</div>	
 		<?php if($config_list=='true'){ ?>
 		<div class="formRow">
 			<label>Chọn danh mục</label>
@@ -125,7 +129,7 @@
 		<div class="formRow lang_hidden lang_vi active">
 			<label>Điểm tích lũy</label>
 			<div class="formRight">
-                <input type="text" name="ten_vi" title="Nhập tên danh mục" id="ten_vi" class="tipS validate[required]" value="<?=@$item['ten_vi']?>" />
+                <input type="text" name="ten_vi" title="Nhập tên danh mục" id="ten_vi" class="form-control tipS validate[required]" value="<?=@$item['ten_vi']?>" />
 			</div>
 			<div class="clear"></div>
 		</div>
@@ -141,7 +145,7 @@
 		<div class="formRow lang_hidden lang_en">
 			<label>Tiêu đề (Tiếng anh)</label>
 			<div class="formRight">
-                <input type="text" name="ten_en" title="Nhập tên danh mục" id="ten_en" class="form-control  tipS validate[required]" value="<?=@$item['ten_en']?>" />
+                <input type="text" name="ten_en" title="Nhập tên danh mục" id="ten_en" class="tipS validate[required]" value="<?=@$item['ten_en']?>" />
 			</div>
 			<div class="clear"></div>
 		</div>
@@ -182,7 +186,7 @@
 		<div class="formRow">
 			<label>Màu nền:</label>
 			<div class="formRight">
-				<input type="text" class="color" name="mau" title="Nhập màu nền" class="tipS" value="<?=@$item['mau']?>" size="15" />
+				<input type="text"  name="mau" title="Nhập màu nền" class="form-control  color tipS" value="<?=@$item['mau']?>" size="15" />
 			</div>
 
 			<div class="clear"></div>

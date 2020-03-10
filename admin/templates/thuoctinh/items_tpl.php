@@ -75,7 +75,7 @@ function select_list()
     return $str;
   }
 ?>
-<div class="control_frm" style="margin-top:25px;">
+<div class="control_frm breadcrumb" style="margin-top:25px;">
     <div class="bc">
         <ul id="breadcrumbs" class="breadcrumbs">
         	<li><a href="index.php?com=thuoctinh&act=man<?php if($_REQUEST['type']!='') echo'&type='. $_REQUEST['type'];?>"><span>Quản lý <?=$title_main ?></span></a></li>
@@ -104,7 +104,7 @@ function select_list()
       <input class="form_or" name="keyword" placeholder="Nhập từ khóa.." value="<?=$_GET['keyword']?>" type="text" />
       <input class="form_or" name="ngaybd" id="datefm" type="text" value="<?=$_GET['ngaybd']?>" placeholder="Từ ngày.."/>
       <input class="form_or" name="ngaykt" id="dateto" type="text" value="<?=$_GET['ngaykt']?>" placeholder="Đến ngày.." />
-      <input type="submit" class="blueB" value="Tìm kiếm" style="width:100px; margin:0px 0px 0px 10px;"  />
+      <input type="submit" class="btn btn-primary" value="Tìm kiếm" style="width:100px; margin:0px 0px 0px 10px;"  />
     </form>
     </div><!--end tim kiem-->
   </div>
@@ -114,8 +114,8 @@ function select_list()
 
 <div class="control_frm" style="margin-top:0;">
   	<div style="float:left;">
-    	<input type="button" class="blueB" value="Thêm" onclick="location.href='index.php?com=thuoctinh&act=add<?php if($_REQUEST['id_list']!='') echo'&id_list='. $_REQUEST['id_list'];?><?php if($_REQUEST['type']!='') echo'&type='. $_REQUEST['type'];?>'" />
-        <input type="button" class="blueB" value="Xoá Chọn" id="xoahet" />
+    	<input type="button" class="btn btn-primary" value="Thêm" onclick="location.href='index.php?com=thuoctinh&act=add<?php if($_REQUEST['id_list']!='') echo'&id_list='. $_REQUEST['id_list'];?><?php if($_REQUEST['type']!='') echo'&type='. $_REQUEST['type'];?>'" />
+        <input type="button" class="btn btn-primary" value="Xoá Chọn" id="xoahet" />
         <?php if($_GET['type']=="soluong") { 
           $url_link=strstr(getCurrentPage(), '&keyword');
         ?>
@@ -131,8 +131,8 @@ function select_list()
     <h6>Chọn tất cả</h6>
     <?php if($_GET['type']!="soluong") { ?>
     <div class="timkiem">
-	    <input type="text" value="" placeholder="Nhập từ khóa tìm kiếm ">
-	    <button type="button" class="blueB"  value="">Tìm kiếm</button>
+	    <input type="text" value="" placeholder="Nhập từ khóa tìm kiếm " class="form-control">
+	    <button type="button" class="btn btn-primary"  value="">Tìm kiếm</button>
     </div>
     <?php } ?>
   </div>
