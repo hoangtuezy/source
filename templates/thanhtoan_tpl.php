@@ -265,29 +265,33 @@ foreach($thanhtoan_arr as $_pay){
 			</div>
 			<div class="card-body border-success">
 				<?php foreach($_SESSION['cart'] as $stt => $item){
-					$_product = fetch_array("select id,tenkhongdau,photo,ten_$lang,giaban from #_product where id='".$item['productid']."' and hienthi=1");	
+					$_product = fetch_array("select * from #_product where id='".$item['productid']."' and hienthi=1");
+					$price_bycolor = json_decode($_product['price_bycolor'],1);
+					$_color = fetch_array("select * from #_thuoctinh where id='".$item['color_id']."' and hienthi=1");
+					$_size = fetch_array("select * from #_thuoctinh where id='".$item['size_id']."' and hienthi=1");	
 					?>
 					<div class="order_item mb-3 d-flex">
-						<img src="thumb/1-100-80/upload/product/<?=$_product["photo"]?>" alt="<?=$_product["photo"]?>">
+						<img src="thumb/1-100-80/upload/product/<?=$_product["photo"]?>" alt="<?=$_product["photo"]?>" onerror='this.src="img/100x80/"'>
 						<div class="detail">
 							<h3><?=$_product["ten_$lang"]?></h3>
-							<div><?=$_product["masp"]?></div>
-							<div><?=$item["qty"]?> x <?=price($_product["giaban"])?></div>
+							<div>Màu: <?=$_color["ten_$lang"]?><br />
+							Size: 	<?=$_size["ten_$lang"]?></div>
+							<div><?=$item["qty"]?> x <?=price($price_bycolor[$item['color_id']])?></div>
 						</div>
 						<div class="order_item_total">
-							<?=price($item["qty"]*$_product["giaban"])?>
+							<?=price($item["qty"]*$price_bycolor[$item['color_id']])?>
 						</div>
 					</div>
 				<?php } ?>
 				<div class="total_order">
-					<div class="d-flex mb-1">
-						<div class="col text-left">Tạm tính</div><div class="col text-right tamtinh" data-value="<?=get_order_total()?>"><?=price(get_order_total())?></div>
+					<div class="mb-1 d-none">
+						<div class="col text-left">Tạm tính</div><div class="col text-right tamtinh p-0" data-value="<?=get_order_total()?>"><?=price(get_order_total())?></div>
 					</div>
 					<!-- <div class="d-flex mb-1">
 						<div class="col text-left">Phí vận chuyển</div><div class="col text-right"><span class="phivanchuyen">0đ</span></div>
 					</div> -->
 					<div class="d-flex">
-						<div class="col text-left">Tổng Giá</div><div class="col text-right"><span class="final_total"><?=price(get_order_total())?></span></div>
+						<div class="col text-left">Tổng Giá</div><div class="col text-right p-0"><span class="final_total"><?=price(get_order_total())?></span></div>
 					</div>
 				</div>
 			</div>

@@ -7,7 +7,18 @@ $(document).on("click",".add_cart",function(){
     var product_id = $(this).data("product");
 
     var soluong = $("#input_soluong").val();
-
+    var mausac = $("#select_mausac").val();
+    mausac = parseInt(mausac);
+    if(isNaN(mausac)){
+        alert("Vui lòng chọn màu sắc thêm vào giỏ hàng.");
+        return;
+    }
+    var size = $("#select_size").val();
+     size = parseInt(size);
+    if(isNaN(size)){
+        alert("Vui lòng chọn size thêm vào giỏ hàng.");
+        return;
+    }
     var _crsf = $("#ajax_crsf").data('value');
 
     $.ajax({
@@ -16,7 +27,7 @@ $(document).on("click",".add_cart",function(){
 
         url: "ajax/add_giohang",
 
-        data: {productid:product_id,soluong:soluong,_crsf:_crsf},
+        data: {productid:product_id,soluong:soluong,_crsf:_crsf,mausac:mausac,size:size},
 
         success: function(html){
 
@@ -48,13 +59,12 @@ $(document).on("click",".add_cart",function(){
 
             var obj = JSON.parse(ob.responseText);
 
-            var _m = $("#ajax_crsf");
+            // var _m = $("#ajax_crsf");
 
-            console.log(_m.data('value'));
-
-            _m.html(obj._crsf);
-
-            update_crsf(obj._crsf);
+            // console.log(_m.data('value'));
+            // _m.html(obj._crsf);
+            // update_crsf(obj._crsf);
+            $(".count_cart").html(obj.count_cart);
 
             // setTimeout(function(){$(".al" + msgid).parent().html(""); }, 3000 + msgid);      
 
@@ -63,5 +73,6 @@ $(document).on("click",".add_cart",function(){
     });
 
 });
+
 
 

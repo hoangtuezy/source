@@ -331,12 +331,21 @@ function save_man(){
 		$data['trongluong'] = $_POST['trongluong'];
 		$data['dientich'] = $_POST['dientich'];
 		$data['diachi'] = $_POST['diachi'];
-		$data['size'] = $_POST['size'];
+		if(!empty($_POST['size'])){
+			$data['size'] = implode(',',$_POST['size']);
+		}
+		if(!empty($_POST['mausac'])){
+			$data['color'] = implode(',',$_POST['mausac']);
+		}
+		if(!empty($_POST['price_bycolor'])){
+			foreach($_POST['price_bycolor'] as $stt => $val){
+				$data['price_bycolor'][$_POST['mausac'][$stt]] = str_replace(',','',$val);
+			}
 
-		if($_POST['tenkhongdau']!="" && $_POST['chk']==false)
-    $data['tenkhongdau'] = $_POST['tenkhongdau'];
-else
-    $data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
+		}
+
+		$data['price_bycolor'] = json_encode($data['price_bycolor']);
+		$data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
 		$data['baohanh_vi'] = $_POST['baohanh_vi'];	
 		$data['baohanh_en'] = $_POST['baohanh_en'];	
 		$data['thongtin_vi'] = $_POST['thongtin_vi'];	
@@ -360,7 +369,7 @@ else
 		}
 		// dump($_POST['tags']);
 		if(!empty($_POST['tags'])){
-		$data['tags'] = implode(',',$_POST['tags']);
+			$data['tags'] = implode(',',$_POST['tags']);
 		}
 
 		
@@ -429,10 +438,7 @@ else
 			$data['mota_'.$key] = $_POST['mota_'.$key];
 			$data['noidung_'.$key] = magic_quote($_POST['noidung_'.$key]);
 		}
-		if($_POST['tenkhongdau']!="" && $_POST['chk']==false)
-    $data['tenkhongdau'] = $_POST['tenkhongdau'];
-else
-    $data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
+		$data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
 		$data['baohanh_vi'] = $_POST['baohanh_vi'];	
 		$data['baohanh_en'] = $_POST['baohanh_en'];	
 		$data['thongtin_vi'] = $_POST['thongtin_vi'];	
@@ -443,7 +449,13 @@ else
 		$data['trongluong'] = $_POST['trongluong'];
 		$data['dientich'] = $_POST['dientich'];
 		$data['diachi'] = $_POST['diachi'];
-		$data['size'] = $_POST['size'];
+		
+		if(!empty($_POST['size'])){
+			$data['size'] = implode(',',$_POST['size']);
+		}
+		if(!empty($_POST['mausac'])){
+			$data['color'] = implode(',',$_POST['mausac']);
+		}
 		$data['giacu'] = str_replace(',','',$_POST['giacu']);
 		$data['soluong'] = str_replace(',','',$_POST['soluong']);
 		$data['giaban'] = str_replace(',','',$_POST['giaban']);
@@ -688,10 +700,7 @@ function save_list(){
 
 		
 		$data['links'] = $_POST['links'];
-		if($_POST['tenkhongdau']!="" && $_POST['chk']==false)
-    $data['tenkhongdau'] = $_POST['tenkhongdau'];
-else
-    $data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
+		$data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
 		$data['title'] = $_POST['title'];
 		$data['keywords'] = $_POST['keywords'];
 		$data['description'] = $_POST['description'];
@@ -721,13 +730,10 @@ else
 			
 			$data['mota_'.$key] = $_POST['mota_'.$key];
 		}
-	
+
 
 		$data['links'] = $_POST['links'];
-		if($_POST['tenkhongdau']!="" && $_POST['chk']==false)
-    $data['tenkhongdau'] = $_POST['tenkhongdau'];
-else
-    $data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
+		$data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
 		$data['title'] = $_POST['title'];
 		$data['keywords'] = $_POST['keywords'];
 		$data['description'] = $_POST['description'];
@@ -899,10 +905,7 @@ function save_cat(){
 			$data['ten_'.$key] = $_POST['ten_'.$key];
 		}
 		
-		if($_POST['tenkhongdau']!="" && $_POST['chk']==false)
-    $data['tenkhongdau'] = $_POST['tenkhongdau'];
-else
-    $data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
+		$data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
 		$data['title'] = $_POST['title'];
 		$data['keywords'] = $_POST['keywords'];
 		$data['description'] = $_POST['description'];
@@ -926,10 +929,7 @@ else
 		$data['ten_vi'] = $_POST['ten_vi'];
 		$data['ten_en'] = $_POST['ten_en'];
 		$data['ten_cn'] = $_POST['ten_cn'];
-		if($_POST['tenkhongdau']!="" && $_POST['chk']==false)
-    $data['tenkhongdau'] = $_POST['tenkhongdau'];
-else
-    $data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
+		$data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
 		$data['title'] = $_POST['title'];
 		$data['keywords'] = $_POST['keywords'];
 		$data['description'] = $_POST['description'];
@@ -1082,10 +1082,7 @@ function save_item(){
 		$data['id_cat'] = $_POST['id_cat'];
 		$data['ten_vi'] = $_POST['ten_vi'];
 		$data['ten_en'] = $_POST['ten_en'];
-		if($_POST['tenkhongdau']!="" && $_POST['chk']==false)
-    $data['tenkhongdau'] = $_POST['tenkhongdau'];
-else
-    $data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
+		$data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
 		$data['title'] = $_POST['title'];
 		$data['keywords'] = $_POST['keywords'];
 		$data['description'] = $_POST['description'];
@@ -1109,10 +1106,7 @@ else
 		$data['id_cat'] = $_POST['id_cat'];
 		$data['ten_vi'] = $_POST['ten_vi'];
 		$data['ten_en'] = $_POST['ten_en'];
-		if($_POST['tenkhongdau']!="" && $_POST['chk']==false)
-    $data['tenkhongdau'] = $_POST['tenkhongdau'];
-else
-    $data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
+		$data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
 		$data['title'] = $_POST['title'];
 		$data['keywords'] = $_POST['keywords'];
 		$data['description'] = $_POST['description'];
@@ -1270,14 +1264,11 @@ function save_sub(){
 		$data['id_item'] = $_POST['id_item'];
 		foreach($config_lang as $key => $value){
 			$data['ten_'.$key] = $_POST['ten_'.$key];
-	
+
 		}
 		
-	
-		if($_POST['tenkhongdau']!="" && $_POST['chk']==false)
-    $data['tenkhongdau'] = $_POST['tenkhongdau'];
-else
-    $data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
+
+		$data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
 		$data['title'] = $_POST['title'];
 		$data['keywords'] = $_POST['keywords'];
 		$data['description'] = $_POST['description'];
@@ -1303,10 +1294,7 @@ else
 		foreach($config_lang as $key => $value){
 			$data['ten_'.$key] = $_POST['ten_'.$key];
 		}
-		if($_POST['tenkhongdau']!="" && $_POST['chk']==false)
-    $data['tenkhongdau'] = $_POST['tenkhongdau'];
-else
-    $data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
+		$data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
 		$data['title'] = $_POST['title'];
 		$data['keywords'] = $_POST['keywords'];
 		$data['description'] = $_POST['description'];

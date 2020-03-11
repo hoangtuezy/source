@@ -30,11 +30,11 @@
 #shopping-cart .sc-stt { width: 80px; }
 @media (max-width: 991px) { #shopping-cart .sc-stt { display: none; } }
 #shopping-cart .sc-title { text-align: left; color: #000; width: calc(100% - 650px); }
-#shopping-cart .sc-title a { font-family: "muli-bold"; }
+#shopping-cart .sc-title a { font-family: "bevietnam-bold"; }
 @media (max-width: 991px) { #shopping-cart .sc-title { width: calc(100% - 570px); } }
 #shopping-cart .sc-price, #shopping-cart .sc-quantity, #shopping-cart .sc-image { width: 125px; }
-#shopping-cart .sc-total-price {text-align: right;font-family: "muli-bold";width: 150px;}
-#shopping-cart .cart-label {/* font-family: "muli-bold"; */}
+#shopping-cart .sc-total-price {text-align: right;font-family: bevietnam-bold;width: 150px;}
+#shopping-cart .cart-label {/* font-family: "bevietnam-bold"; */}
 #shopping-cart .cart-label, #shopping-cart .cart-item {padding: 10px;border-bottom: 1px solid #ededed;text-align: center;display: flex;justify-content: space-between;}
 @media (max-width: 991px) { #shopping-cart .cart-item { flex-flow: wrap; } }
 @media (max-width: 767px) { #shopping-cart .cart-label { display: none; }
@@ -52,7 +52,7 @@
 }  
 .cart-buttons {text-align: right;margin-bottom: 30px;}
 .cart-summary { padding-right: 20px; text-align: right; font-size: 17px; margin-bottom: 15px; }
-.cart-summary span {color: #df0000;font-family: "muli-bold";margin-left: 20px;}
+.cart-summary span {color: #df0000;font-family: "bevietnam-bold";margin-left: 20px;}
 .product_info .btn-giohang:before { content: "\f07a"; font-family: FontAwesome; font-size: 17px; margin-right: 10px; }
 .soluong_11 {border: 1px solid #CCC;float: left;height: 32px;}
 .soluong { border: none; outline: 0; border-left: 1px solid #CCC; border-right: 1px solid #ccc; float: left; width: 100px; height: 100%; text-align: center; }
@@ -61,7 +61,8 @@
 .order_item{
   position: relative;
   border-bottom: 1px solid #46ad00;
-  padding-bottom: 13px;
+  padding-bottom: 30px;
+  justify-content: space-between;
 }
 .order_item .detail{
   margin-left: 5px;
@@ -69,7 +70,7 @@
 }
 .order_item h3{
   font-size: 14px;
-  font-family: "muli-bold";
+  font-family: "bevietnam-bold";
 }
 .order_item .order_item_total{
   text-align: right;
@@ -77,7 +78,7 @@
   right: 0;
   bottom: 0;
   color: #df0000;
-  /* font-family: "muli-bold"; */
+  /* font-family: "bevietnam-bold"; */
 }
 body.thanhtoan .form-check-label{
 }

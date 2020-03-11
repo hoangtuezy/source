@@ -131,12 +131,17 @@ function get_size($size){
 		return get_no_color_price($cid);
 	}
 
-	function get_price($pid){
+	function get_price($pid,$color=null){
 		global $d, $row;
-		$sql = "select giaban from table_product where id='".$pid."'";
+		$sql = "select giaban,price_bycolor from table_product where id='".$pid."'";
 		$d->reset();
 		$d->query($sql);
 		$row = $d->fetch_array();
+		if(!is_null($color)){
+			$price_bycolor = json_decode($row['price_bycolor'],1);
+			return (int)$price_bycolor[$color];
+			
+		}
 		return $row['giaban'];
 	}
 
@@ -147,7 +152,8 @@ function get_size($size){
 			$pid=$_SESSION['cart'][$i]['productid'];
 			$q=$_SESSION['cart'][$i]['qty'];
 			$color = $_SESSION['cart'][$i]['color_id'];
-			$price = get_price($pid);
+			$price = get_price($pid,$color);
+			// $price = get_price_color($pid);
 			$sum+=$price*$q;
 		}
 		// return ($sum + $_SESSION["phivanchuyen"]);
@@ -178,10 +184,10 @@ function get_size($size){
 		$max=count($_SESSION['cart']);
 		$flag=0;
 		for($i=0;$i<$max;$i++){
-			if($pid==$_SESSION['cart'][$i]['productid']){
+			if($pid==$_SESSION['cart'][$i]['productid']&&$_SESSION['cart'][$i]['color_id'] == $color&&$_SESSION['cart'][$i]['size_id'] == $size){
 				$_SESSION['cart'][$i]['qty'] = $_SESSION['cart'][$i]['qty'] + $q;
-				$_SESSION['cart'][$i]['color_id'] = $color;
-				$_SESSION['cart'][$i]['size_id'] = $size;
+				// $_SESSION['cart'][$i]['color_id'] = $color;
+				// $_SESSION['cart'][$i]['size_id'] = $size;
 				$flag=1;
 				break;
 			}

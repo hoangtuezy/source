@@ -24,4 +24,7 @@ if($_POST['command']=='delete' && $_POST['pid']>0){
     $sql = "select noidung_$lang from #_info where type='taikhoan'";
     $d->query($sql);
     $result_taikhoan = $d->fetch_array();
+
+    $raw_colors = result_array("select * from #_thuoctinh where type='mausac' and hienthi=1 ");
+    $raw_sizes = result_array("select * from #_thuoctinh where type='mausac' and hienthi=1 ");
 ?>
