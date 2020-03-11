@@ -29,6 +29,7 @@
 							<?=$_product["ten_$lang"]?><br />
 							Màu: <?=$_color["ten_$lang"]?><br />
 							Size: 	<?=$_size["ten_$lang"]?>
+							<span onclick="del(<?=$_product["id"]?>,<?=$item['color_id']?>,<?=$item['size_id']?>)" class="btn-del">Xóa</span>
 						</div>
 						<div class="sc-quantity"> 
 							<div class="<?=return_uid($_product["id"])?> soluong_11" data-product="<?=return_uid($_product["id"])?>">
@@ -55,14 +56,18 @@
 	</div>	
 </div>
 			<input type="hidden" name="pid" class="pid" />
+			<input type="hidden" name="zcolor" class="zcolor" />
+			<input type="hidden" name="zsize" class="zsize" />
 			<input type="hidden" name="_crsf" value="<?=$_crsf?>" class="_crsf"/>
 			<input type="hidden" name="command" class="command" />
 </form>
 <?php }else{ echo(_empty_cart);} ?>
 <script language="javascript">
-	function del(pid){
+	function del(pid,c,z){
 		if(confirm('Bạn có muốn xóa sản phẩm?')){
 			$('.pid').val(pid);
+			$('.zcolor').val(c);
+			$('.zsize').val(z);
 			$('._crsf').val();
 			$('.command').val('delete');
 			$("#form-giohang").submit();

@@ -32,8 +32,6 @@ $product_thongtin = fetch_array("select noidung_$lang from #_company where type=
                         <div class="product_info">
                             <div class="giaban"><span class="label"><?=_gia?>:</span><span class="text-red" style="font-size: 18px;"><?= price($row_detail["giaban"]) ?></span> <?php if(!empty($row_detail["giacu"])){ ?> <del class="text-grey" style="font-size: 16px;text-decoration: line-through;"><?= price($row_detail["giacu"]) ?><?php } ?></div>
                         </div>
-                
-            
                         <?php if(!empty($row_detail['mota_'.$lang])){ ?>
                             <div class="product_info">
                                <?=$row_detail['mota_'.$lang]; ?>

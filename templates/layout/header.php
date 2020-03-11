@@ -15,35 +15,56 @@ $d->reset();
 $d->query("select * from #_product_list where type='san-pham' and hienthi=1 and noibat=1 order by stt asc ");
 $product_list = $d->result_array();
 ?>
-<div id="topbar">
-	<div class="container d-flex justify-content-between flex-wrap">
-		<div class="col-md-8 d-flex justify-content-between flex-wrap">
-			<span class="icon marker">Địa chỉ: <?=$row_setting["diachi_$lang"]?></span>
-			<span class="icon email">Email: <?=$row_setting["email"]?></span>
-		</div>
-		<div>
-			<span class="icon hotline">tel: <?=$row_setting["hotline"]?> - <?=$row_setting["dienthoai"]?></span>
-		</div>
-	</div>
-</div>
 <div id="header">
 	<div class="container">
-		<div id="logo">
-			<a href="">
-				<img src="upload/hinhanh/<?=$row_logo["photo_vi"]?>" alt="logo" onerror='this.src="img/180x148/"'/>
-			</a>
-		</div>
+		
 		<div id="banner">
 			<a href="">
-				<img src="upload/hinhanh/<?=$row_banner["photo_vi"]?>" alt="banner" onerror='this.src="img/1000x148/"'/>
+				<img src="thumb/1-330-112/upload/hinhanh/<?=$row_banner["photo_vi"]?>" alt="banner" onerror='this.src="img/330x112/"'/>
 			</a>
+		</div>
+		<?php include _template."components/timkiem.php";?>
+		<div class="hotline">
+			
 		</div>
 	</div>
 </div>
 <div id="menu-top">
 	<div class="container">
+		<a href="#menu_responsive" class="btn-menu"><span class="icon menu_responsive"></span></a>
+	<div class="nav-left">
+		DANH MỤC SẢN PHẨM
+		<?php if(!empty($product_list)){ ?>
+			<div class="vertical_menu d-block">
+						<ul class="nav-menu-list">
+							<?php foreach($product_list as $list){ ?>
+								<li class="menu-list"><a href="<?=$list["tenkhongdau"]?>" class="menu-list-text"><?=$list["ten_$lang"]?></a>
+									<?php  
+										$product_cat = result_array("select id,tenkhongdau,ten_$lang from #_".'product'."_cat where hienthi=1 and id_list='".$list['id']."'");
+										if(!empty($product_cat)){ ?>
+											<ul class="nav-menu-cat">
+												<?php foreach($product_cat as $cat){ ?>
+													<li class="menu-cat"><a href="<?=$cat["tenkhongdau"]?>"><?=$cat["ten_$lang"]?></a>
+														<?php 
+															$product_items = result_array("select id,tenkhongdau,ten_$lang from #_".'product'."_item where hienthi=1 and id_list='".$list['id']."'");
+															if(!empty($product_items)){ ?>
+																<ul class="nav-menu-item">
+																	<?php foreach($product_items as $items){ ?>
+																		<li class="menu-item"><a href="<?=$items["tenkhongdau"]?>"><?=$items["ten_$lang"]?></a></li>
+																	<?php } ?>
+																</ul>
+															<?php } ?>
+														</li>
+													<?php } ?>
+												</ul>
+										<?php } ?>	
+									</li>	
+								<?php }?>
+							</ul>
+							</div>
+						<?php }?>
+	</div>
 		<?php include _template."components/menu.php";?>
-		<?php include _template."layout/timkiem_icon.php";?>
 	</div>
 </div>
 <?php include _template."components/slider.php";?>

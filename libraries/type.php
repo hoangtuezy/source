@@ -1512,8 +1512,8 @@ case 'thanh-toan-giao-nhan':
 			break;
 		case 'banner':
 			$title_main = 'Banner';
-			@define ( _width_thumb , 1000 );
-			@define ( _height_thumb , 148 );
+			@define ( _width_thumb , 330 );
+			@define ( _height_thumb , 112 );
 			@define ( _style_thumb , 1 );
 			@define ( _img_type , 'jpg|gif|png|jpeg|PNG|JPG|JPEG|GIF|swf' );
 			$ratio_ = 1;

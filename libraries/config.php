@@ -36,7 +36,7 @@
 	$config['database']['database'] = 'source';
 	$config['database']['refix'] = 'table_';
 
-	$config_responsive =false;
+	$config_responsive =true;
 	$config_short_link =true;
 
 	$config_cart = array(

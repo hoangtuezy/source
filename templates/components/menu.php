@@ -3,21 +3,14 @@ $menu_array = array(
 	'index' => array(
 		'title' => _trangchu
 	),
-	'gioi-thieu' => array(
-		'title' => "Giới Thiệu"
-	),
+	
 	'san-pham' => array(
-		'title' => "Sản phẩm",
+		'title' => "Sản phẩm Hot",
 		'table' => 'product',
 		'type'	=> 'san-pham',
 		'lv'	=> 2
 	),
-	'dich-vu' => array(
-		'title' => "Dịch Vụ",
-		'table' => 'baiviet',
-		'type'	=> 'dich-vu',
-		// 'lv'	=> 1
-	),
+	
 	// 'du-an' => array(
 	// 	'title' => "Dự Án Công Trình",
 	// 	'table' => 'baiviet',
@@ -30,15 +23,16 @@ $menu_array = array(
 		'type'	=> 'tin-tuc',
 		// 'lv'	=> 1
 	),
+	'chinh-sach-si' => array(
+		'title' => "Chính Sách Sĩ"
+	),
+	'giao-hang' => array(
+		'title' => "Giao Hàng"
+	),
 	'lien-he' => array(
 		'title' => "Liên Hệ"
 	),
-	'tuyen-dung' => array(
-		'title' => "Tuyển Dụng",
-		'table' => 'baiviet',
-		'type'	=> 'tuyen-dung',
-		// 'lv'	=> 1
-	),
+	
 	
 );
 $system_level = array('list','cat','item','sub');
