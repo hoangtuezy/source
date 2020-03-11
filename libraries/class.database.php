@@ -322,8 +322,11 @@ if(strpos($v['Type'], 'int') !== false | strpos($v['Type'], 'float') !== false |
 		$this->sql = "insert into ".$this->refix.$this->table.$key." values ".$value;
 		//echo $this->sql;die;
 		$this->query();
-		$this->insert_id = mysqli_insert_id();
+		$this->insert_id = $this->db->insert_id;
 		return $this->result;
+	}
+	function insert_id(){
+		return $this->db->insert_id;
 	}
 	function update($data = array()){
 		$values = "";
@@ -498,7 +501,7 @@ function mysql_fetch_array($stringSQL){
 }
 function mysql_insert_id(){
 	global $d,$lang;
-	return $d->insert_id;
+	return $d->insert_id();
 }
 function mysql_fetch_assoc(){
 		global $d;
