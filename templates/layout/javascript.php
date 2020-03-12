@@ -18,6 +18,7 @@
   </script>
   <script>
     $(document).ready(function(){
+      $("#menu_responsive").mmenu();
      var i=0;
     var deg=0;
     deg=parseInt(deg);

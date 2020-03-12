@@ -32,7 +32,7 @@
 			<div class="formRight">
             	<input type="file" id="file" name="file" />
 				<img src="./images/question-button.png" alt="Upload hình" class="icon_question tipS" original-title="Tải hình ảnh (ảnh JPEG, GIF , JPG , PNG)">
-				<div class="note"> width : <?php echo _width_thumb*$ratio_;?> px , Height : <?php echo _height_thumb*$ratio_;?> px </div>
+				<div class="note"> width : 40 px , Height : 40 px </div>
 			</div>
 			<div class="clear"></div>
 		</div>
@@ -55,7 +55,8 @@
 			<div class="formRight">
             	<input type="file" id="file" name="quangcao" />
 				<img src="./images/question-button.png" alt="Upload quảng cáo" class="icon_question tipS" original-title="Tải hình ảnh (ảnh JPEG, GIF , JPG , PNG)">
-				<div class="note"> width : 550 px , Height : 233 px </div>
+				<div class="note"> width : <?php echo _width_thumb*$ratio_;?> px , Height : <?php echo _height_thumb*$ratio_;?> px </div>
+				
 			</div>
 			<div class="clear"></div>
 		</div>
@@ -87,6 +88,9 @@
 		<?php }?>
 		<?php if($config_mota=='true'){?>
 			<?php include _template."helper/mota_lang.php";?>
+		<?php }?>
+		<?php if($config_noidung=='true'){?>
+			<?php include _template."helper/noidung_lang.php";?>
 		<?php }?>
         <div class="formRow">
           <label>Hiển thị : <img src="./images/question-button.png" alt="Chọn loại" class="icon_que tipS" original-title="Bỏ chọn để không hiển thị danh mục này ! "> </label>

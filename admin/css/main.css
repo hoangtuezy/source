@@ -2905,6 +2905,7 @@ table thead td.headerSortDown span {
 	float: left;
 	/* font-weight: bold; */
 	white-space:nowrap;
+	width: 15%;
 }
 .formRight label {
 	float: left;
@@ -2948,7 +2949,7 @@ table thead td.headerSortDown span {
 .formRow .formRight {
 	display: flex;
 	float: right;
-	width: 85%;
+	width: 83%;
 	margin-right: 18px;
 	flex-wrap: wrap;
 	align-items: center;

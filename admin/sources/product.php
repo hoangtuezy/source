@@ -694,7 +694,7 @@ function save_list(){
 		}
 		foreach($config_lang as $key => $value){
 			$data['ten_'.$key] = $_POST['ten_'.$key];
-			
+			$data['noidung_'.$key] = $_POST['noidung_'.$key];
 			$data['mota_'.$key] = $_POST['mota_'.$key];
 		}
 
@@ -707,7 +707,7 @@ function save_list(){
 		$data['stt'] = $_POST['stt'];
 		$data['hienthi'] = isset($_POST['hienthi']) ? 1 : 0;
 		$data['ngaysua'] = time();
-		
+		$d->reset();
 		$d->setTable('product_list');
 		$d->setWhere('id', $id);
 		if($d->update($data))

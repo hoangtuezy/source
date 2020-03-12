@@ -161,7 +161,7 @@ function layout_mxh($w,$h,$type='mxh_top',$msg=''){
 	}
 	foreach($_mxh as $item){ 
 		$html .= '<a href="'.$item['url'].'" target="_blank" class="d-block mr-2">';
-		$html .= '<img src="thumb/2-'.$w.'-'.$h.'/'._upload_hinhanh_l.$item['photo'].'" alt="'.$item['ten'].'" /></a>';
+		$html .= '<img src="thumb/2-'.$w.'-'.$h.'/'._upload_hinhanh_l.$item['photo'].'" alt="'.$item['ten'].'" onerror=\'this.src="img/'.$w.'x'.$h.'/"\'/></a>';
 	}
 	$html .= '</div>';
 	return $html;

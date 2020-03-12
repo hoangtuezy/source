@@ -5,7 +5,7 @@ $menu_array = array(
 	),
 	
 	'san-pham' => array(
-		'title' => "Sản phẩm Hot",
+		'title' => "Sản phẩm Hot <img src='assets/images/hot.png' class='imghot' alt='hot'/>",
 		'table' => 'product',
 		'type'	=> 'san-pham',
 		'lv'	=> 2

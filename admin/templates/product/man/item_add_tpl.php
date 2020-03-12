@@ -296,7 +296,7 @@ $tags_arr = $d->result_array();
 			
 			
 			<?php include _template."helper/ten_lang.php";?>
-
+			<?php include _template."helper/config_tenkhongdau.php";?>
 			<?php if($config_quangcao == 'true'){ ?>
 				<div class="formRow">
 					<label>Ảnh Quảng Cáo:</label>

@@ -10,29 +10,18 @@
      <li><a href="index.php?com=product&act=man&type=san-pham">Sản Phẩm</a></li>
    </ul>
  </li>
-  <li class="menu categories_li"><a href="" title="" class="exp"><span>Dịch Vụ</span><strong></strong></a>
-    <ul class="sub"> 
-      <li><a href="index.php?com=baiviet&act=man_list&type=dich-vu">DM Cấp 1</a></li>
-     <li><a href="index.php?com=baiviet&act=man&type=dich-vu">Dịch Vụ</a></li>
-   </ul>
- </li>
-  <li class="menu categories_li"><a href="" title="" class="exp"><span>Dự Án</span><strong></strong></a>
-    <ul class="sub"> 
-      <li><a href="index.php?com=baiviet&act=man_list&type=du-an">DM Cấp 1</a></li>
-     <li><a href="index.php?com=baiviet&act=man&type=du-an">Dự Án</a></li>
-   </ul>
- </li>
  <li class="menu categories_li"><a href="" title="" class="exp"><span>Bài viết</span><strong></strong></a>
   <ul class="sub">
    <li><a href="index.php?com=info&act=capnhat&type=gioi-thieu">Giới Thiệu</a></li>
-   <li><a href="index.php?com=baiviet&act=man&type=tuyen-dung">Tuyển Dụng</a></li>
+   <li><a href="index.php?com=info&act=capnhat&type=chinh-sach-si">Chính Sách Sĩ</a></li>
+   <li><a href="index.php?com=info&act=capnhat&type=giao-hang">Giao Hàng</a></li>
+   <li><a href="index.php?com=baiviet&act=man&type=chinh-sach">Chính Sách</a></li>
     <li><a href="index.php?com=baiviet&act=man&type=tin-tuc">Tin TỨc</a></li>
  </ul>
 </li>
 <li class="menu categories_li"><a href="#" title="" class="exp"><span>Thông tin công ty</span><strong></strong></a>
   <ul class="sub">
     <!--<li<?php if($_GET['type']=='bgweb') echo ' class="this"' ?>><a href="index.php?com=background&act=capnhat&type=bgweb" title="">Background body</a></li>-->
-    <li><a href="index.php?com=bannerqc&act=capnhat&type=logo" title="">Logo</a></li>
     <li><a href="index.php?com=bannerqc&act=capnhat&type=banner" title="">Banner</a></li>
     <li><a href="index.php?com=bannerqc&act=capnhat&type=favicon" title="">Favicon</a></li>
     <!-- <li><a href="index.php?com=lkweb&act=man&type=lkweb" title="">Link liên kết</a></li> -->
@@ -42,6 +31,7 @@
     <!-- <li><a href="index.php?com=newsletter&act=man&type=formdk" title="">Đăng ký lái thử</a></li> -->
     <!-- <li><a href="index.php?com=toado&act=man" title="">Hệ Thống</a></li> -->
     <li><a href="index.php?com=company&act=capnhat&type=lienhe" title="">Liên Hệ</a></li>
+    <li><a href="index.php?com=company&act=capnhat&type=footer" title="">Hỗ trợ trực tuyến</a></li>
     <!-- <li><a href="index.php?com=lkweb&act=man&type=tags" title="">Tags</a></li> -->
     <li><a href="index.php?com=setting&act=capnhat" title="">Cấu hình chung</a></li>
     <li><a href="index.php?com=newsletter&act=man&type=dangkynhanmail" title="">Đăng Ký Nhận Mail</a></li>
@@ -51,8 +41,8 @@
 <li class="menu categories_li"><a href="#" title="" class="exp"><span>Slider - Video - Hình ảnh</span><strong></strong></a>
   <ul class="sub">
     <li><a href="index.php?com=photo&act=man_photo&type=slider" title="">Hình ảnh slider</a></li>
-    <li><a href="index.php?com=bannerqc&act=capnhat&type=quangcao" title="">Quảng cáo</a></li>
-    <li><a href="index.php?com=mxh&act=man&type=mxh_top" title="">Quảng cáo</a></li>
+    <li><a href="index.php?com=photo&act=man_photo&type=quangcao" title="">Quảng cáo</a></li>
+    <li><a href="index.php?com=mxh&act=man&type=mxh_top" title="">MXH</a></li>
   </ul>
 </li>
 

@@ -5,15 +5,15 @@ $chinhsach = result_array("select * from #_baiviet where type='chinh-sach' and h
 <div id="footer">
 	<div class="container" style="border-bottom: 1px solid #0298e7">
 		<div class="row">
-			<div class="col-sm-2 col-12">
+			<div class="col-md-2 col-sm-12 col-12">
 				<h3 class="line-bottom">LIÊN KẾT MXH</h3>
 				<?=layout_mxh(32,33,'mxh_bottom')?>
 			</div>
-			<div class="col-sm-4 col-12">
+			<div class="col-md-4 col-sm-12 col-12">
 				<h3 class="line-bottom">HỖ TRỢ TRỰC TUYẾN</h3>
 				<?=$footer_content["noidung_$lang"]?>
 			</div>
-			<div class="col-sm-6 col-12">
+			<div class="col-md-6 col-sm-12 col-12">
 				<h3 class="line-bottom">ĐĂNG KÝ EMAIL NHẬN TIN</h3>
 				<form action="nhan-mail" method="POST" class="relative">
 						<input type="hidden" name="nhanmail">
@@ -29,7 +29,7 @@ $chinhsach = result_array("select * from #_baiviet where type='chinh-sach' and h
 	</div>
 	<div class="container py-sm-4 py-2">
 		<div class="row">
-			<div class="col-sm-4 col-12">
+			<div class="col-md-4 col-sm-12 col-12">
 				<h2><?=$row_setting["ten_$lang"]?></h2>
 				<div class="icon marker">Địa chỉ: <?=$row_setting["diachi_$lang"]?></div>
 				<div class="icon hotline">Hotline :<?=$row_setting["hotline"]?></div>
@@ -37,7 +37,7 @@ $chinhsach = result_array("select * from #_baiviet where type='chinh-sach' and h
 				<div class="icon global">Website :<?=$row_setting["website"]?></div>
 				
 			</div>
-			<div class="col-sm-3 col-12">
+			<div class="col-md-3 col-sm-12 col-12">
 				<h3 style="font-family: roboto-bold;text-transform: uppercase;">Chính sách</h3>
 				<div> 
 					<?php foreach($chinhsach as $item): ?>
@@ -46,7 +46,7 @@ $chinhsach = result_array("select * from #_baiviet where type='chinh-sach' and h
 					<?php endforeach; ?>
 				</div>
 			</div>
-			<div class="col-sm-5 col-12">
+			<div class="col-md-5 col-sm-12 col-12">
 				<div class="bando_iframe">
 					<?=$row_setting['toado']?>
 				</div>

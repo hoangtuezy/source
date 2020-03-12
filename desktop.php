@@ -33,8 +33,22 @@
 	<div id="wrapper">
 		<?php if($com!='index'){ ?>
 			<?php include _template."layout/breadcrum.php";?>
-
-		<?php } ?>
+		<?php }else{ ?>
+		<div class="container mb-3 d-flex justify-content-between flex-wrap">
+			<div class="col-md-3 col-sm-6 col-12">
+			<img src="assets/images/vs1.jpg" class="img-fluid" alt="visaochon1">
+			</div>
+			<div class="col-md-3 col-sm-6 col-12">
+			<img src="assets/images/vs2.jpg" class="img-fluid" alt="visaochon2">
+			</div>
+			<div class="col-md-3 col-sm-6 col-12">
+			<img src="assets/images/vs3.jpg" class="img-fluid" alt="visaochon3">
+			</div>
+			<div class="col-md-3 col-sm-6 col-12">
+			<img src="assets/images/vs4.jpg" class="img-fluid" alt="visaochon4">
+			</div>
+		</div>
+		<?php } ?>	
 		<div class="container">
 			<div class="box-left">
 				<?php include _template."layout/box-left.php";?>

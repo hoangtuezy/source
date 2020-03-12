@@ -22,6 +22,7 @@
 					$config_images = "true";
 					$config_qc = "true";
 					$config_mota= "true";
+					$config_noidung= "true";
 					$config_noibat= "true";
 					$config_noibat1= "false";
 					$config_noibat2= "false";
@@ -56,8 +57,8 @@
 					$config_item = "false";
 					$config_sub = "false";
 					$config_masp = true;
-					$config_giaban = false;
-					$config_giacu = false
+					$config_giaban = true;
+					$config_giacu = true
 					;
 					$config_diachi = false;
 					$config_dientich = false;
