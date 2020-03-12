@@ -1,1 +1,0 @@
-<?php return array("id","id_list","id_cat","ten_vi","tenkhongdau","stt","hienthi","ngaysua","ngaytao","type");?>

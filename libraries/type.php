@@ -8,7 +8,7 @@
 		$act = 'default';
 	}
 		$config_noibat_title = "Nổi Bật";
-		$config_noibat1_title = "Mới";
+		$config_noibat1_title = "Khuyến Mãi";
 		$config_noibat2_title = "Combo";
 		$config_noibat3_title = "Sale";
 		$setting_slogan = true;
@@ -20,14 +20,14 @@
 				case 'list':
 					$title_main = "Danh true cấp 1";
 					$config_images = "true";
-					$config_qc = "false";
+					$config_qc = "true";
 					$config_mota= "true";
 					$config_noibat= "true";
 					$config_noibat1= "false";
 					$config_noibat2= "false";
 					$config_tenkhongdau = true;
-					@define ( _width_thumb , 250 );
-					@define ( _height_thumb , 250 );
+					@define ( _width_thumb , 900 );
+					@define ( _height_thumb , 240 );
 					@define ( _style_thumb , 2 );
 					$ratio_ = 1;
 					break;
@@ -65,7 +65,7 @@
 					$config_quangcao = 'false';
 					$config_trongluong = "false";
 					$config_noibat = "true";
-					$config_noibat1 = "false";
+					$config_noibat1 = "true";
 					$config_noibat2 = "false";
 					$config_noibat3 = "false";
 					$config_tags = "false";
@@ -1633,8 +1633,8 @@ case 'thanh-toan-giao-nhan':
 			$title_main = "Hình ảnh slider";
 			$config_list = "false";
 			$config_mota = "false";
-			@define ( _width_thumb , 1366 );
-			@define ( _height_thumb , 420);
+			@define ( _width_thumb , 940 );
+			@define ( _height_thumb , 368);
 			@define ( _style_thumb , 1 );
 			@define ( _img_type , 'jpg|gif|png|jpeg|PNG|JPG|JPEG|GIF' );
 			$ratio_ = 1;
@@ -1701,8 +1701,8 @@ case 'thanh-toan-giao-nhan':
 		
 		case 'quangcao':
 		    $title_main = "Quảng cáo";
-			@define ( _width_thumb , 1200 );
-			@define ( _height_thumb , 180 );
+			@define ( _width_thumb , 250 );
+			@define ( _height_thumb , 480 );
 			@define ( _style_thumb , 1 );
 			@define ( _img_type , 'jpg|gif|png|jpeg|PNG|JPG|JPEG|GIF' );
 			$ratio_ = 1;
@@ -1777,8 +1777,8 @@ case 'thanh-toan-giao-nhan':
 			break;
 		case 'mxh_bottom':
 		    $title_main = "Mạng xã hội 2";
-			@define ( _width_thumb , 47 );
-			@define ( _height_thumb , 47 );
+			@define ( _width_thumb , 32 );
+			@define ( _height_thumb , 33 );
 			@define ( _style_thumb , 2 );
 			@define ( _img_type , 'jpg|gif|png|jpeg|PNG|JPG|JPEG|GIF' );
 			$ratio_ = 1;

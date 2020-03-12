@@ -1,1 +1,0 @@
-<?php return array("id","username","email","password","ten","bcoin","tichluy","dienthoai","ngaysinh","diachi","sex","photo","id_district","id_city","active","ngaydangky","lastlogin","stt","randomkey","limit_time","ngaytao","facebook_auth_id","google_auth_id","com","hienthi","block_user","mathanhvien","thanhvien","nguoigt");?>

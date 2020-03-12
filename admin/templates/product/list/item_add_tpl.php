@@ -1,6 +1,4 @@
-
 <script type="text/javascript">		
-
 	$(document).ready(function() {
 		$('.chonngonngu li a').click(function(event) {
 			var lang = $(this).attr('href');
@@ -13,7 +11,6 @@
 	});
 </script>
 <div class="wrapper">
-
 <div class="control_frm breadcrumb" style="margin-top:25px;">
     <div class="bc">
         <ul id="breadcrumbs" class="breadcrumbs">
@@ -26,6 +23,7 @@
 
 <form name="supplier" id="validate" class="form" action="index.php?com=product&act=save_list<?php if($_REQUEST['type']!='') echo'&type='. $_REQUEST['type'];?>" method="post" enctype="multipart/form-data">
 	<div class="widget">
+		
 		<?php include _template."helper/lang.php";?>
        	
 		<?php if($config_images=='true'){?>

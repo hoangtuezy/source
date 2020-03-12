@@ -1,1 +1,0 @@
-<?php return array("id","id_baiviet","type","photo","thumb","ten","mota","stt","hienthi","ngaytao","ngaysua");?>

@@ -1,1 +1,0 @@
-<?php return array("id_user","ip","timelog","user_agent","id");?>

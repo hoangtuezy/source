@@ -1,1 +1,0 @@
-<?php return array("id","username","password","ten","dienthoai","email","diachi","sex","nick_yahoo","nick_skype","congty","country","city","quyen","role","hienthi","com","login_session","lastlogin","user_token");?>

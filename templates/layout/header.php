@@ -33,6 +33,8 @@ $product_list = $d->result_array();
 	<div class="container">
 		<a href="#menu_responsive" class="btn-menu"><span class="icon menu_responsive"></span></a>
 	<div class="nav-left">
+		<span class="icon-btn-menu" style="height: 14px;display: flex;
+    margin-right: 10px;"><img src="assets/images/btn-menu.png" alt="btnmenu"></span>
 		DANH MỤC SẢN PHẨM
 		<?php if(!empty($product_list)){ ?>
 			<div class="vertical_menu d-block">
@@ -67,6 +69,8 @@ $product_list = $d->result_array();
 		<?php include _template."components/menu.php";?>
 	</div>
 </div>
-<?php include _template."components/slider.php";?>
-
+<div class="container d-flex justify-content-between flex-wrap">
+	<div></div>
+	<?php include _template."components/slider.php";?>
+</div>
 

@@ -1,1 +1,0 @@
-<?php return array("id","stt","ten","diachi","dienthoai","photo","thumb","email","tieude","noidung","ghichu","view","hienthi","ngaytao","type");?>

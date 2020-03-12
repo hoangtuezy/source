@@ -1,1 +1,0 @@
-<?php return array("id","noibat","type","photo","thumb","ten_vi","tenkhongdau","links","title","keywords","description","ten_en","ten_cn","stt","hienthi","ngaytao","ngaysua","luotxem","noidung_cn","noidung_en","noidung_vi","mota_cn","mota_en","mota_vi","ten_kr","mota_kr","noidung_kr");?>

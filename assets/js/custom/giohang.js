@@ -5,20 +5,21 @@ var msg ='';
 $(document).on("click",".add_cart",function(){
 
     var product_id = $(this).data("product");
-
     var soluong = $("#input_soluong").val();
-    var mausac = $("#select_mausac").val();
-    mausac = parseInt(mausac);
-    if(isNaN(mausac)){
-        alert("Vui lòng chọn màu sắc thêm vào giỏ hàng.");
-        return;
-    }
-    var size = $("#select_size").val();
-     size = parseInt(size);
-    if(isNaN(size)){
-        alert("Vui lòng chọn size thêm vào giỏ hàng.");
-        return;
-    }
+    var mausac;
+    var size;
+    // var mausac = $("#select_mausac").val();
+    // mausac = parseInt(mausac);
+    // if(isNaN(mausac)){
+    //     alert("Vui lòng chọn màu sắc thêm vào giỏ hàng.");
+    //     return;
+    // }
+    // var size = $("#select_size").val();
+    //  size = parseInt(size);
+    // if(isNaN(size)){
+    //     alert("Vui lòng chọn size thêm vào giỏ hàng.");
+    //     return;
+    // }
     var _crsf = $("#ajax_crsf").data('value');
 
     $.ajax({

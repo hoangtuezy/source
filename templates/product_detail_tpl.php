@@ -8,7 +8,7 @@ $product_thongtin = fetch_array("select noidung_$lang from #_company where type=
     <div class="container">
         <div id="product-detail">
             <div class="row">
-                <div id="left" class="col-5">
+                <div id="left" class="col-md-5 col-12">
                     <div class="showhinh text-center">
                         <a class="MagicZoomPlus" id="shoes" href="<?=_upload_product_l.$row_detail['photo']?>"><img src="thumb/1-560-640/<?=_upload_product_l.$row_detail['photo']?>" alt="<?=$row_detail['ten_'.$lang]?>" onerror='this.src="img/560x640/"'/></a>
                     </div>
@@ -22,7 +22,7 @@ $product_thongtin = fetch_array("select noidung_$lang from #_company where type=
                         </div>
                         <div class="clearfix"></div>
                     </div>
-                    <div id="right" class="col-7">
+                    <div id="right" class="col-md-7 col-12">
                         <h1 class="vcard fn"><?php echo $row_detail['ten_'.$lang]; ?></h1>
                         <?php if(!empty($row_detail["masp"])){ ?>
                             <div class="product_info">
@@ -32,19 +32,63 @@ $product_thongtin = fetch_array("select noidung_$lang from #_company where type=
                         <div class="product_info">
                             <div class="giaban"><span class="label"><?=_gia?>:</span><span class="text-red" style="font-size: 18px;"><?= price($row_detail["giaban"]) ?></span> <?php if(!empty($row_detail["giacu"])){ ?> <del class="text-grey" style="font-size: 16px;text-decoration: line-through;"><?= price($row_detail["giacu"]) ?><?php } ?></div>
                         </div>
+                     <?php /*   <div class="product_info mausac">
+                                <?php $colors = json_decode($row_detail['price_bycolor'],1); ?>
+                                <div class="input-group mb-3">
+                              <div class="input-group-prepend col-2 p-0 text-center">
+                                <label class="input-group-text w-100" for="select_mausac">Màu sắc</label>
+                            </div>
+                            <select class="custom-select col-lg-4 col-md-6 col-12" id="select_mausac">
+                                <option selected>Chọn màu sắc...</option>
+                                <?php  foreach($colors as $i => $c){
+                                    $color = fetch_array("select * from #_thuoctinh where id='".$i."' ");?>
+                                    <option value="<?=$i?>"><?=$color["ten_$lang"]?> - <?=price($c)?></option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                            </div>
+                            <div class="product_info size">
+                                 <?php 
+                                 $sizes = explode(',', $row_detail['size']); ?>
+                                <div class="input-group mb-3">
+                              <div class="input-group-prepend col-2 p-0 text-center">
+                                <label class="input-group-text w-100" for="select_size">Size</label>
+                            </div>
+                            <select class="custom-select col-lg-4 col-md-6 col-12" id="select_size">
+                                <option selected>Chọn size...</option>
+                                <?php  foreach($sizes as $i){
+                                    $size = fetch_array("select * from #_thuoctinh where id='".$i."' ");?>
+                                    <option value="<?=$i?>"><?=$size["ten_$lang"]?></option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                            </div>
+                             */ ?>
+                            <div class="product_info">
+                                <div class="input-group mb-3">
+                                <div class="input-group-prepend col-md-2 col-3 p-0 text-center">
+                                <label class="input-group-text w-100" for="input_soluong">Số lượng</label>
+                            </div>
+                                <div class="soluong_11 <?=return_uid($row_detail["id"])?>" data-product="<?=return_uid($row_detail["id"])?>">
+                                    <a href="javascript:void()" class="minus a_1">-</a>
+                                    <input type="text" value="1" min="1" max="999" name="soluong" class="soluong form-control" id="input_soluong">
+                                    <a href="javascript:void()" class="add a_1">+</i></a>
+                                </div>
+
+                                <div class="clearfix"></div>
+                            </div>
+                            </div>
+                            <div class="product_info d-flex ">
+                                <div class="btn-giohang add_cart" data-product="<?=return_uid($row_detail["id"])?>">THÊM VÀO GIỎ HÀNG</div>
+                                <div class="btn-giohang muangay px-2" onclick="addtocart(<?=$row_detail['id']?>)" data-product="<?=return_uid($row_detail["id"])?>">MUA NGAY</div>
+                            </div>
                         <?php if(!empty($row_detail['mota_'.$lang])){ ?>
                             <div class="product_info">
                                <?=$row_detail['mota_'.$lang]; ?>
                            </div>
                        <?php } ?>
                        <div class="product_info">
-                           <div class="chiase df aic">
-                            <div class="fb-like" data-href="<?=getCurrentPageURL()?>" data-layout="button" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-                            &nbsp;<div class="zalo-share-button" data-href="<?=getCurrentPageURL()?>" data-oaid="579745863508352884" data-layout="1" data-color="blue" data-customize=false></div>
-                            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                            <g:plusone size="medium" ></g:plusone>
-                            <div class="clearfix"></div>
-                        </div>
+                         <?php include _template."layout/chiase.php";?>
                     </div>
               
          
@@ -66,9 +110,9 @@ $product_thongtin = fetch_array("select noidung_$lang from #_company where type=
 <div class="header-title my-4 text-center">
     <h2 class="h2-title"><span><?=$title_com?> <?=_khac?></span></h2>
 </div>
-<div class="product-all row row-20">
+<div class="product-all row row-15">
     <?php foreach($product_khac as $item) { ?>
-        <div class="col-3 mb-3">
+        <div class="col-md-3 col-sm-4 col-6 mb-3">
             <?php include _template."components/product_item.php";?>
         </div>
     <?php } ?>

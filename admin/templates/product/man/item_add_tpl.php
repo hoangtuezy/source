@@ -374,6 +374,8 @@ $tags_arr = $d->result_array();
 					<div class="clear"></div>
 				</div>
 			<?php } ?>
+			
+<?php if($config_cart['color']){ ?>				
 			<?php
 			$price_bycolor = json_decode($item['price_bycolor'],1);
 			$row_mausac =result_array("select * from #_thuoctinh where hienthi=1 and type='mausac' order by id desc");
@@ -413,6 +415,8 @@ if(!empty($_tmm)){
 					<?php } ?>
 				</div>
 			</div>
+<?php } ?>			
+<?php if($config_cart['size']){ ?>			
 			<div class="formRow">
 				<label>Size </label>
 				<div class="formRight">
@@ -438,7 +442,7 @@ if(!empty($_tmm)){
 				</div>
 				<div class="clear"></div>
 			</div>
-
+<?php } ?>
 
 
 			<?php if($config_giacu){ ?>			

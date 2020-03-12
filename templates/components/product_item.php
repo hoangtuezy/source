@@ -1,6 +1,6 @@
 <?php
-$_p_w = 285;
-$_p_h = 215;
+$_p_w = 215;
+$_p_h = 205;
 $_com = $item["type"];
 if(empty($_com)){
 	$_com = $com;
@@ -15,7 +15,10 @@ if(empty($_com)){
 	</div>
 	<div class="detail">
 		<h3><a href="<?=$item['tenkhongdau']?>" class="h3a"><?=$item["ten_$lang"]?></a></h3>
-		<div class="mota"><?=$item["mota_$lang"]?></div>
+		<div class="price">
+			<div class="giaban"><span><?=price($item['giaban'])?></span></div>
+			<?php if(!empty($item["giacu"])){ ?><div class="giacu"><span><?=price($item['giacu'])?></span></div><?php } ?>
+		</div>
 		
 	</div>
 </div>

@@ -1,1 +1,0 @@
-<?php return array("id","id_vitri","slider_vi","slider_en","ten_vi","ten_en","link","mota_vi","mota_en","stt","hienthi","com","noidung_vi","noidung_en","ten_cn","mota_cn","noidung_cn","ten_kr","mota_kr","noidung_kr");?>

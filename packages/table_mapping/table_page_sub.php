@@ -1,1 +1,0 @@
-<?php return array("id","id_list","id_cat","id_item","type","ten_vi","ten_en","tenkhongdau","mota","title","keywords","description","photo","thumb","stt","hienthi","ngaytao","ngaysua","mota_vi","noidung_vi","mota_en","noidung_en","ten_cn","mota_cn","noidung_cn","ten_kr","mota_kr","noidung_kr");?>
