@@ -664,8 +664,12 @@ function tinhtrang($i=0)
 
 						<td><?=$i+1?></td>
 
-						<td><?=$pname?><br />Màu: <?=$_color["ten_$lang"]?><br />
-							Size: 	<?=$_size["ten_$lang"]?></td>
+						<td><?=$pname?><br />
+							<?php if($config_cart['color']){ ?>
+							Màu: <?=$_color["ten_$lang"]?><br /><?php } ?>
+							<?php if($config_cart['size']){ ?>
+							Size: 	<?=$_size["ten_$lang"]?><?php } ?>
+						</td>
 
 						<td align="center"><?=number_format($result_ctdonhang[$i]['gia'],0, ',', '.')?>&nbsp;VNĐ</td>
 
