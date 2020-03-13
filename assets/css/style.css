@@ -46,21 +46,7 @@
 .slider_container { margin-bottom: 20px; }
 .tag_sukien_item { padding: 8px 15px; display: inline-block; margin-bottom: 10px; margin-right: 5px; }
 .tag_sukien_item a { color: #FFF; text-decoration: none; font-family: "lato-regular"; font-size: 15px; text-transform: uppercase; }
-#menu-top { background: #02419d; position: relative; z-index: 99; }
-.nav-menu { display: table; width: 100%; position: relative; }
-.nav-menu a { text-decoration: none; display: flex; align-items: center; text-align: center; height: 45px; color: #fff; text-transform: uppercase; font-size: 14px; justify-content: center; }
-.nav-menu li:hover > ul { display: block; }
-.nav-menu li { position: relative; }
-.nav-menu > li.menu { display: table-cell; position: relative; border-right: 1px solid #0250c3; }
-.nav-menu > li.menu.active, .nav-menu > li.menu:hover { background-color: #f5c900; }
-.nav-menu > li.menu.active > a, .nav-menu > li.menu:hover > a { color: #0148ae; }
-.nav-menu > li.menu ul { position: absolute; display: none; }
-.nav-menu > li.menu ul li { white-space: nowrap; padding: 0 15px; display: flex; }
-.nav-menu > li.menu > ul.nav-menu-list { background-color: #f5c900; }
-.nav-menu > li.menu > ul.nav-menu-list li:hover { background-color: #0148ae; }
-.nav-menu > li.menu > ul.nav-menu-list a { color: #1f1f1f; }
-.nav-menu > li.menu > ul.nav-menu-list ul.nav-menu-cat { background-color: #e6bc00; }
-.nav-menu > li.menu > ul.nav-menu-list ul { left: 100%; top: 0; }
+
 .product-detail-content #left { width: 520px; float: left; }
 .product-detail-content #right { width: calc(100% - 565px); float: right; }
 @media (max-width: 567px) { .product-detail-content #left { width: 100%; }

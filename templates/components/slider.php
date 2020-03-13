@@ -1,5 +1,7 @@
 <?php
-$slider =result_array("select ten_vi,photo_vi,link from #_photo where type='slider'  and hienthi=1 order by stt,id desc");
+$d->reset();
+$d->query("select ten_vi,photo_vi,link from #_photo where type='slider' and hienthi=1 order by stt,id desc");
+$slider =$d->result_array();
 $width=940;
 $height = 368;
 $sliderzc = 1;

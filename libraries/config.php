@@ -37,6 +37,7 @@
 	$config['database']['refix'] = 'table_';
 
 	$config_responsive =true;
+	
 	$config_short_link =true;
 
 	$config_cart = array(
