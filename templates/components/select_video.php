@@ -47,7 +47,7 @@ $vheight = 320;
 			?>
 			<div class="swiper-slide">
 				<div>
-				<a class="d-block select_video_item" href="<?=$item['links']?>" data-fancybox="gallery" data-id="<?=$item['id']?>" style="height: 105px;overflow-y: hidden;background: url(https://img.youtube.com/vi/<?=youtobi($item['links'])?>/maxresdefault.jpg);background-size: cover;">
+				<a class="d-block select_video_item" href="<?=$item['links']?>" data-fancybox="gallery" data-id="<?=$item['id']?>" style="height: 80px;overflow-y: hidden;background: url(https://img.youtube.com/vi/<?=youtobi($item['links'])?>/maxresdefault.jpg);background-size: cover;">
 				</a>
 				</div>
 			</div>

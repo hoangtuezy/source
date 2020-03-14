@@ -22,5 +22,4 @@
 		$com = $__product['type'];
 		$__target = $__product;
 	}
-
 ?>

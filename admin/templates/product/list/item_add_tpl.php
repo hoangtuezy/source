@@ -32,7 +32,7 @@
 			<div class="formRight">
             	<input type="file" id="file" name="file" />
 				<img src="./images/question-button.png" alt="Upload hình" class="icon_question tipS" original-title="Tải hình ảnh (ảnh JPEG, GIF , JPG , PNG)">
-				<div class="note"> width : 40 px , Height : 40 px </div>
+				<div class="note"> width : <?php echo _width_thumb*$ratio_;?> px , Height : <?php echo _height_thumb*$ratio_;?> px </div>
 			</div>
 			<div class="clear"></div>
 		</div>

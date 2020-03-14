@@ -34,38 +34,19 @@
 		<?php if($com!='index'){ ?>
 			<?php include _template."layout/breadcrum.php";?>
 		<?php }else{ ?>
-		<div class="container mb-3 d-flex justify-content-between flex-wrap">
-			<div class="col-md-3 col-sm-6 col-12">
-			<img src="assets/images/vs1.jpg" class="img-fluid" alt="visaochon1">
-			</div>
-			<div class="col-md-3 col-sm-6 col-12">
-			<img src="assets/images/vs2.jpg" class="img-fluid" alt="visaochon2">
-			</div>
-			<div class="col-md-3 col-sm-6 col-12">
-			<img src="assets/images/vs3.jpg" class="img-fluid" alt="visaochon3">
-			</div>
-			<div class="col-md-3 col-sm-6 col-12">
-			<img src="assets/images/vs4.jpg" class="img-fluid" alt="visaochon4">
-			</div>
-		</div>
+		
 		<?php } ?>	
-		<div class="container">
-			<div class="box-left">
-				<?php include _template."layout/box-left.php";?>
-			</div>
-			<div class="box-right">
 				<?php if($com!='index'){ ?>
-				<div class="header-slogan text-center">
-					<h2><span class="header-slogan"><?=$title_detail?></span></h2>
+				<div class="header-title ">
+					<h2 class="h2-title"><span><?=$title_detail?></span></h2>
 				</div>
 				<?php } ?>
 				<?php include _template.$template."_tpl.php";?>
-			</div>
-		</div>
 		<div class="clearfix"></div>
 	</div>
 	<?php if($com=='index'){ ?>
-		<?php include _template."layout/video.php";?>
+		<?php include _template."layout/doitac.php";?>
+		
 	<?php } ?>
 	<?php include _template."layout/footer.php";?>
 	<?php include _template."layout/js.php";?>

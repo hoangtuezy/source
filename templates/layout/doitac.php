@@ -4,6 +4,10 @@ if(count($index_doitac) > 0){
 ?>
 <div id="doitac">
 	<div class="container">
+		<div class="header-title">
+			<h2 class="h2-title"><span>ĐỐI TÁC KHÁCH HÀNG</span></h2>
+			<div class="desc text-secondary">Chúng tôi tự hào hợp tác cùng với những khách hàng lớn, uy tín</div>
+		</div>
 		<marquee behavior="scroll" direction="" onmouseover="this.stop()" onmouseout="this.start()" LOOP=-1>
 		<?php foreach($index_doitac as $item) { ?>
 		<div class="doitac_item">

@@ -1312,7 +1312,7 @@ case 'thanh-toan-giao-nhan':
 		case 'album':
 			$title_main = "Album hình";
 			$config_images = "true";
-			$config_img = "false";
+			$config_img = "true";
 			$config_mota= "false";
 			$config_list = "false";
 			$config_cat = "false";
@@ -1513,8 +1513,8 @@ case 'thanh-toan-giao-nhan':
 			break;
 		case 'banner':
 			$title_main = 'Banner';
-			@define ( _width_thumb , 330 );
-			@define ( _height_thumb , 112 );
+			@define ( _width_thumb , 360 );
+			@define ( _height_thumb , 115 );
 			@define ( _style_thumb , 1 );
 			@define ( _img_type , 'jpg|gif|png|jpeg|PNG|JPG|JPEG|GIF|swf' );
 			$ratio_ = 1;
@@ -1634,8 +1634,8 @@ case 'thanh-toan-giao-nhan':
 			$title_main = "Hình ảnh slider";
 			$config_list = "false";
 			$config_mota = "false";
-			@define ( _width_thumb , 940 );
-			@define ( _height_thumb , 368);
+			@define ( _width_thumb , 1366 );
+			@define ( _height_thumb , 465);
 			@define ( _style_thumb , 1 );
 			@define ( _img_type , 'jpg|gif|png|jpeg|PNG|JPG|JPEG|GIF' );
 			$ratio_ = 1;

@@ -15,28 +15,28 @@ $(document).ready(function(){
     },
 });
  
-        var swiper_quangcao = new Swiper('#slider_video_select .swiper-container', {
+        var swiper_quangcao = new Swiper('#slider_product_list_noibat_select .swiper-container', {
             slidesPerView: 3,
-            spaceBetween: 20,
+            spaceBetween: 10,
       // init: false,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
     },
-breakpoints: {
-        0: {
-          slidesPerView: 1,
-          spaceBetween: 20,
-        },
-        568: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        1024: {
-          slidesPerView: 4,
-          spaceBetween: 20,
-        },
-      }
+// breakpoints: {
+//         0: {
+//           slidesPerView: 1,
+//           spaceBetween: 20,
+//         },
+//         568: {
+//           slidesPerView: 2,
+//           spaceBetween: 20,
+//         },
+//         1024: {
+//           slidesPerView: 3,
+//           spaceBetween: 20,
+//         },
+//       }
 });
 
  $(document).on('click','.action-button',function(){

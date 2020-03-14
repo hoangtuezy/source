@@ -40,7 +40,9 @@ $white_coms = array(
 	'gio-hang',
 	'thanh-toan',
 	'bo-suu-tap',
-	'album'
+	'album',
+	'khach-hang',
+	'thiet-ke'
 );
 if(!in_array($com, $white_coms)){
 	include _lib."short_link.php";
@@ -55,10 +57,22 @@ switch($com){
 	$template = isset($id) ? "video_detail" : "video";
 	break;
 	case 'album':
-	$source = "album";
+	$source = "news";
 	$template = isset($id) ? "album_detail" : "album";
 	$type_bar = 'album';
 	$title_detail = "Album hình ảnh";
+	break;
+	case 'khach-hang':
+	$source = "news";
+	$template = isset($id) ? "news_detail" : "news";
+	$type_bar = 'khach-hang';
+	$title_detail = "Khách Hàng";
+	break;
+	case 'thiet-ke':
+	$source = "news";
+	$template = isset($id) ? "news_detail" : "news";
+	$type_bar = 'thiet-ke';
+	$title_detail = "Thiết Kế";
 	break;
 	case 'gioi-thieu':
 	$source = "about";

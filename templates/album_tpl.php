@@ -1,14 +1,13 @@
 <div id="album">
     <div class="container">
         <div class="content">
-            
             <div class="row row-20 w-100" id="lightgallery">
-                <?php foreach($album as $stt => $item){
+                <?php foreach($tintuc as $stt => $item){
                 $sql_khac = result_array("select * from #_baiviet_photo where id_baiviet='".$item['id']."' order by id desc");
                 ?>
-                <a rel="prettyPhoto[<?=$item["tenkhongdau"]?>]" href="thumb/1-720-480/upload/baiviet/<?=$item["photo"]?>"  class="col-4 mb-3 d-block">
+                <a rel="prettyPhoto[<?=$item["tenkhongdau"]?>]" href="thumb/1-720-480/upload/baiviet/<?=$item["photo"]?>"  class="col-md-3 col-sm-4 col-6 d-block">
                     <img src="thumb/1-320-240/upload/baiviet/<?=$item["photo"]?>" alt="<?=$item["photo"]?>" class="img-fluid w-100" onerror='this.src="img/320x200/"'>
-                    <h5 class="h5a text-center my-3"><?=$item["ten_$lang"]?></h5>
+                    <h3 class="h3a text-center my-3"><?=$item["ten_$lang"]?></h3>
                 </a>
                 <?php foreach($sql_khac as $photo){ ?>
                 <a rel="prettyPhoto[<?=$item["tenkhongdau"]?>]" href="thumb/1-720-480/upload/baiviet/<?=$photo["photo"]?>"  class="col-3 d-none">

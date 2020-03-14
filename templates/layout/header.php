@@ -19,69 +19,25 @@ $product_list = $d->result_array();
 	<div class="container">
 		<div id="banner">
 			<a href="">
-				<img src="thumb/1-330-112/upload/hinhanh/<?=$row_banner["photo_vi"]?>" alt="banner" onerror='this.src="img/330x112/"'/>
+				<img src="thumb/1-360-115/upload/hinhanh/<?=$row_banner["photo_vi"]?>" alt="banner" onerror='this.src="img/330x112/"'/>
 			</a>
 		</div>
 		<?php include _template."components/timkiem.php";?>
 		<div class="addons d-flex justify-content-between flex-wrap">
 			<div class="hotline">
-				<div>HOTLINE: <span class="number"><?=$row_setting["hotline"]?></span></div>
-				<div style="font-family: roboto-regular;font-size: 14px;color: #434343;">Đặt hàng: (7h - 20h từ T2-CN)</div> 
+				<div><span class="number"><?=$row_setting["hotline"]?></span></div>
+				<div><span class="number"><?=$row_setting["dienthoai"]?></span></div>
 			</div>
-			<a class="cart" href="gio-hang">
-				Giỏ hàng<br />
-				(<span class="count_cart"><?=count((array)$_SESSION['cart'])?></span>) sản phẩm
-			</a>
+		
 		</div>
 	</div>
 </div>
 <div id="menu-top">
 	<div class="container">
-		<a href="#menu_responsive" class="btn-menu"><span class="icon menu_responsive"></span></a>
-	<div class="nav-left">
-		<span class="icon-btn-menu" style="height: 14px;display: flex;
-    margin-right: 10px;"><img src="assets/images/btn-menu.png" alt="btnmenu"></span>
-		DANH MỤC SẢN PHẨM
-		<?php if(!empty($product_list)){ ?>
-			<div class="vertical_menu d-block">
-						<ul class="nav-menu-list">
-							<?php foreach($product_list as $list){ ?>
-								<li class="menu-list">
-									<a href="<?=$list["tenkhongdau"]?>" class="menu-list-text">
-										<img src="upload/product/<?=$list['photo']?>" class="product_list_photo" alt="<?=$list['photo']?>">
-										<?=$list["ten_$lang"]?></a>
-									<?php  
-										$product_cat = result_array("select id,tenkhongdau,ten_$lang from #_".'product'."_cat where hienthi=1 and id_list='".$list['id']."'");
-										if(!empty($product_cat)){ ?>
-											<ul class="nav-menu-cat">
-												<?php foreach($product_cat as $cat){ ?>
-													<li class="menu-cat"><a href="<?=$cat["tenkhongdau"]?>"><?=$cat["ten_$lang"]?></a>
-														<?php 
-															$product_items = result_array("select id,tenkhongdau,ten_$lang from #_".'product'."_item where hienthi=1 and id_list='".$list['id']."'");
-															if(!empty($product_items)){ ?>
-																<ul class="nav-menu-item">
-																	<?php foreach($product_items as $items){ ?>
-																		<li class="menu-item"><a href="<?=$items["tenkhongdau"]?>"><?=$items["ten_$lang"]?></a></li>
-																	<?php } ?>
-																</ul>
-															<?php } ?>
-														</li>
-													<?php } ?>
-												</ul>
-										<?php } ?>	
-									</li>	
-								<?php }?>
-							</ul>
-							</div>
-						<?php }?>
-	</div>
-		<?php include _template."components/menu.php";?>
+			<?php include _template."components/menu.php";?>
 	</div>
 </div>
-<div class="container d-flex justify-content-between flex-wrap">
-	<div></div>
 	<?php include _template."components/slider.php";?>
-</div>
 
 <div id="menu_responsive">
 	<ul>

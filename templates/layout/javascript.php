@@ -18,7 +18,7 @@
   </script>
   <script>
     $(document).ready(function(){
-      $("#menu_responsive").mmenu();
+      // $("#menu_responsive").mmenu();
      var i=0;
     var deg=0;
     deg=parseInt(deg);
@@ -77,3 +77,21 @@ $(document).on("click",".spin-item",function(){
   <link rel="stylesheet" href="assets/css/giohang.css">
   <script src="assets/js/custom/giohang.js"></script>
 <?php } ?>
+<script>
+  $(document).ready(function(){
+             var main_dichvu = new Swiper('#dichvu .swiper-container', {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            updateOnWindowResize:true,
+            autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      // init: false,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});
+  })
+</script>

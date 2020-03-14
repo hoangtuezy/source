@@ -2,7 +2,7 @@
 $breadcrumb_stt = 1;
 ?>
 <nav aria-label="breadcrumb" class="w-100">
-  <ul class="breadcrumb mb-5" itemscope itemtype="http://schema.org/BreadcrumbList">
+  <ul class="breadcrumb mb-3" itemscope itemtype="http://schema.org/BreadcrumbList">
     <div class="container d-flex flex-wrap">
         <li class="breadcrumb-item" itemprop="itemListElement" itemscope
         itemtype="http://schema.org/ListItem">

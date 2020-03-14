@@ -3,9 +3,11 @@ $menu_array = array(
 	'index' => array(
 		'title' => _trangchu
 	),
-	
+	'gioi-thieu' => array(
+		'title' => "Giới Thiệu"
+	),
 	'san-pham' => array(
-		'title' => "Sản phẩm Hot <img src='assets/images/hot.png' class='imghot' alt='hot'/>",
+		'title' => "Sản phẩm",
 		'table' => 'product',
 		'type'	=> 'san-pham',
 		'lv'	=> 2
@@ -17,18 +19,32 @@ $menu_array = array(
 	// 	'type'	=> 'du-an',
 	// 	// 'lv'	=> 1
 	// ),
+	'dich-vu' => array(
+		'title' => "Dịch Vụ",
+		'table' => 'baiviet',
+		'type'	=> 'dich-vu',
+		// 'lv'	=> 1
+	),
+	'thiet-ke' => array(
+		'title' => "Thiết Kế Nội Thất",
+		'table' => 'baiviet',
+		'type'	=> 'thiet-ke',
+		// 'lv'	=> 1
+	),
+
+	'khach-hang' => array(
+		'title' => "Khách Hàng",
+		'table' => 'baiviet',
+		'type'	=> 'khach-hang',
+		// 'lv'	=> 1
+	),
 	'tin-tuc' => array(
 		'title' => "Tin Tức",
 		'table' => 'baiviet',
 		'type'	=> 'tin-tuc',
 		// 'lv'	=> 1
 	),
-	'chinh-sach-si' => array(
-		'title' => "Chính Sách Sĩ"
-	),
-	'giao-hang' => array(
-		'title' => "Giao Hàng"
-	),
+	
 	'lien-he' => array(
 		'title' => "Liên Hệ"
 	),
