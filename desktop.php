@@ -11,8 +11,8 @@
 	<?php }else{ ?>
 		<meta name="viewport" content="width=1366">
 	<?php } ?>	
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/base.css">
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="stylesheet" href="assets/css/news.css">
 	<link rel="stylesheet" href="assets/js/swiper/swiper.min.css">
 	<link rel="stylesheet" href="assets/js/owl/owl.carousel.min.css">
@@ -44,10 +44,7 @@
 				<?php include _template.$template."_tpl.php";?>
 		<div class="clearfix"></div>
 	</div>
-	<?php if($com=='index'){ ?>
-		<?php include _template."layout/doitac.php";?>
-		
-	<?php } ?>
+
 	<?php include _template."layout/footer.php";?>
 	<?php include _template."layout/js.php";?>
 	<?php include _lib."web_schema.php";?>

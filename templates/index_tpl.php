@@ -66,46 +66,6 @@ $index_gioithieu = $d->fetch_array();
 </div>
 
 
-<?php
-$khonggianquan_index = result_array("select * from #_baiviet where type='album' and hienthi=1 and noibat=1 limit 6");
-if(!empty($khonggianquan_index)){ 
-?>
-<div id="khonggianquan">
-	<div class="container">
-		<div class="header-title">
-			<h2 class="h2-title">
-				<span>Công trình đã thi công</span>
-			</h2>
-		</div>
-		<div class="content row row-10">
-			<div class="col-md-6 col-12 d-flex justify-content-between flex-wrap">
-				<div class="row row-10">
-					<?php foreach($khonggianquan_index as $stt => $item){
-						if($stt == 0 || $stt == 3){
-							$w = 600;
-							$h = 360;
-							$c = 'col-12';
-						}else{
-							$w = 290;
-							$h = 260;
-							$c = 'col-6';
-						}
-						?>
-						<div class="kgq_item <?=$c?> hieuung">
-							<a href="<?=$item["tenkhongdau"]?>">
-								<img src="thumb/1-<?=$w?>-<?=$h?>/upload/baiviet/<?=$item["photo"]?>" alt="<?=$item["photo"]?>" class="img-fluid w-100" onerror='this.src="img/<?=$w?>x<?=$h?>/"'>
-							</a>
-							<h3 class="overlay"><?=$item["ten_$lang"]?></h3>
-						</div>
-						<?php if($stt + 1 == count($khonggianquan_index)) { echo('</div></div>');break;} ?>
-						<?php if($stt % 3 == 2) { echo('</div></div><div class="col-md-6 col-12 d-flex justify-content-between flex-wrap"><div class="row row-10">');} ?>  
-					<?php } ?>
-				</div>
-			</div>
-		</div>
-<?php } ?>
-
-
 		<?php
 		$dichvu_items = result_array("select * from #_baiviet where type='dich-vu' and hienthi=1 and noibat=1 order by stt asc ");
 	if(!empty($dichvu_items)){ 	
@@ -146,40 +106,47 @@ if(!empty($khonggianquan_index)){
 			</div>
 		</div>
 	<?php } ?>
-		<div id="newsletter" class="xvn">
-			<div class="container">
-				<div class="header-title">
-					<h2 class="h2-title"><span>ĐĂNG KÝ NHẬN TIN</span></h2>
-					<div class="desc">Chúng tôi luôn tư vấn và hỗ trợ khách hàng tốt nhất</div>
-				</div>
-				<div>
-					<form method="post" name="frm_newsletter" action="newsletterl">
-						<div class="row">
-							<div class="col-12 col-md-6 inputx">
-								<input name="tenlienhe" type="text" required class="form-control" id="tenlienhe" placeholder="Tên" size="40" />
-							</div>
-							<div class="col-12 col-md-6 inputx">
-								<input name="email" id="email" required type="text" class="form-control" placeholder="Email" size="40"  />
-							</div>		  
-							<div class="col-12 col-md-6 inputx">				
-								<input name="dienthoai" required type="text" class="form-control" id="dienthoai" placeholder="Số điện thoại" size="40"/>
 
-							</div>
-							<div class="col-12 col-md-6 inputx">				
-								<input name="noidung" required type="text" class="form-control" id="noidung" placeholder="nội dung" size="40"/>
-
-							</div>
-							<div class="col-12 inputx text-center">
-								<input type="hidden" name="recaptcha_response" class="recaptcha_response" id="recaptchaResponse_ct">
-								<!-- <input class="button" type="button" value="Xóa" onclick="document.frm_newsletter.reset();" /> -->
-								<input class="button" type="submit" value="Gửi Đi" />
-							</div> 
-							<div class="clearfix"></div>                     
-						</div>                             
-					</form>
+<?php
+$khonggianquan_index = result_array("select * from #_album where type='album' and hienthi=1  limit 10");
+if(!empty($khonggianquan_index)){ 
+?>
+<div id="khonggianquan">
+	<div class="container">
+		<div class="header-title">
+			<h2 class="h2-title">
+				<span>Không Gian Buổi Tiệc</span>
+			</h2>
+		</div>
+		<div class="content">
+				<div class="d-flex kgq_item_container">
+					<?php foreach($khonggianquan_index as $stt => $item){
+						if($stt == 0 || $stt == 3){
+							$w = 290;
+							$h = 260;
+							$c = 'w-20';
+						}else{
+							$w = 290;
+							$h = 260;
+							$c = 'w-20';
+						}
+						?>
+						<div class="kgq_item <?=$c?> hieuung">
+							<a href="<?=$item["tenkhongdau"]?>">
+								<img src="thumb/1-<?=$w?>-<?=$h?>/upload/baiviet/<?=$item["photo"]?>" alt="<?=$item["photo"]?>" class="img-fluid w-100" onerror='this.src="img/<?=$w?>x<?=$h?>/"'>
+							</a>
+							<h3 class="overlay d-none"><?=$item["ten_$lang"]?></h3>
+						</div>
+						<?php if($stt + 1 == count($khonggianquan_index)) { echo('</div>');break;} ?>
+						<?php if($stt % 5 == 4) { echo('</div><div class="d-flex kgq_item_container stt2">');} ?>  
+					<?php } ?>
+					<div class="clearfix"></div>
 				</div>
 			</div>
 		</div>
+<?php } ?>
+
+		
 		<?php
 		$minibox_tintuc = result_array("select * from #_baiviet where type='tin-tuc' and hienthi=1 and noibat=1 order by stt asc ");
 		$video = result_array("select * from #_video where type='video' and hienthi=1 order by stt asc");
@@ -187,53 +154,37 @@ if(!empty($khonggianquan_index)){
 		<div id="minibox">
 			<div class="container">
 				<div class="row">
-					<div class="col-8">
+					<div class="col-md-7 col-sm-6 col-12">
 						<h2 class="minibox_title"><span>TIN TỨC NỔI BẬT</span></h2>
 						<div class="content" id="minibox_vertical_baiviet">
-							<div class="main_tintuc">
-								<div class="image hieuung">
-									<a href="<?=_link_media("tin-tuc",$minibox_tintuc[0]["tenkhongdau"])?>">
-										<img src="thumb/1-380-200/upload/baiviet/<?=$minibox_tintuc[0]["photo"]?>" alt="<?=$minibox_tintuc[0]["photo"]?>" onerror='this.src="img/380x200/"'>
-									</a>
-								</div>
-								<div class="detail">
-									<h3><a href="<?=_link_media("tin-tuc",$minibox_tintuc[0]["tenkhongdau"])?>"><?=$minibox_tintuc[0]["ten_$lang"]?></a></h3>
-									<div class="mota">
-										<?=catchuoi($minibox_tintuc[0]["mota_$lang"],100)?>
-									</div>
-									<div class="xemthem">
-										<a href="<?=_link_com("tin-tuc",$minibox_tintuc[0]['tenkhongdau'])?>">Xem thêm</a>
-									</div>
-								</div>
-							</div>
 							<div class="vertical_tintuc">
 								<div id="scroller">
 									<!-- Additional required wrapper -->
-									<?php foreach($minibox_tintuc as $item){ ?>
-										<div class="swiper-slide">
-											<div class="vertical_baiviet_item">
+									<?php foreach($minibox_tintuc as $stt => $item){ ?>
+											<div class="vertical_baiviet_item <?=$stt&1?'flex-row-reverse':''?>">
 												<div class="image hieuung">
-													<a href="<?=_link_media("tin-tuc",$item["tenkhongdau"])?>">
-														<img src="thumb/1-150-110/upload/baiviet/<?=$item["photo"]?>" alt="<?=$item["photo"]?>" onerror='this.src="img/150x110/"'>
+													<a href="<?=$item["tenkhongdau"]?>">
+														<img src="thumb/1-140-140/upload/baiviet/<?=$item["photo"]?>" alt="<?=$item["photo"]?>" onerror='this.src="img/140x140/"'>
 													</a>
 												</div>
 												<div class="detail">
-													<h3><a href="<?=_link_media("tin-tuc",$item["tenkhongdau"])?>"><?=$item["ten_$lang"]?></a></h3>
+
+													<h3><a href="<?=$item["tenkhongdau"]?>"><?=$item["ten_$lang"]?></a></h3>
+													<div class="ngaytao"><span class="icon calendar">Tháng <?=date('m,d Y',$item["ngaytao"])?></span></div>
 													<div class="mota">
 														<?=catchuoi($item["mota_$lang"],100)?>
 													</div>
 												</div>
 											</div>
-										</div>
 									<?php } ?>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-4">
-						<h2 class="minibox_title"><span>VIDEO CLIP</span></h2>
+					<div class="col-md-5 col-sm-6 col-12">
+						<h2 class="minibox_title"><span>FANPAGE</span></h2>
 						<div class="content">
-							<?php include _template."components/select_video.php";?>
+							<?=layout_fanpage($row_setting['facebook'],500,450)?>
 						</div>
 					</div>
 				</div>

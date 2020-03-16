@@ -1,0 +1,122 @@
+body{
+	font-size: 14px;
+}
+@font-face { font-family: 'FontAwesome'; src: url('../fonts/fontawesome-webfont.eot?v=4.2.0'); src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'roboto-regular'; src: url('../fonts/Roboto-Regular.ttf'); font-weight: normal; }
+@font-face { font-family: 'roboto-bold'; src: url('../fonts/Roboto-Bold.ttf'); font-weight: normal; }
+@font-face { font-family: 'roboto-black'; src: url('../fonts/Roboto-Black.ttf'); font-weight: normal; }
+@font-face { font-family: 'roboto-medium'; src: url('../fonts/Roboto-Medium.ttf'); font-weight: normal; }
+@font-face { 
+	font-family: 'tinos-bold';
+	src: url('../fonts/Tinos-Bold.ttf');
+	 font-weight: normal; }
+@font-face { 
+	font-family: 'utm-zirkon';
+	src: url('../fonts/UTM Zirkon.ttf');
+	 font-weight: normal; }
+	 @font-face { 
+	font-family: 'svn-avo-bold';
+	src: url('../fonts/SVN-Avo bold.ttf');
+	 font-weight: normal; 
+}
+
+@import 'style/icon';
+
+#footer{
+	background: url(../images/bg_footer.jpg);
+	background-size: cover;
+	padding: 45px 0;
+	color: #c0bebf;
+	font-size: 15px;
+	margin-top: 15px;
+}
+#footer .container{
+	background-color: #18191e;
+	border: 10px solid #202127;
+	position: relative;
+}
+#footer .icon{
+  padding-left: 40px;
+  margin-bottom: 15px;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 10px;
+  height: unset;
+}
+#footer .icon:before{
+  color: #FFF;
+  /* border: 1px solid #ffffff5e; */
+  width: 32px!important;
+  height: 32px!important;
+  border-radius: 5px;
+  margin-right: 40px;
+  font-size: 14px;
+}
+#footer h2{
+	font-family: tinos-bold;
+	font-size: 35px;
+	margin-bottom: 15px;
+	color: #fff;
+	background: url(../images/h2_footer.png) bottom center no-repeat;
+	padding-bottom: 10px;
+}
+#footer input,#footer textarea{
+	border-radius: 0;
+	border: 0;
+}
+#footer input{
+	height: 45px;
+}
+
+#footer h3{
+	font-size: 20px;
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+#footer .copyright{
+	position: absolute;
+	bottom: 15px;
+}
+.vertical_baiviet_item{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-bottom: 15px;
+	.image{
+		img{
+			border-radius: 50%;
+		}
+	}
+	.detail{
+		width: calc(100% - 165px);
+	}
+	h3{
+		margin-bottom: 0.15rem;
+	}
+	h3 a{
+		font-family: svn-avo-bold;
+		font-size: 19px;
+		color: #333;
+	}
+}
+.minibox_title{
+	font-family: tinos-bold;
+	color: #333;
+	font-size: 40px;
+}
+#minibox{
+  background: url(../images/bg_minibox.png) top no-repeat;
+  background-size: 100%;
+  padding:30px 0;
+}
+#minibox .ngaytao{
+	color: #919191;
+	font-size: 13px;
+}
+.w-20{
+	width: 20%;
+}
+.kgq_item{
+	padding-left: 2px;
+	padding-right: 2px;
+	margin-bottom: 4px;
+}

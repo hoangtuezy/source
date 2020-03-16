@@ -45,6 +45,7 @@
     <li><a href="index.php?com=photo&act=man_photo&type=slider" title="">Hình ảnh slider</a></li>
     <li><a href="index.php?com=photo&act=man_photo&type=quangcao" title="">Quảng cáo</a></li>
     <li><a href="index.php?com=mxh&act=man&type=mxh_top" title="">MXH</a></li>
+    <li><a href="index.php?com=album&act=man&type=album" title="">Album</a></li>
   </ul>
 </li>
 
