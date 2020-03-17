@@ -16,20 +16,13 @@ $d->query("select * from #_product_list where type='san-pham' and hienthi=1 and 
 $product_list = $d->result_array();
 ?>
 <div id="header">
-	<div class="container">
-		<div id="banner">
+	<div id="banner">
 			<a href="">
-				<img src="thumb/1-360-115/upload/hinhanh/<?=$row_banner["photo_vi"]?>" alt="banner" onerror='this.src="img/330x112/"'/>
+				<img src="thumb/1-1366-168/upload/hinhanh/<?=$row_banner["photo_vi"]?>" alt="banner" onerror='this.src="img/1366x168/"' class="img-fluid w-100"/>
 			</a>
 		</div>
-		<?php include _template."components/timkiem.php";?>
-		<div class="addons d-flex justify-content-between flex-wrap">
-			<div class="hotline">
-				<div><span class="number"><?=$row_setting["hotline"]?></span></div>
-				<div><span class="number"><?=$row_setting["dienthoai"]?></span></div>
-			</div>
+	<div class="container">
 		
-		</div>
 	</div>
 </div>
 <div id="menu-top">

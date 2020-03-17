@@ -3,7 +3,7 @@ $d->reset();
 $d->query("select ten_vi,photo_vi,link from #_photo where type='slider' and hienthi=1 order by stt,id desc");
 $slider =$d->result_array();
 $width=1366;
-$height = 465;
+$height = 500;
 $sliderzc = 1;
 $slider_indicators = false;
 $slider_pagination = false;

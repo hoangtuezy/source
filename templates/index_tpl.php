@@ -1,112 +1,42 @@
-<?php
-$product_list= "select * from #_product_list where hienthi=1 and type='san-pham' and noibat=1 order by stt,id desc";
-$d->query($product_list);
-$product_list = $d->result_array();
-$first_product_list = array_pop($product_list);
-if(!empty($product_list)){ 	
-?>
-<div id="video" class="py-4">
-	<div class="container">
-		<div class="header-title">
-			<h2 class="h2-title"><span >BỘ SƯU TẬP</span></h2>
-			<div class="desc text-secondary">Chúng tôi chuyên cung cấp những sản phẩm bàn ghế tốt nhất</div>
-		</div>
-		<div class="first_product_list">
-			<div class="product_list_item first">
-				<a href="<?=$first_product_list["tenkhongdau"]?>">
-				<img src="upload/product/<?=$first_product_list["photo"]?>" alt="<?=$first_product_list["photo"]?>" class="img-fluid w-100"></a>
-				<h3><a href="<?=$first_product_list["tenkhongdau"]?>"><?=$first_product_list["tenkhongdau"]?></a></h3>
+<?php include _template."layout/gioithieu.php"; ?>
+<?php include _template."layout/quangcao.php"; ?>
+<?php include _template."layout/product_list.php"; ?>
+<?php $khachhang = result_array("select * from #_baiviet where type='khach-hang' and hienthi=1 and noibat=1 order by stt asc");
+if(!empty($khachhang)){ 
+	?>
+	<div id="ykien" class="fullpage">
+		<div class="container">
+			<div class="header-title invert">
+				<h2 class="h2-title">Cảm Nhận Khách Hàng</h2>
 			</div>
-		</div>
-		<div id="slider_product_list_noibat_select" class="mt-2  w-100">
-			<div class="swiper-container">
+			<div class="swiper-container mw-100">
 				<div class="swiper-wrapper">
-					<?php foreach($product_list as $stt => $item){
-
-						?>
+					<?php foreach($khachhang as $item){ ?>
 						<div class="swiper-slide">
-							<div class="product_list_item hieuung"><a href="<?=$item["tenkhongdau"]?>">
-								<img src="thumb/1-385-360/upload/product/<?=$item["photo"]?>" alt="<?=$item["photo"]?>" class="img-fluid w-100"></a>
-								<h3><a href="<?=$item["tenkhongdau"]?>"><?=$item["tenkhongdau"]?></a></h3>
+							<div class="khachhang_item rounded-circle" data-id="<?=$item["tenkhongdau"]?>">
+								<div class="image hieuung rounded-circle">
+									<img src="thumb/1-190-190/upload/baiviet/<?=$item["photo"]?>" alt="<?=$item["photo"]?>" class="img-fluid rounded-circle">
+								</div>
 							</div>
 						</div>
 					<?php } ?>
 				</div>
 			</div>
-		</div>
+			<div class="content-khachhang mw-100">
+				<?php foreach($khachhang as $item){ ?>
+					<div class="ykien_content <?=$item["tenkhongdau"]?> text-center">
+						<div class="mota text-center">
+							<?=catchuoi($item["mota_$lang"],300)?>
 
-	</div>
-</div>
-<?php } ?>
-<?php
-$d->reset();
-$d->query("select * from #_info where type='gioi-thieu' ");
-$index_gioithieu = $d->fetch_array();
-
-?>
-<div id="gioithieu">
-	<div class="container flex jb w">
-		<div class="detail">
-			<div class="gioithieu-header">
-				<div class="label">Giới thiệu công ty</div>
-				<div class="title"><?php echo e($index_gioithieu["ten_vi"]); ?></div>
-			</div>
-			<div class="gioithieu-content">
-				<?php echo e($index_gioithieu["mota_$lang"]); ?>
-
-			</div>
-			<div class="more">
-				<a href="gioi-thieu" class="xemthem">Xem thêm</a>
-			</div>
-		</div>
-		<div class="image">
-			<img src="upload/hinhanh/<?=$index_gioithieu["photo"]?>" alt="Giới thiệu " class="img-fluid">
-		</div>
-	</div>
-</div>
-
-
-		<?php
-		$dichvu_items = result_array("select * from #_baiviet where type='dich-vu' and hienthi=1 and noibat=1 order by stt asc ");
-	if(!empty($dichvu_items)){ 	
-		?>
-		<div id="dichvu">
-			<div class="container">
-				<div class="header-title">
-					<h2 class="h2-title">
-						DỊCH VỤ CHÚNG TÔI
-					</h2>
-				</div>
-				<div class="swiper-container">
-					<div class="swiper-wrapper">
-						<?php foreach($dichvu_items as $item){ ?>
-							<div class="swiper-slide">
-								<div class="dichvu_item mb-4 hover">
-									<div class="image hieuung">
-										<a href="<?=$item["tenkhongdau"]?>" class="d-block overflow-hidden">
-											<img src="thumb/1-380-365/upload/baiviet/<?=$item["photo"]?>" class="card-img-top" alt="<?=$item["tenkhongdau"]?>" onerror="this.src='img/380x365/'">
-										</a>
-									</div>
-									<div class="detail">
-										<div>
-											<h3><a href="<?=$item["tenkhongdau"]?>"><?=$item["ten_$lang"]?></a></h3>
-											<div class="mota">
-												<?=catchuoi($item["mota_$lang"],120)?>
-											</div>
-											<div class="xemthem">
-												<a href="<?=$item["tenkhongdau"]?>"><span class="chitiet">Chi tiết</span></a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						<?php } ?>
+						</div>
+						<h3><?=$item["ten_$lang"]?></h3>
 					</div>
-				</div>
+				<?php } ?>
 			</div>
 		</div>
-	<?php } ?>
-
+	</div>
+<?php } ?>
+		
 <?php
 $khonggianquan_index = result_array("select * from #_album where type='album' and hienthi=1  limit 10");
 if(!empty($khonggianquan_index)){ 
@@ -117,6 +47,7 @@ if(!empty($khonggianquan_index)){
 			<h2 class="h2-title">
 				<span>Không Gian Buổi Tiệc</span>
 			</h2>
+			<div class="desc">Chuyên nhận nấu tiệc: liên hoan, tân gia, kết hôn, sinh nhật, hội nghị</div>
 		</div>
 		<div class="content">
 				<div class="d-flex kgq_item_container">
@@ -158,7 +89,7 @@ if(!empty($khonggianquan_index)){
 						<h2 class="minibox_title"><span>TIN TỨC NỔI BẬT</span></h2>
 						<div class="content" id="minibox_vertical_baiviet">
 							<div class="vertical_tintuc">
-								<div id="scroller">
+								<div id="vertical">
 									<!-- Additional required wrapper -->
 									<?php foreach($minibox_tintuc as $stt => $item){ ?>
 											<div class="vertical_baiviet_item <?=$stt&1?'flex-row-reverse':''?>">

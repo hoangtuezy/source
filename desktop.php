@@ -18,9 +18,12 @@
 	<link rel="stylesheet" href="assets/js/owl/owl.carousel.min.css">
 	<link rel="stylesheet" href="assets/css/jquery.mmenu.css">
 	<link rel="stylesheet" href="assets/js/fancybox/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="assets/plugin/tinyslider/tiny.css">
 	<script src="assets/js/jquery-3.4.1.min.js"></script>
 	<script src="assets/js/jquery.mmenu.all.js"></script>
 	<script src="assets/js/fancybox/jquery.fancybox.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	
 	<script src="https://www.google.com/recaptcha/api.js?render=<?=$config['gv3_client']?>"></script>
 	<?=$row_setting['scriptcode']?>
 </head>
