@@ -73,7 +73,7 @@ function save_info(){
     $data['tenkhongdau'] = $_POST['tenkhongdau'];
 else
     $data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
-		
+		$data['link'] = $_POST['link'];
 		$data['title'] = $_POST['title'];
 		$data['keywords'] = $_POST['keywords'];
 		$data['description'] = $_POST['description'];
@@ -136,7 +136,7 @@ else
     $data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
 
 		$data['type'] = $_GET['type'];
-
+		$data['link'] = $_POST['link'];
 		$data['title'] = $_POST['title'];
 		$data['keywords'] = $_POST['keywords'];
 		$data['description'] = $_POST['description'];

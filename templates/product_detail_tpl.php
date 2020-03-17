@@ -64,6 +64,7 @@ $product_thongtin = fetch_array("select noidung_$lang from #_company where type=
                         </div>
                             </div>
                              */ ?>
+                             <?php /* ?>
                             <div class="product_info">
                                 <div class="input-group mb-3">
                                 <div class="input-group-prepend col-md-2 col-3 p-0 text-center">
@@ -82,6 +83,7 @@ $product_thongtin = fetch_array("select noidung_$lang from #_company where type=
                                 <div class="btn-giohang add_cart" data-product="<?=return_uid($row_detail["id"])?>">THÊM VÀO GIỎ HÀNG</div>
                                 <div class="btn-giohang muangay px-2" onclick="addtocart(<?=$row_detail['id']?>)" data-product="<?=return_uid($row_detail["id"])?>">MUA NGAY</div>
                             </div>
+                         <?php */ ?>   
                         <?php if(!empty($row_detail['mota_'.$lang])){ ?>
                             <div class="product_info">
                                <?=$row_detail['mota_'.$lang]; ?>

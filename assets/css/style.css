@@ -265,8 +265,11 @@ body {
 }
 
 .kgq_item_container {
-  width: 1090px;
-  float: left;
+  max-width: 1090px;
+  /* float: left; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .kgq_item_container.stt2 {
@@ -434,7 +437,16 @@ body {
   font-family: tinos-bold;
   font-size: 50px;
 }
-
+#gioithieu .image > a{
+  position:relative;
+}
+#gioithieu .image > a:before{
+  content: url(../images/play.png);
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%) scale(1.5)
+}
 @media (min-width: 991px) {
   #gioithieu .detail,
   #gioithieu .image {
@@ -442,6 +454,13 @@ body {
   }
 }
 
+  #menu-top {
+    height:62px;
+    z-index: 999;
+    width: 100%;
+    background: url(/assets/images/bg_menu.jpg?0bdd39db66b9ffedfa21604caa6c46ad) repeat-x;
+    position: relative;
+  }
 @media (min-width: 1200px) {
   #menu-top .container {
     display: flex;
@@ -460,7 +479,7 @@ body {
     margin: 0;
   }
 
-  #menu-top .nav-menu a {
+  #menu-top .nav-menu .menu > a {
     font-family: tinos-bold;
     text-decoration: none;
     display: flex;
@@ -526,6 +545,11 @@ body {
     /* padding: 0 15px; */
     display: flex;
     width: 100%;
+    height: 40px;
+    align-items:center;
+  }
+  .menu-list{
+    /* padding: 0 20px; */
   }
 
   #menu-top .nav-menu > li.menu ul li.menu-list {
@@ -534,6 +558,13 @@ body {
 
   #menu-top .nav-menu > li.menu ul li.menu-list > a {
     color: #333;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 100%;
+    font-family: tinos-bold;
+    font-size: 16px;
+    font-weight: normal;
   }
 
   #menu-top .nav-menu > li.menu > ul.nav-menu-list {
@@ -548,8 +579,8 @@ body {
   }
 
   #menu-top .nav-menu > li.menu > ul.nav-menu-list li:hover > a {
-    color: #333;
-    background: #f1f1f1;
+    color: #fff;
+    background: #222222;
   }
 
   #menu-top .nav-menu > li.menu > ul.nav-menu-list > a {
@@ -567,21 +598,23 @@ body {
 
   #menu-top li.menu-list > a {
     width: 100%;
-    border-bottom: 1px solid #efefef38;
+    /* border-bottom: 1px solid #efefef38; */
   }
 
-  #menu-top {
-    z-index: 999;
-    width: 100%;
-    background: url(/assets/images/bg_menu.jpg?0bdd39db66b9ffedfa21604caa6c46ad) repeat-x;
-  }
 
   .bando_footer iframe {
     /* height: 250px; */
     width: 100%;
   }
 }
-
+@media (max-width: 1199px){
+  .nav-menu{
+    display: none;
+  }
+  .btn-responsive{
+    display:flex;
+  }
+}
 
 #logo{
   position:absolute;

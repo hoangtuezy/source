@@ -102,7 +102,15 @@ $(this).parent().remove();
 			<div class="clear"></div>
 		</div>
 		<?php } ?>
-
+ <?php if($config_link=='true'){?>        
+        <div class="formRow">
+            <label>Link liên kết: </label>
+            <div class="formRight">
+                <input type="text" id="price" name="link" value="<?=@$item['link']?>"  title="Nhập link liên kết cho hình ảnh" class="form-control tipS" />
+            </div>
+            <div class="clear"></div>
+        </div>   
+        <?php } ?>    
 		<?php if($config_img=='true'){ ?>
 		<div class="formRow">
 			<label>Hình ảnh kèm theo: </label>

@@ -41,9 +41,9 @@
 	$config_short_link =true;
 
 	$config_cart = array(
-		'color'=> false,
-		'size'=> false,
-		'ship'=>false
+		// 'color'=> false,
+		// 'size'=> false,
+		// 'ship'=>false
 	);
 	$config['_check_crsf'] = true;
 	$config['login']['attempt'] = 5; // Số lần cho phép đăng nhập sai

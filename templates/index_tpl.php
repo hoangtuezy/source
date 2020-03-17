@@ -63,7 +63,7 @@ if(!empty($khonggianquan_index)){
 						}
 						?>
 						<div class="kgq_item <?=$c?> hieuung">
-							<a href="<?=$item["tenkhongdau"]?>">
+							<a href="upload/baiviet/<?=$item["photo"]?>" data-fancybox="khonggianquan_index">
 								<img src="thumb/1-<?=$w?>-<?=$h?>/upload/baiviet/<?=$item["photo"]?>" alt="<?=$item["photo"]?>" class="img-fluid w-100" onerror='this.src="img/<?=$w?>x<?=$h?>/"'>
 							</a>
 							<h3 class="overlay d-none"><?=$item["ten_$lang"]?></h3>
@@ -85,7 +85,7 @@ if(!empty($khonggianquan_index)){
 		<div id="minibox">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-7 col-sm-6 col-12">
+					<div class="col-md-7 col-sm-12 col-12">
 						<h2 class="minibox_title"><span>TIN TỨC NỔI BẬT</span></h2>
 						<div class="content" id="minibox_vertical_baiviet">
 							<div class="vertical_tintuc">
@@ -112,7 +112,7 @@ if(!empty($khonggianquan_index)){
 							</div>
 						</div>
 					</div>
-					<div class="col-md-5 col-sm-6 col-12">
+					<div class="col-md-5 col-sm-12 col-12">
 						<h2 class="minibox_title"><span>FANPAGE</span></h2>
 						<div class="content">
 							<?=layout_fanpage($row_setting['facebook'],500,450)?>

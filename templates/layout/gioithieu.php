@@ -20,7 +20,9 @@ $index_gioithieu = $d->fetch_array();
 			</div>
 		</div>
 		<div class="image">
+			<a href="<?=$index_gioithieu['link']?>" data-fancybox="gioithieu_video">
 			<img src="upload/hinhanh/<?=$index_gioithieu["photo"]?>" alt="Giới thiệu " class="img-fluid">
+			</a>
 		</div>
 	</div>
 </div>

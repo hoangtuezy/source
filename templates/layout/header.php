@@ -27,6 +27,7 @@ $product_list = $d->result_array();
 </div>
 <div id="menu-top">
 	<div class="container">
+		<a href="#menu_responsive" class="btn-responsive"><span class="icon menu_responsive"></span></a>
 			<?php include _template."components/menu.php";?>
 	</div>
 </div>

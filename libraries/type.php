@@ -922,6 +922,7 @@
 			$config_item = "false";
 			$config_sub = "false";
 			$config_noibat = "true";
+			$config_link = "true";
 			switch ($act) {
 				case 'list':
 					@define ( _width_thumb , 690 );
