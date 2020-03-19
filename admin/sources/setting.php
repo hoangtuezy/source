@@ -39,15 +39,15 @@ function save_gioithieu(){
 		$data['diachi_'.$key] = $_POST['diachi_'.$key];
 	}
 
-		$file_dw=images_name($_FILES['dongdau']['name']);
-	if(!empty($file_dw)){
-		upload_image("dongdau", 'png', '../upload/','watermark');
-		$files_cache = glob('../water@#cache/*'); // get all file names
-		foreach($files_cache as $file){ // iterate files
-			if(is_file($file))
-		    unlink($file); // delete file
-	}
-	}
+	// $file_dw=images_name($_FILES['dongdau']['name']);
+	// if(!empty($file_dw)){
+	// 	upload_image("dongdau", 'png', '../upload/','watermark');
+	// 	$files_cache = glob('../water@#cache/*'); // get all file names
+	// 	foreach($files_cache as $file){ // iterate files
+	// 		if(is_file($file))
+	// 	    unlink($file); // delete file
+	// }
+	// }
 	
 	$data['email'] = magic_quote($_POST['email']);
 	$data['website'] = magic_quote($_POST['website']);

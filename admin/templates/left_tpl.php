@@ -14,16 +14,17 @@
   <ul class="sub">
    <li><a href="index.php?com=info&act=capnhat&type=gioi-thieu">Giới Thiệu</a></li>
    <li><a href="index.php?com=baiviet&act=man&type=chinh-sach">Chính Sách</a></li>
-    <li><a href="index.php?com=baiviet&act=man&type=tin-tuc">Tin TỨc</a></li>
+    <li><a href="index.php?com=baiviet&act=man&type=tin-tuc">Tin Tức</a></li>
      <li><a href="index.php?com=baiviet&act=man&type=album">Album</a></li>
      <li><a href="index.php?com=baiviet&act=man&type=dich-vu">Dịch Vụ</a></li>
      <li><a href="index.php?com=baiviet&act=man&type=khach-hang">Khách Hàng</a></li>
-     <li><a href="index.php?com=baiviet&act=man&type=thiet-ke">Thiết Kế</a></li>
+     <li><a href="index.php?com=baiviet&act=man&type=tuyen-dung">Tuyển Dụng</a></li>
  </ul>
 </li>
 <li class="menu categories_li"><a href="#" title="" class="exp"><span>Thông tin công ty</span><strong></strong></a>
   <ul class="sub">
     <!--<li<?php if($_GET['type']=='bgweb') echo ' class="this"' ?>><a href="index.php?com=background&act=capnhat&type=bgweb" title="">Background body</a></li>-->
+    <li><a href="index.php?com=bannerqc&act=capnhat&type=logo" title="">Logo</a></li>
     <li><a href="index.php?com=bannerqc&act=capnhat&type=banner" title="">Banner</a></li>
     <li><a href="index.php?com=bannerqc&act=capnhat&type=favicon" title="">Favicon</a></li>
     <!-- <li><a href="index.php?com=lkweb&act=man&type=lkweb" title="">Link liên kết</a></li> -->

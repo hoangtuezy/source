@@ -58,8 +58,7 @@
 					$config_sub = "false";
 					$config_masp = true;
 					$config_giaban = true;
-					$config_giacu = true
-					;
+					$config_giacu = true;
 					$config_diachi = false;
 					$config_dientich = false;
 					$config_stock = "false";
