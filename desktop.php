@@ -41,10 +41,16 @@
 		<?php } ?>	
 				<?php if($com!='index'){ ?>
 				<div class="header-title ">
-					<h2 class="h2-title"><span><?=$title_detail?></span></h2>
+					<h2 class="h2-title"><span class="text-primary"><?=$title_detail?></span></h2>
 				</div>
-				<?php } ?>
 				<?php include _template.$template."_tpl.php";?>
+				<?php }else{ ?>
+				<?php include _template."layout/product_list_all.php";?>
+				<?php include _template."layout/newsletter.php";?>
+				<?php include _template."layout/minibox.php";?>
+				<?php include _template."layout/visaochon.php";?>
+
+				<?php } ?>
 		<div class="clearfix"></div>
 	</div>
 

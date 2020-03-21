@@ -26,10 +26,10 @@
 	var options = {
     'vertical': {
       container: '#vertical',
-      items: 3,
+      items: 2,
       // loop: false,
       mouseDrag: true,
-      axis: 'vertical',
+      // axis: 'vertical',
       autoplay: true,
       autoplayTimeout: 2000,
       arrowKeys: false,

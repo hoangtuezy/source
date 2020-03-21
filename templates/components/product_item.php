@@ -1,6 +1,6 @@
 <?php
 $_p_w = 280;
-$_p_h = 300;
+$_p_h = 290;
 $_com = $item["type"];
 if(empty($_com)){
 	$_com = $com;

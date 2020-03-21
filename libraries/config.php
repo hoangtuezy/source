@@ -1,7 +1,7 @@
 <?php
 	if(!defined('_lib')) die("Error");
  	error_reporting(3);
- 	define ( 'NN_MSHD' , '185220'); //Mã số HĐ
+ 	define ( 'NN_MSHD' , '134820'); //Mã số HĐ
 	define ( 'NN_AUTHOR' , 'vohoangtu.nina@gmail.com'); //Email của lập trình
 
 	$Protocol='http://';	

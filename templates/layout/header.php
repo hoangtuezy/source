@@ -18,58 +18,76 @@ $product_list = $d->result_array();
 <div id="header">
 	<div id="banner">
 			<a href="">
-				<img src="thumb/1-1366-168/upload/hinhanh/<?=$row_banner["photo_vi"]?>" alt="banner" onerror='this.src="img/1366x168/"' class="img-fluid w-100"/>
+				<img src="thumb/1-1366-120/upload/hinhanh/<?=$row_banner["photo_vi"]?>" alt="banner" onerror='this.src="img/1366x120/"' class="img-fluid w-100"/>
 			</a>
 		</div>
 	<div class="container">
-		
+		<div id="logo">
+			<a href="">
+				<img src="thumb/1-170-120/upload/hinhanh/<?=$row_logo["photo_vi"]?>" alt="banner" onerror='this.src="img/170x120/"' class="img-fluid w-100"/>
+			</a>
+		</div>
+		<div class="addons">
+			<?=layout_mxh(32,32,"mxh_top")?>
+			<div class="hotline">
+				Hotline<br />
+				<span class="number"><?=$row_setting["hotline"]?></span>
+			</div>
+		</div>
 	</div>
 </div>
 <div id="menu-top">
 	<div class="container">
 		<a href="#menu_responsive" class="btn-responsive"><span class="icon menu_responsive"></span></a>
 			<?php include _template."components/menu.php";?>
+			<?php include _template."components/timkiem.php";?>
 	</div>
 </div>
+<?php if($com=='index'){ ?>
 	<?php include _template."components/slider.php";?>
+<?php } ?>
 
 <div id="menu_responsive">
 	<ul>
-			<?php $sub_menu = array();
-			foreach($menu_array as $key => $item){
-				$_tmp = result_array("select id,tenkhongdau,ten_$lang from #_product_list where hienthi=1 and type='".$item['type']."' order by stt asc ");
-				$sub_menu[$key]=$_tmp;?>
-				<li class="menu <?=$com==$key?'active':''?>"><a href="<?=$key==='index'?'':$key?>"><?=$item["title"]?></a>
-					<?php if(!empty($sub_menu[$key])){ ?>
-						<ul>
-							<?php foreach($sub_menu[$key] as $list){ ?>
-								<li><a href="<?=$list["tenkhongdau"]?>"><?=$list["ten_$lang"]?></a>
-									<?php if($item['lv'] > 1){ 
-										$product_cat = result_array("select id,tenkhongdau,ten_$lang from #_".$item['table']."_cat where hienthi=1 and id_list='".$list['id']."'");
-										if(!empty($product_cat)){ ?>
-											<ul>
-												<?php foreach($product_cat as $cat){ ?>
-													<li><a href="<?=$cat["tenkhongdau"]?>"><?=$cat["ten_$lang"]?></a>
-														<?php if($item['lv'] > 2){ 
-															$product_items = result_array("select id,tenkhongdau,ten_$lang from #_".$item['table']."_item where hienthi=1 and id_list='".$list['id']."'");
-															if(!empty($product_items)){ ?>
-																<ul>
-																	<?php foreach($product_items as $items){ ?>
-																		<li ><a href="<?=$items["tenkhongdau"]?>"><?=$items["ten_$lang"]?></a></li>
-																	<?php } ?>
-																</ul>
-															<?php } ?><?php } ?>
-														</li>
+	<li class=" <?=$com=='index'?'active':''?>"><a href=""><span>Trang Chủ</span></a></li>
+	<li class=" <?=$com=='gioi-thieu'?'active':''?>"><a href="gioi-thieu"><span>Giới thiệu</span></a></li>
+	<?php if(!empty($product_list)){ ?>
+		<?php foreach($product_list as $list){
+$product_cat = result_array("select id,tenkhongdau,ten_$lang from #_product_cat where hienthi=1 and id_list='".$list['id']."'");
+		 ?>
+			<li class=" <?=$com=='san-pham'?'active':''?>"><a href="san-pham"><span><?=$list["ten_$lang"]?></span></a>
+				<?php if(!empty($product_cat)){ ?>
+				<ul class="nav--list">
+					<?php foreach($product_cat as $cat){ ?>
+						<li class="-list"><a href="<?=$cat["tenkhongdau"]?>"><?=$cat["ten_$lang"]?></a>
+							<?php 
+							$product_cat = result_array("select id,tenkhongdau,ten_$lang from #_product_cat where hienthi=1 and id_list='".$list['id']."'");
+							if(!empty($product_cat)){ ?>
+								<ul class="nav--cat">
+									<?php foreach($product_cat as $cat){ ?>
+										<li class="-cat"><a href="<?=$cat["tenkhongdau"]?>"><span><?=$cat["ten_$lang"]?></span></a>
+											<?php 
+											$product_items = result_array("select id,tenkhongdau,ten_$lang from #_product_item where hienthi=1 and id_list='".$list['id']."'");
+											if(!empty($product_items)){ ?>
+												<ul class="nav--item">
+													<?php foreach($product_items as $items){ ?>
+														<li class="-item"><a href="<?=$items["tenkhongdau"]?>"><span><?=$items["ten_$lang"]?></span></a></li>
 													<?php } ?>
 												</ul>
 											<?php } ?>
-										<?php } ?>	
-									</li>	
-								<?php }?>
-							</ul>
-						<?php }?>	
-					</li>
-				<?php }?>
-			</ul>
+										</li>
+									<?php } ?>
+								</ul>
+							<?php } ?>
+						</li>	
+					<?php }?>
+				</ul>
+			<?php }?>
+		</li>
+	<?php }?>
+<?php }?>
+<li class="menu <?=$com=='tin-tuc'?'active':''?>"><a href="tin-tuc"><span>Tin Tức</span></a></li>
+<li class="menu <?=$com=='lien-he'?'active':''?>"><a href="lien-he"><span>Liên Hệ</span></a></li>
+</ul>
 
 </div>

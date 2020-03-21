@@ -63,8 +63,8 @@ if(!empty($khonggianquan_index)){
 						}
 						?>
 						<div class="kgq_item <?=$c?> hieuung">
-							<a href="upload/baiviet/<?=$item["photo"]?>" data-fancybox="khonggianquan_index">
-								<img src="thumb/1-<?=$w?>-<?=$h?>/upload/baiviet/<?=$item["photo"]?>" alt="<?=$item["photo"]?>" class="img-fluid w-100" onerror='this.src="img/<?=$w?>x<?=$h?>/"'>
+							<a href="upload/album/<?=$item["photo"]?>" data-fancybox="khonggianquan_index">
+								<img src="thumb/1-<?=$w?>-<?=$h?>/upload/album/<?=$item["photo"]?>" alt="<?=$item["photo"]?>" class="img-fluid w-100" onerror='this.src="img/<?=$w?>x<?=$h?>/"'>
 							</a>
 							<h3 class="overlay d-none"><?=$item["ten_$lang"]?></h3>
 						</div>

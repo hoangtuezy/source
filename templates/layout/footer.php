@@ -51,7 +51,7 @@ $chinhsach = result_array("select * from #_baiviet where type='chinh-sach' and h
 
 				<div class="bando_iframe">
 
-					<?=$row_setting['toado']?>
+					<?=layout_fanpage($row_setting['facebook'],350,200)?>
 
 				</div>
 

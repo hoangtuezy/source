@@ -21,19 +21,17 @@ $target="all";
     </div>
     <div class="container">
         <ul class="nav justify-content-center" id="product_list_tab" role="tablist">
-          
             <?php foreach($index_product_list as $stt => $list){ ?>
             <li class="nav-item">
                 <a class="product_tpl_tab_item nav-link <?=$stt==0?'active':''?>" id="<?=return_uid($list["id"])?>-tab" data-toggle="tab" href="#<?=return_uid($list["id"])?>" role="tab" aria-controls="<?=return_uid($list["id"])?>" aria-selected="true">
                     <div class="w-100"><span class="b"><?=$list["ten_$lang"]?></span></div>
-                    </a>
+                </a>
             </li>
             <?php } ?>
         </ul>
     </div>
-    <div class="container py-4">
+<div class="container py-4">
         <div class="tab-content" id="myTabContent">
- 
             <?php foreach($index_product_list as $stt => $list){
             $where_sanpham = " #_product where hienthi=1 and type='san-pham' and noibat!=0 and id_list='".$list["id"]."' ";
             $_result_sanpham="select * from $where_sanpham order by stt,id desc $limit";

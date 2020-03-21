@@ -58,7 +58,7 @@
 					$config_sub = "false";
 					$config_masp = true;
 					$config_giaban = true;
-					$config_giacu = true;
+					$config_giacu = false;
 					$config_diachi = false;
 					$config_dientich = false;
 					$config_stock = "false";
@@ -1295,14 +1295,14 @@ case 'thanh-toan-giao-nhan':
 			
 			case 'vi-sao-chon':
 			$title_main = "Vì Sao Chọn";
-			$config_images = "true";
+			$config_images = "false";
 			$config_mota= "true";
 			$config_list = "false";
 			$config_cat = "false";
 			$config_item = "false";
 			$config_sub = "false";
 			$config_noibat = "true";
-			$config_noidung = "true";
+			$config_noidung = "false";
 			@define ( _width_thumb , 173 );
 			@define ( _height_thumb , 173 );
 			@define ( _style_thumb , 1 );
@@ -1539,7 +1539,7 @@ case 'thanh-toan-giao-nhan':
 		case 'logo':
 		$title_main = 'Logo';
 		@define ( _width_thumb , 170 );
-		@define ( _height_thumb , 170 );
+		@define ( _height_thumb , 120 );
 		@define ( _style_thumb , 2 );
 		@define ( _img_type , 'jpg|gif|png|jpeg|PNG|JPG|JPEG|GIF' );
 		$ratio_ = 1;
