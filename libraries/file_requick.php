@@ -39,10 +39,12 @@ $white_coms = array(
 	'ajax',
 	'gio-hang',
 	'thanh-toan',
+	'tai-khoan',
 	'bo-suu-tap',
 	'album',
 	'khach-hang',
-	'thiet-ke'
+	'thiet-ke',
+	'tai-khoan','dang-nhap','dang-ky','quen-mat-khau','dang-xuat'
 );
 if(!in_array($com, $white_coms)){
 	include _lib."short_link.php";
@@ -365,6 +367,33 @@ switch($com){
 	$title_detail = "Thanh Toán";
 	break;	
 	
+	case 'tai-khoan':
+	$source = "account/taikhoan";
+	$title_detail = "Tài Khoản";
+	break;
+
+	case 'dang-nhap':
+	$source = "account/taikhoan";
+	$template = "account/dangnhap";
+	$title_detail = "Đăng Nhập";
+	break;
+
+	case 'dang-ky':
+	$source = "account/taikhoan";
+	$template = "account/dangky";
+	$title_detail = "Đăng Ký";
+	break;
+
+	case 'quen-mat-khau':
+	$source = "account/taikhoan";
+	$template = "account/quenmatkhau";
+	$title_detail = "Quên Mật Khẩu";
+	break;
+
+	case 'dang-xuat':
+	$source = "account/taikhoan";
+	break;
+
 	case 'index':
 	$source = "index";
 	$template ="index";

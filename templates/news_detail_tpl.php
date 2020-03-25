@@ -11,5 +11,16 @@
 		</div>
 		<div class="noidung_tintuc"><?=$row_detail['noidung_'.$lang]?></div>
 		<div class="fb-comments" data-href="<?=getCurrentPageURL()?>" data-width="100%" data-numposts="10"></div>
+		<div class="othernews">
+			<div class="header-title">
+				<h2 class="h2-title"><span><?=_cacbaivietkhac?></span></h2>
+			</div>
+			<ul class="mb-3">
+
+				<?php foreach($tintuc as $tinkhac){?>
+					<li><a href="<?=$_GET['com']?>/<?=$tinkhac['tenkhongdau']?>.htm" ><?=$tinkhac['ten_'.$lang]?></a> <font>(<?=make_date($tinkhac['ngaytao'])?>)</font></li>
+				<?php }?>
+			</ul>
+		</div>
 	</div>
 </div>

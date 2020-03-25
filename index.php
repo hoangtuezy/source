@@ -23,7 +23,7 @@ if(empty($_SESSION['lang']))
 {
 	$_SESSION['lang']='vi';
 }
-
+$_SESSION["links"] = $_SERVER['HTTP_REFERER'];
 if(!empty($_GET['lang'])){
 	$_SESSION['lang']=$_GET['lang'];
 	header('Location: ' . $_SERVER['HTTP_REFERER']);

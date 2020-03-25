@@ -167,7 +167,7 @@ function save_item(){
 		
 		/*$data['username'] = $_POST['username'];*/
 		if($_POST['password']!="")
-			$data['password'] = md5($_POST['password']);
+			$data['password'] = encrypt_password($_POST['password'],$config['salt']);
 		$data['email'] = $_POST['email'];
 		$data['ten'] = $_POST['ten'];
 		$data['sex'] = $_POST['sex'];
@@ -213,7 +213,7 @@ function save_item(){
 		if($_POST['password']=="") transfer("Chưa nhập mật khẩu", "index.php?com=thanhvien&act=add");
 		
 /*		$data['username'] = $_POST['username'];*/
-		$data['password'] = md5($_POST['password']);
+		$data['password'] = encrypt_password($_POST['password'],$config['salt']);
 		$data['email'] = $_POST['email'];
 		$data['ten'] = $_POST['ten'];
 		$data['dienthoai'] = $_POST['dienthoai'];

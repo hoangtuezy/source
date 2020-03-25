@@ -138,6 +138,10 @@ function price($giaban,$sdt='',$ccy=' đ'){
     }
     return number_format($giaban).$ccy;
 }
+
+
+
+
 function result_array($query)
     {
         global $d;

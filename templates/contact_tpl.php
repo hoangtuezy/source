@@ -1,4 +1,4 @@
-<script type="text/javascript" src="js/my_script.js"></script>
+<script type="text/javascript" src="assets/js/my_script.js"></script>
 <script type="text/javascript">
 function js_submit(){
   if(isEmpty(document.getElementById('ten'), "Xin nhập Họ tên.")){

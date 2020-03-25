@@ -16,7 +16,7 @@
         
         <br/>
         <div style="font-size:20px;color:#8f7f59;padding:0px 20px"><?=$showtext?></div><br>
-        <img src="//<?=$config_url?>/images/default/gears.gif" alt="gears.gif" />
+        <img src="//<?=$config_url?>/assets/images/default/gears.gif" alt="gears.gif" />
         <br>-----------------------------------------<br>
         (<a href="<?=$page_transfer?>" style="color:#9f9fab;">Click vào đây nếu không muốn đợi lâu</a>)
         <br><br>

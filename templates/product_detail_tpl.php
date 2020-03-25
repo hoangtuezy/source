@@ -3,6 +3,8 @@ $row_default_photo = fetch_array("select photo_vi,link from #_photo where type='
 $product_giaohang = fetch_array("select mota_$lang from #_info where type='giaohang' ");
 $product_hoantra= fetch_array("select mota_$lang from #_info where type='hoantra' ");
 $product_thongtin = fetch_array("select noidung_$lang from #_company where type='product_info' ");
+$p_w = 260;
+$p_h = 240;
 ?>
 <div class="scrollbar">
     <div class="container">
@@ -10,14 +12,14 @@ $product_thongtin = fetch_array("select noidung_$lang from #_company where type=
             <div class="row">
                 <div id="left" class="col-md-5 col-12">
                     <div class="showhinh text-center">
-                        <a class="MagicZoomPlus" id="shoes" href="<?=_upload_product_l.$row_detail['photo']?>"><img src="thumb/1-560-640/<?=_upload_product_l.$row_detail['photo']?>" alt="<?=$row_detail['ten_'.$lang]?>" onerror='this.src="img/560x640/"'/></a>
+                        <a class="MagicZoomPlus" id="shoes" href="<?=_upload_product_l.$row_detail['photo']?>"><img src="thumb/1-<?=$p_w*2?>-<?=$p_h*2?>/<?=_upload_product_l.$row_detail['photo']?>" alt="<?=$row_detail['ten_'.$lang]?>" onerror='this.src="img/<?=$p_w*2?>x<?=$p_h*2?>/"'/></a>
                     </div>
                     <div class="MagicScroll thumbhinh" data-options="draggable: true;items: 5;">
-                        <a data-zoom-id="shoes" href="<?=_upload_product_l.$row_detail['photo']?>" data-image="thumb/1-560-640/<?=_upload_product_l.$row_detail['photo']?>"><img src="thumb/1-112-128/<?=_upload_product_l.$row_detail['photo']?>" alt="<?=$row_detail['ten_'.$lang]?>" class="img-fluid" /></a>
+                        <a data-zoom-id="shoes" href="<?=_upload_product_l.$row_detail['photo']?>" data-image="thumb/1-<?=$p_w*2?>-<?=$p_h*2?>/<?=_upload_product_l.$row_detail['photo']?>"><img src="thumb/1-<?=$p_w*0.4?>-<?=$p_h*0.4?>/<?=_upload_product_l.$row_detail['photo']?>" alt="<?=$row_detail['ten_'.$lang]?>" class="img-fluid" /></a>
                         <?php
                         if(count($result_hinhanh) > 0) {
                             for($i=0;$i<count($result_hinhanh);$i++) { ?>
-                                <a data-zoom-id="shoes" href="<?=_upload_product_l.$result_hinhanh[$i]['photo']?>" data-image="thumb/1-560-640/<?=_upload_product_l.$result_hinhanh[$i]['photo']?>"><img src="thumb/1-112-128/<?=_upload_product_l.$result_hinhanh[$i]['photo']?>" alt="<?=$row_detail['ten_'.$lang]?>" class="img-fluid"/></a>
+                                <a data-zoom-id="shoes" href="<?=_upload_product_l.$result_hinhanh[$i]['photo']?>" data-image="thumb/1-<?=$p_w*2?>-<?=$p_h*2?>/<?=_upload_product_l.$result_hinhanh[$i]['photo']?>"><img src="thumb/1-<?=$p_w*0.4?>-<?=$p_h*0.4?>/<?=_upload_product_l.$result_hinhanh[$i]['photo']?>" alt="<?=$row_detail['ten_'.$lang]?>" class="img-fluid"/></a>
                             <?php } }?>
                         </div>
                         <div class="clearfix"></div>
