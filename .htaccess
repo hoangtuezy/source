@@ -22,6 +22,7 @@ RewriteRule ^watermark/([0-9])-([0-9]+)-([0-9]+)/(.*) watermark.php?src=$4&w=$2&
 
 #ErrorDocument 404 /404.php
 
+
 <Ifmodule mod_php4.c>
     php_flag display_errors  on
     php_flag log_errors  off

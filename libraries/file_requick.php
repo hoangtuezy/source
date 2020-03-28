@@ -44,7 +44,7 @@ $white_coms = array(
 	'album',
 	'khach-hang',
 	'thiet-ke',
-	'tai-khoan','dang-nhap','dang-ky','quen-mat-khau','dang-xuat'
+	'tai-khoan','dang-nhap','dang-ky','quen-mat-khau','dang-xuat','active-member'
 );
 if(!in_array($com, $white_coms)){
 	include _lib."short_link.php";
@@ -389,6 +389,13 @@ switch($com){
 	$template = "account/quenmatkhau";
 	$title_detail = "Quên Mật Khẩu";
 	break;
+
+	case 'active-member':
+	$source = "account/taikhoan";
+	$template = "account/activeaccount";
+	$title_detail = "Kích Hoạt Tài Khoản";
+	break;
+
 
 	case 'dang-xuat':
 	$source = "account/taikhoan";

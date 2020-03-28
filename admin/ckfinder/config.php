@@ -62,7 +62,7 @@ Examples:
 ATTENTION: The trailing slash is required.
 */
 $config_url=$_SERVER["SERVER_NAME"];
-$baseUrl = 'http://'.$config_url.'/upload/';
+$baseUrl = $Protocol.$config_url.'/upload/';
 
 /*
 $baseDir : the path to the local directory (in the server) which points to the

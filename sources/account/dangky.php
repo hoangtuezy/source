@@ -33,6 +33,7 @@ if($_POST){
 	if($d->insert($data))
 		{
 			transfer("Bạn đã đăng ký thành công<br/>Vui lòng vào email kích hoạt tài khoản", $Protocol.$config_url);
+			
 		}
 		else{
 			echo "<script>alert('Đăng Ký Không Thành Công .Vui lòng đăng ký lại .');</script>";

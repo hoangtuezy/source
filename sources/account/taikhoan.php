@@ -12,6 +12,9 @@ if(in_array($com, array('dang-ky','dang-nhap'))){
 	}
 }
 switch ($com) {
+	case 'active-member':
+	include __DIR__."/activeaccount.php";
+	break;
 	case 'dang-nhap':
 	include __DIR__."/dangnhap.php";
 	break;

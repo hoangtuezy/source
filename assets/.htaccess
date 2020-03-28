@@ -1,5 +1,11 @@
 Options -Indexes
-<Files ~ "\.(ph|pH|P|asp|ht|H|inc|php|phps|phpt|cgi|pl|php4|php5|php56|asp|aspx|jsp|kid|cbg|nok|shtml|phtml)$">
- order allow,deny
- deny from all
-</Files>
+Order Allow,Deny
+Deny from all
+<FilesMatch "\.([Cs][Ss][Ss]|[Jj][Ss]|[Pp][Nn][Gg]|[Jj][Pp][Gg]|[Gg][Ii][Ff])$">
+Allow from all
+</FilesMatch>
+
+RewriteCond %{REMOTE_ADDR} !^(xxx\.xxx\.xxx\.xxx|xxx\.xxx\xxx\.xxx|66\.249\.)
+RewriteCond %{HTTP_HOST} !^(127\.0\.0\.0|localhost) [NC]
+RewriteCond %{HTTP_REFERER} !^https?://(.+\.)?source\.test/ [NC]
+RewriteRule .* http://source.test/ [L]
